@@ -1,0 +1,22 @@
+td.center
+{
+	text-align:center;
+}
+img.center
+{
+	align: center;
+}
+th.center
+{
+	text-align:center;
+}
+table.voiture
+{
+	background-image: url("/UTR/images/FULL_IVY.JPG");
+	background-color : #004080;
+}
+td.voiture
+{
+	background-image: url("/UTR/images/Wallpaper_Angel_Fall_First.bmp");
+	background-color : #004080;
+}

@@ -1,0 +1,24 @@
+.caseInfo
+{
+	background-color: #FFFFFF;
+	border-style: none;
+}
+td.normal
+{
+	background-color : #808080;
+	color : #000000;
+	text-align : center;
+}
+td.over
+{
+	background-color : #585858;
+	color : #FFFFFF;
+	text-align : center;
+}
+td.select
+{
+	background-color : #303030;
+	color : #FFFFFF;
+	font-weight : bold;
+	text-align : center;
+}
