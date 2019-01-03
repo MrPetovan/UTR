@@ -18,7 +18,7 @@
 		{
 			var confirmation;
 			var action=form.action.value;
-			if(action=="Supprimer") confirmation = "Etes-vous sûr de vouloir supprimer cette news ?";
+			if(action=="Supprimer") confirmation = "Etes-vous sÃ»r de vouloir supprimer cette news ?";
 			else confirmation = (action+" cette news ?");
 			if(confirm(confirmation))
 			{
@@ -78,7 +78,7 @@
 		</tr>
 		<tr>
 			<td align="left">par <?php echo ($news['Jou_Pseudo']!='')?$news['Jou_Pseudo']:$news['Nws_NomPosteur'];?></td>
-			<td align="right">le <?php echo "$jour/$mois/$annee à $heure:$minute";?></td>
+			<td align="right">le <?php echo "$jour/$mois/$annee Ã  $heure:$minute";?></td>
 		</tr>
 		<tr>
 			<td colspan="2" align="left"><?php echo nl2br($news['Nws_Texte'])?>

@@ -3,7 +3,7 @@ function is_NotNull(element,name,suffixe)
 	if(element == "")
 	{
 		if(suffixe == undefined) suffixe ="";
-		return (" - "+name+" doit être renseigné"+suffixe+"\n");
+		return (" - "+name+" doit Ãªtre renseignÃ©"+suffixe+"\n");
 	}
 	return "";
 }
@@ -14,8 +14,8 @@ function is_Number(element,Taille, nom)
 
 	if (!exp.test(element))
 	{
-		if(Taille=="")	return(" - "+nom+" doit être un nombre.\n");
-		else return(" - "+nom+" doit être un nombre de maximum "+Taille+" chiffres.\n");
+		if(Taille=="")	return(" - "+nom+" doit Ãªtre un nombre.\n");
+		else return(" - "+nom+" doit Ãªtre un nombre de maximum "+Taille+" chiffres.\n");
 	}
 	else return "";
 }
@@ -35,8 +35,8 @@ function is_Null(valeur)
 
 function is_Date(d,name,flag)
 {
-	// Cette fonction vérifie le format JJ/MM/AAAA saisi et la validité de la date.
-	// Le séparateur est défini dans la variable separateur
+	// Cette fonction vÃ©rifie le format JJ/MM/AAAA saisi et la validitÃ© de la date.
+	// Le sÃ©parateur est dÃ©fini dans la variable separateur
 	var exp = new RegExp("^[0-9]{2}[\/][0-9]{2}[\/][0-9]{4}$","");
 
 	//var separateur="/"; // separateur entre jour/mois/annee
@@ -67,12 +67,12 @@ function is_Date(d,name,flag)
 		}
 		else
 		{
-//Contrôle de cohérence :
+//ContrÃ´le de cohÃ©rence :
 //flag == 1 : Futur
-//flag == -1 : Passé
-//Sinon pas de contrôle
+//flag == -1 : PassÃ©
+//Sinon pas de contrÃ´le
 			if((flag == 1 && d2 < dateJour) || (flag == -1) && (2 > dateJour))
-					return ("\t- "+name+" est incohérente\n");
+					return ("\t- "+name+" est incohÃ©rente\n");
 		}
 	}
 	return chaine;

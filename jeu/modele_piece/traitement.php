@@ -35,7 +35,7 @@
 
 		$verificationJs=$_POST['verificationJs'];
 
-//Gestion des erreurs de saisie si la vérification n'a pas été faite en JavaScript
+//Gestion des erreurs de saisie si la vÃ©rification n'a pas Ã©tÃ© faite en JavaScript
 		if($verificationJs == "false")
 		{
 			$codesErreur = ",";
@@ -58,7 +58,7 @@
 		}
 		if($_POST["action"]=="Ajouter")
 		{
-			$requeteAjouterModèle="	INSERT INTO modele_piece(
+			$requeteAjouterModÃ¨le="	INSERT INTO modele_piece(
 												ModPi_IdMarque,
 												ModPi_NomModele,
 												ModPi_Commentaires,
@@ -94,7 +94,7 @@
 												$ModPi_CapaciteMoteur,
 												$ModPi_CapaciteMax,
 												'$ModPi_DureeVieMax')";
-			mysql_query($requeteAjouterModèle);
+			mysql_query($requeteAjouterModÃ¨le);
 
 			$IdModelePiece = mysql_fetch_row(mysql_query("SELECT MAX(IdModelePiece) FROM modele_piece"));
 
@@ -104,7 +104,7 @@
 
 		if($_POST["action"]=="Modifier")
 		{
-			$requeteModifierModèle = "	UPDATE modele_piece
+			$requeteModifierModÃ¨le = "	UPDATE modele_piece
 												SET	ModPi_IdMarque = '$ModPi_IdMarque',
 														ModPi_NomModele = '$ModPi_NomModele',
 														ModPi_Commentaires = '$ModPi_Commentaires',
@@ -123,7 +123,7 @@
 														ModPi_CapaciteMax = $ModPi_CapaciteMax,
 													   ModPi_DureeVieMax = '$ModPi_DureeVieMax'
 												WHERE IdModelePiece = '$IdModelePiece'";
-			mysql_query($requeteModifierModèle)or die("Requete Modifier Modele Piece : $requeteModifierModèle<br>".mysql_error());
+			mysql_query($requeteModifierModÃ¨le)or die("Requete Modifier Modele Piece : $requeteModifierModÃ¨le<br>".mysql_error());
 
 			header("Location: fiche.php?IdModelePiece=$IdModelePiece");
 			exit;

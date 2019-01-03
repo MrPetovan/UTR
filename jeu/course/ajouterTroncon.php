@@ -26,7 +26,7 @@ function msTOkmh($vitesse)
 	if(!empty($_GET)) unset($tab['troncons']);
 	$_SESSION=$tab;
 /*	print_r($_SESSION);*/
-//Ajout du tronçon
+//Ajout du tronÃ§on
 	if(!empty($_POST))
 	{
 		$IdSecteur = $_POST['IdSecteur'];
@@ -58,7 +58,7 @@ function msTOkmh($vitesse)
 ?>
 <html>
 <head>
-	<title>UTR : Ajouter un tronçon à une course</title>
+	<title>UTR : Ajouter un tronÃ§on Ã  une course</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
 	<link href="../style/style.css" rel="stylesheet" type="text/css" />
@@ -155,7 +155,7 @@ function annulModif(IdPilote)
                             <td width=457
                 background="/UTR/design/nav.jpg"
                 height=34><div align="left">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp; &nbsp;<?php echo(isset($_GET['action']))?"Organiser une nouvelle course":"Ajouter un tronçon";?></div></td>
+                                &nbsp; &nbsp;<?php echo(isset($_GET['action']))?"Organiser une nouvelle course":"Ajouter un tronÃ§on";?></div></td>
                             <td width="11" align=right
                 background="/UTR/design/navtile.jpg">&nbsp;</td>
                             <td width="76" align=right

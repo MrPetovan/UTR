@@ -45,7 +45,7 @@
 	$resultatDatesActivation = mysql_query($requeteDatesActivations)or die(mysql_error());
 	$dateActivation = mysql_fetch_assoc($resultatDatesActivation);
 
-	if($_GET['ok'] == 1) echo "Tout s'est bien passé !<br><br>";
+	if($_GET['ok'] == 1) echo "Tout s'est bien passÃ© !<br><br>";
 ?>
 <table border="1">
 <form name="formulaire" action="traitement.php" method="POST">
@@ -55,22 +55,22 @@
 <tr>
 	<td><input type="checkbox" id="checkbox1" name="UTR_TraiterCourse" checked></td>
 	<td><label for="checkbox1">Traiter les courses</label></td>
-	<td>Dernière activation : <?php echo date("\l\e j/m/Y à H:i",$dateActivation['UTR_DateTraitementCourse'])?></td>
+	<td>DerniÃ¨re activation : <?php echo date("\l\e j/m/Y Ã  H:i",$dateActivation['UTR_DateTraitementCourse'])?></td>
 </tr>
 <tr>
 	<td><input type="checkbox" id="checkbox2" name="UTR_VerserSalaire" checked></td>
 	<td><label for="checkbox2">Verser les salaires</label></td>
-	<td>Dernière activation : <?php echo date("\l\e j/m/Y à H:i",$dateActivation['UTR_DateDernierSalaire'])?></td>
+	<td>DerniÃ¨re activation : <?php echo date("\l\e j/m/Y Ã  H:i",$dateActivation['UTR_DateDernierSalaire'])?></td>
 </tr>
 <tr>
 	<td><input type="checkbox" id="checkbox3" name="UTR_CreerPieces" checked></td>
-	<td><label for="checkbox3">Créer des pièces</label></td>
-	<td>Dernière activation : <?php echo date("\l\e j/m/Y à H:i",$dateActivation['UTR_DateCreationPiece'])?></td>
+	<td><label for="checkbox3">CrÃ©er des piÃ¨ces</label></td>
+	<td>DerniÃ¨re activation : <?php echo date("\l\e j/m/Y Ã  H:i",$dateActivation['UTR_DateCreationPiece'])?></td>
 </tr>
 <tr>
 	<td><input type="checkbox" id="checkbox4" name="UTR_CreerVoitures" checked></td>
-	<td><label for="checkbox4">Créer des voitures</label></td>
-	<td>Dernière activation : <?php echo date("\l\e j/m/Y à H:i",$dateActivation['UTR_DateCreationVoiture'])?></td>
+	<td><label for="checkbox4">CrÃ©er des voitures</label></td>
+	<td>DerniÃ¨re activation : <?php echo date("\l\e j/m/Y Ã  H:i",$dateActivation['UTR_DateCreationVoiture'])?></td>
 </tr>
 <tr>
 	<td colspan="3" align="center"><input type="submit" value="Lancer la machine !"></td>

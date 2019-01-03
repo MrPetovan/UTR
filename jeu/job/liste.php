@@ -43,14 +43,14 @@
 	<tr>
 		<th>Niv</th>
 		<th>Nom Masculin</th>
-		<th>Nom Féminin</th>
+		<th>Nom FÃ©minin</th>
 		<th>Salaire</th>
 		<th>Gestion</th>
 	</tr>
 <?php
 		$requeteInfoJobs = "	SELECT	IdJob,
 												Job_NomMasculin,
-												Job_NomFéminin,
+												Job_NomFÃ©minin,
 												Job_Niveau,
 												Job_Salaire
 									FROM job
@@ -63,7 +63,7 @@
 <tr>
 	<td><?php echo $infoJob['Job_Niveau']?></td>
 	<td><?php echo $infoJob['Job_NomMasculin']?></td>
-	<td><?php echo $infoJob['Job_NomFéminin']?></td>
+	<td><?php echo $infoJob['Job_NomFÃ©minin']?></td>
 	<td><?php echo $infoJob['Job_Salaire']?> &euro;</td>
 	<td><a href="gestion.php?action=Modifier&IdJob=<?php echo $infoJob['IdJob']?>">Modifier</a>&nbsp;|&nbsp;<a href="traitement.php?action=Supprimer&IdJob=<?php echo $infoJob['IdJob']?>">Supprimer</a></td>
 </tr>

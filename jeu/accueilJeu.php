@@ -87,10 +87,10 @@
 				echo "Vous devez saisir un login et un mot de passe";
 				break;
 			case 3 :
-				echo "Le jeu n'est accessible qu'aux joueurs enregistrés.";
+				echo "Le jeu n'est accessible qu'aux joueurs enregistrÃ©s.";
 				break;
 			case 4 :
-				echo "Votre compte n'est pas encore activé !<br>Normalement, un mail vous a été envoyé, il contient un lien permettant d'activer votre compte. Si vous n'avez pas reçu ce mail avant un jour, contactez le Pacha.";
+				echo "Votre compte n'est pas encore activÃ© !<br>Normalement, un mail vous a Ã©tÃ© envoyÃ©, il contient un lien permettant d'activer votre compte. Si vous n'avez pas reÃ§u ce mail avant un jour, contactez le Pacha.";
 				break;
 		}
 	}
@@ -112,7 +112,7 @@
                                                 </tr>
                                               </form>
                                             </table><br>
-                                            <a href="inscription.php">S'incrire à UTR</a> </td>
+                                            <a href="inscription.php">S'incrire Ã  UTR</a> </td>
                                         </tr>
                                         <tr>
                                           <td bgcolor=#0a0a0a height=1></td>

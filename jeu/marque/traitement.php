@@ -40,7 +40,7 @@
 
 		$verificationJs=$_POST['verificationJs'];
 
-//Gestion des erreurs de saisie si la vérification n'a pas été faite en JavaScript
+//Gestion des erreurs de saisie si la vÃ©rification n'a pas Ã©tÃ© faite en JavaScript
 		if($verificationJs == "false")
 		{
 			$codesErreur = ",";

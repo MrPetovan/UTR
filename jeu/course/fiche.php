@@ -70,7 +70,7 @@
 		function confirmSuppr(form)
 		{
 			var action=form.action.value;
-			var confirmation = "Etes-vous sûr de vouloir "+action+" cette course ?";
+			var confirmation = "Etes-vous sÃ»r de vouloir "+action+" cette course ?";
 			if(confirm(confirmation))
 			{
 				form.method="POST";
@@ -157,11 +157,11 @@
 					<td><?php echo $infoCourse['Cou_PrixEngagement']?> &euro;</td>
 				</tr>
 				<tr class="piece">
-					<th>Densité de circulation :</th>
+					<th>DensitÃ© de circulation :</th>
 					<td><?php echo $infoCourse['Cou_DensiteCirculation']?> %</td>
 				</tr>
 				<tr class="piece">
-					<th>Nombre maximum de compétiteurs :</th>
+					<th>Nombre maximum de compÃ©titeurs :</th>
 					<td><?php echo $infoCourse['Cou_NbCompetiteursMax']?></td>
 				</tr>
 				<tr class="piece">
@@ -177,7 +177,7 @@
 					<td><?php echo $Cou_NbCompetiteurs*$infoCourse['Cou_PrixEngagement']?> &euro;</td>
 				</tr>
 				<tr class="piece">
-					<th>Intérêt de la police :</th>
+					<th>IntÃ©rÃªt de la police :</th>
 					<td><?php echo round(($Cou_NbCompetiteurs/12)*100,2)?> % de chance</td>
 				</tr>
 				<tr class="piece">
@@ -189,10 +189,10 @@
 
 			</table>
 			<br>
-<!--Tracé du circuit-->
+<!--TracÃ© du circuit-->
 			<table border="0" class="liste">
 				<tr class="piece">
-					<th colspan="3" class="titre">Tracé du circuit</th>
+					<th colspan="3" class="titre">TracÃ© du circuit</th>
 				</tr>
 				<tr class="piece">
 					<th class="titre">Secteur</th>
@@ -232,7 +232,7 @@
 		echo "Moyen";
 	else if($difficulte > 90)
 		echo "Difficile";
-	else echo "Très difficile";
+	else echo "TrÃ¨s difficile";
 	//echo $requeteInscriptionCourse;
 ?>
 					</td>
@@ -262,7 +262,7 @@
 ?>
 					<th class="titre">Position</th>
 					<th class="titre">Temps</th>
-					<th class="titre">Différence</th>
+					<th class="titre">DiffÃ©rence</th>
 <?php
 	}
 ?>
@@ -312,7 +312,7 @@
 <input type="hidden" name="Cou_PrixInscription" value="<?php echo $infoCourse['Cou_PrixInscription']; ?>">
 <br>
 <!--////////////////////////////////////
-//Formulaire d'inscription à la course//
+//Formulaire d'inscription Ã  la course//
 /////////////////////////////////////-->
 <?php
 	if( ! $coursePassee )
@@ -354,7 +354,7 @@
 	if(count($piloteDisponible)==0)
 	{
 ?>
-Aucun pilote libre ce jour-là
+Aucun pilote libre ce jour-lÃ 
 <?php
 	}
 	else
@@ -414,7 +414,7 @@ Aucun pilote libre ce jour-là
 	if(count($voitureDisponible)==0)
 	{
 ?>
-Aucune voiture libre ce jour-là
+Aucune voiture libre ce jour-lÃ 
 <?php
 	}
 	else
@@ -439,14 +439,14 @@ Aucune voiture libre ce jour-là
 		</tr>
 	</table>
 <!--/////////////////////////////////////////
-//Formulaire de désinscription de la course//
+//Formulaire de dÃ©sinscription de la course//
 //////////////////////////////////////////-->
 	<table width="100%" border="0" id="formulaire2" class="liste">
 		<tr class="piece">
-			<th>Désincrire un de ses pilotes</th>
+			<th>DÃ©sincrire un de ses pilotes</th>
 		</tr>
 		<tr>
-			<td>Pilote à désinscrire :
+			<td>Pilote Ã  dÃ©sinscrire :
 <?php
 	$requetePilotesInscrits = "	SELECT IdPilote, Pil_Nom
 								FROM pilote
@@ -475,7 +475,7 @@ Aucun pilote inscrit
 ?>
 		</tr>
 		<tr class="piece">
-			<td><input type="Submit" name="action" value="Désincrire" <?php if(mysql_num_rows($resultatPilotesInscrits)!="1")echo "disabled";?>></td>
+			<td><input type="Submit" name="action" value="DÃ©sincrire" <?php if(mysql_num_rows($resultatPilotesInscrits)!="1")echo "disabled";?>></td>
 		</tr>
 	</table>
 <!--//////////////////
@@ -521,7 +521,7 @@ Aucun pilote inscrit
 	{
 ?>
 	<input type="button" onClick="formulaire(1)" value="Inscrire un de ses pilotes"><br>
-	<input type="button" onClick="formulaire(2)" value="Désincrire un de ses pilotes"><br>
+	<input type="button" onClick="formulaire(2)" value="DÃ©sincrire un de ses pilotes"><br>
 	<input type="button" onClick="formulaire(3)" value="Parier sur un pilote">
 <?php
 	}

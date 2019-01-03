@@ -117,7 +117,7 @@
 	{
 ?>
 <br>
-Insertion effectuée avec succès !
+Insertion effectuÃ©e avec succÃ¨s !
 <br>
 <?php
 	}
@@ -159,7 +159,7 @@ Insertion effectuée avec succès !
 	{
 ?>
 		<tr>
-			<td><input type="radio" name="Ajouter_Bis" value="false" checked> Retourner à la liste
+			<td><input type="radio" name="Ajouter_Bis" value="false" checked> Retourner Ã  la liste
 			</td>
 		<td><input type="radio" name="Ajouter_Bis" value="true"> Ajouter un autre sponsor
 			</td>

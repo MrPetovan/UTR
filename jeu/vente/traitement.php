@@ -119,7 +119,7 @@
 		if(isset($infoVente['IdVente']))
 		{
 
-//requête supprimant une vente
+//requÃªte supprimant une vente
 			if($_POST["action"]=="Supprimer")
 			{
 				if($_POST["reponse"]=="Oui")
@@ -239,7 +239,7 @@
 		}
 		else	$location = "erreur.php";
 
-//Gestion des erreurs de saisie si la vérification n'a pas été faite en JavaScript
+//Gestion des erreurs de saisie si la vÃ©rification n'a pas Ã©tÃ© faite en JavaScript
 		if($verificationJs == "false")
 		{
 			$codesErreur = ",";

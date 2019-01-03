@@ -1,7 +1,7 @@
 <?php
 
 /*
- *définition des constantes
+ *dÃ©finition des constantes
  */
 
 define('TABLE_MANAGER', "manager");
@@ -27,12 +27,12 @@ define('LU', "o");
 define('NON_LU', "n");
 
 /*
- *définition des fonctions
+ *dÃ©finition des fonctions
  */
 
 function connexion () {
 /*
- *Permet de se connecter à la base de données
+ *Permet de se connecter Ã  la base de donnÃ©es
  *Version 1.0
  */
 	$serveur = "<host>";
@@ -44,7 +44,7 @@ function connexion () {
 		or die ( "Impossible de se connecter au serveur." );
 
 	mysql_select_db ( $base )
-		or die ( "Impossible de se connecter à la base de données." );
+		or die ( "Impossible de se connecter Ã  la base de donnÃ©es." );
 }
 
 function Nom_To_Id ( $nom ) {
@@ -56,7 +56,7 @@ function Nom_To_Id ( $nom ) {
  */
 	$requete = "SELECT ".TABLE_MAN_ID." FROM ".TABLE_MANAGER." WHERE ".TABLE_MAN_NOM." = '$nom'";
 
-	$result = mysql_query( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+	$result = mysql_query( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 
 	$row =mysql_fetch_row( $result );
 
@@ -78,7 +78,7 @@ function Id_To_Nom ( $id ) {
  */
 	$requete = "SELECT ".TABLE_MAN_NOM." FROM ".TABLE_MANAGER." WHERE ".TABLE_MAN_ID." = $id";
 
-	$result = mysql_query( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+	$result = mysql_query( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 
 	$row = mysql_fetch_row( $result );
 
@@ -92,29 +92,29 @@ function Id_To_Nom ( $id ) {
 
 function Obtenir_Messages ( $idMan, $pos ) {
 /*
- *Récupère les messages d'un manager
+ *RÃ©cupÃ¨re les messages d'un manager
  *$idMan : le manager dont on veut les messages
- *$pos : le type de messages souhaité
- *Retourne la ressource de résultat du mysql_query contenant le résultat de la requête
+ *$pos : le type de messages souhaitÃ©
+ *Retourne la ressource de rÃ©sultat du mysql_query contenant le rÃ©sultat de la requÃªte
  *Version 1.0
  */
  	$requete = "SELECT * FROM ".TABLE_MESSAGE." WHERE ".TABLE_MESS_PROPRIO." = $idMan AND ".TABLE_MESS_POS." = $pos ORDER BY ".TABLE_MESS_DATE." DESC";
 
-	$result = mysql_query ( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+	$result = mysql_query ( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 
 	return $result;
 }
 
 function Obtenir_Message ( $idMess ) {
 /*
- *Permet de récupérer un message
+ *Permet de rÃ©cupÃ©rer un message
  *$idMess : l'id du message
- *Retourne le tableau contenant le résultat, false sinon
+ *Retourne le tableau contenant le rÃ©sultat, false sinon
  *Version 1.0
  */
  	$requete = "SELECT * FROM ".TABLE_MESSAGE." WHERE ".TABLE_MESS_ID." = $idMess";
 
-	$result = mysql_query ( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+	$result = mysql_query ( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 
 	if ( $tab = mysql_fetch_array( $result ) ) {
 		return $tab;
@@ -127,8 +127,8 @@ function Obtenir_Message ( $idMess ) {
 
 function Envoyer_Message ( $idExp, $contenu, $idDest, $sujet, $copie = FALSE) {
 /*
- *Permet d'ajouter un message en base de données
- *$idExp : l'expéditeur du message
+ *Permet d'ajouter un message en base de donnÃ©es
+ *$idExp : l'expÃ©diteur du message
  *$contenu : le contenu du message
  *$idDest : le destinataire du message
  *$sujet : le sujet du message
@@ -152,7 +152,7 @@ function Envoyer_Message ( $idExp, $contenu, $idDest, $sujet, $copie = FALSE) {
 								POS_RECEPT.",
 								now())";
 
-	mysql_query ( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+	mysql_query ( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 
 	if ( $copie ) {
 		$requete = "INSERT INTO ".TABLE_MESSAGE." (".TABLE_MESS_PROPRIO.", ".
@@ -172,19 +172,19 @@ function Envoyer_Message ( $idExp, $contenu, $idDest, $sujet, $copie = FALSE) {
 									POS_ENVOI.",
 									now())";
 
-		mysql_query ( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+		mysql_query ( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 	}
 }
 
 function Marquer_Lu ( $idMess ) {
 /*
- *Permet d'indiquer un message comme étant lu
+ *Permet d'indiquer un message comme Ã©tant lu
  *$idMess : le message
  *Version 1.0
  */
  	$requete = "UPDATE ".TABLE_MESSAGE." SET ".TABLE_MESS_LU." = '".LU."' WHERE ".TABLE_MESS_ID." = $idMess";
 
-	mysql_query ( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+	mysql_query ( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 }
 
 function Archiver_Message ( $idMess ) {
@@ -195,7 +195,7 @@ function Archiver_Message ( $idMess ) {
  */
 	$requete = "UPDATE ".TABLE_MESSAGE." SET ".TABLE_MESS_POS." = ".POS_ARCHIVE.", ".TABLE_MESS_LU." = '".LU."' WHERE ".TABLE_MESS_ID." = $idMess";
 
-	mysql_query ( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+	mysql_query ( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 }
 
 function Supprimer_Message ( $idMess ) {
@@ -206,30 +206,30 @@ function Supprimer_Message ( $idMess ) {
  */
 	$requete = "DELETE FROM ".TABLE_MESSAGE." WHERE ".TABLE_MESS_ID." = $idMess";
 
-	mysql_query ( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+	mysql_query ( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 }
 
 function Supprimer_Messages ( $idMan, $pos ) {
 /*
  *Permet de supprimer tout les messages d'une position
- *$idMan : le manager à qui appartient les messages
- *$pos : la position à supprimer
+ *$idMan : le manager Ã  qui appartient les messages
+ *$pos : la position Ã  supprimer
  *Version 1.0
  */
 	$requete = "DELETE FROM ".TABLE_MESSAGE." WHERE ".TABLE_MESS_PROPRIO." = $idMan AND ".TABLE_MESS_POS." = $pos";
 
- 	mysql_query ( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+ 	mysql_query ( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 }
 
 function Recup_Managers () {
 /*
- *Permet de récupérer les noms et id de tous les managers
- *Retourne la ressource de résultat du mysql_query contenant le résultat de la requête
+ *Permet de rÃ©cupÃ©rer les noms et id de tous les managers
+ *Retourne la ressource de rÃ©sultat du mysql_query contenant le rÃ©sultat de la requÃªte
  *Version 1.0
  */
 	$requete = "SELECT ".TABLE_MAN_ID.", ".TABLE_MAN_NOM." FROM ".TABLE_MANAGER;
 
-	$result = mysql_query ( $requete ) or die ( "Impossible d'exécuter la requête $requete" );
+	$result = mysql_query ( $requete ) or die ( "Impossible d'exÃ©cuter la requÃªte $requete" );
 
 	return $result;
 }

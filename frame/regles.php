@@ -6,7 +6,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <title>Règles</title>
+  <title>RÃ¨gles</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   <link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
 </head>
@@ -30,10 +30,10 @@
     <td width="78%"> <table border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td height="83"><img src="/UTR/design/spacer.gif" width="59" height="64"></td>
-          <td>Règles du jeu :<br /><br />
+          <td>RÃ¨gles du jeu :<br /><br />
           Lexique :<br /><br />
           <u>Shift</u> : passage de vitesse.<br />
-          <p>Le but de tout pilote, c'est de réaliser le shift parfait, c'est-à-dire passer la vitesse suivante au moment précis où la voiture perdra le moins de vitesse.</p>
+          <p>Le but de tout pilote, c'est de rÃ©aliser le shift parfait, c'est-Ã -dire passer la vitesse suivante au moment prÃ©cis oÃ¹ la voiture perdra le moins de vitesse.</p>
             </td>
         </tr>
       </table>

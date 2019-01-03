@@ -310,7 +310,7 @@ function InitialiserSelects(FormulaireCourant)
 	}
 	else
 	{
-			ChangeMessage("text","Si vous ne voyez pas les barres vertes, c'est que vous ne disposez pas d'un navigateur respectant les normes Internet.<br /><a href='http://www.getfirefox.com' target='_blank'>Essayez plutôt Firefox</a> !");
+			ChangeMessage("text","Si vous ne voyez pas les barres vertes, c'est que vous ne disposez pas d'un navigateur respectant les normes Internet.<br /><a href='http://www.getfirefox.com' target='_blank'>Essayez plutÃ´t Firefox</a> !");
 			document.all.text.width = 100;
 	}
 }
@@ -534,7 +534,7 @@ function annulModif(IdVoiture)
 
 function confirmationChangement()
 {
-	return confirm("Les changements coûteront "+document.getElementById("prix").value+" &euro;\nVoulez-vous continuer ?");
+	return confirm("Les changements coÃ»teront "+document.getElementById("prix").value+" &euro;\nVoulez-vous continuer ?");
 }
 	</script>
 </head>
@@ -565,11 +565,11 @@ function confirmationChangement()
 			<th colspan="2" class="titre">Ajouter/Changer/Retirer : <?php echo $typePiece['TypPi_Libelle'];?></th>
 		</tr>
 		<tr class="piece">
-			<th class="titre">Pièce actuelle</th>
+			<th class="titre">PiÃ¨ce actuelle</th>
 			<td>
 <?php
 	echo ($pieceStock!="")?	"<a href=\"../piece/fiche.php?IdPieceDetachee=".$pieceStock['IdPieceDetachee']."\">".$pieceStock['ModPi_NomModele']." ".$pieceStock['Marq_Libelle']."</a>":
-									"Pas de pièce installée";
+									"Pas de piÃ¨ce installÃ©e";
 ?>
 			</td>
 		</tr>
@@ -579,7 +579,7 @@ function confirmationChangement()
 <?php
 	if($pieceStock!="")
 	{?>
-					<option value="<?php echo $IdPieceInstallee?>">Laisser la pièce</option>
+					<option value="<?php echo $IdPieceInstallee?>">Laisser la piÃ¨ce</option>
 					<option value="0">Retirer</option>
 <?php }
 	else
@@ -591,7 +591,7 @@ function confirmationChangement()
 			</td>
 		</tr>
 		<tr>
-			<th>Coût total :</th>
+			<th>CoÃ»t total :</th>
 			<td><input type="text" size="6" id="prix" name="PrixTotal" value="0" readonly /> &euro;</td>
 		</tr>
 	</table>
@@ -601,7 +601,7 @@ function confirmationChangement()
 			<th colspan="4" class='titre'>Changements sur la voiture</th>
 		</tr>
 		<tr>
-			<th>Accélération</th>
+			<th>AccÃ©lÃ©ration</th>
 			<td>
 				<table cellspacing="0" cellpadding="0">
 					<tr height="10">
@@ -650,7 +650,7 @@ function confirmationChangement()
 			</td>
 		</tr>
 		<tr>
-			<th>Adhérence</th>
+			<th>AdhÃ©rence</th>
 			<td>
 				<table cellspacing="0" cellpadding="0">
 					<tr height="10">
@@ -662,7 +662,7 @@ function confirmationChangement()
 			</td>
 		</tr>
 		<tr>
-			<th>Solidité Moteur</th>
+			<th>SoliditÃ© Moteur</th>
 			<td>
 				<table cellspacing="0" cellpadding="0">
 					<tr height="10">
@@ -674,7 +674,7 @@ function confirmationChangement()
 			</td>
 		</tr>
 		<tr>
-			<th>Aspect Extérieur</th>
+			<th>Aspect ExtÃ©rieur</th>
 			<td>
 				<table cellspacing="0" cellpadding="0">
 					<tr height="10">
@@ -693,7 +693,7 @@ function confirmationChangement()
 			<td align="center" colspan="3"><br>
 				<input type="submit" value="Appliquer les changements">
 			</td>
-			<td align="center" colspan="3"><br><input type="button" onclick="annulModif('<?php echo $IdVoiture?>')" value="Revenir à la fiche"><br>
+			<td align="center" colspan="3"><br><input type="button" onclick="annulModif('<?php echo $IdVoiture?>')" value="Revenir Ã  la fiche"><br>
 			</td>
 		</tr>
 	</table>

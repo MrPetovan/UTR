@@ -88,7 +88,7 @@
           print_r($infoCourse);
           echo "</pre>";
         }
-  //Récupération de la liste des pièces pour chaque concurrent pour l'initialisation
+  //RÃ©cupÃ©ration de la liste des piÃ¨ces pour chaque concurrent pour l'initialisation
       for($i = 0; $i < $j; $i++)
       {
         $infoConcurrent[$i] = mysql_fetch_assoc($resultatInscriptionCourse);
@@ -103,7 +103,7 @@
         //foreach($infoConcurrent as $i => $infoConcurrentTour)
         //{
           echo ($debug)?"dispoVoiture(".$infoConcurrent[$i]['IdVoiture'].") = ".dispoVoiture($infoConcurrent[$i]['IdVoiture'])."<br />":"";
-      //Récupération de la liste des pièces détachées
+      //RÃ©cupÃ©ration de la liste des piÃ¨ces dÃ©tachÃ©es
           if(dispoVoiture($infoConcurrent[$i]['IdVoiture'])==1)
           {
             $infoConcurrent[$i]['IC_TempsParcours'] = 0;
@@ -125,7 +125,7 @@
                               Voit_IdTransmission,
                               Voit_IdEchappement,
                               Voit_IdPneus,
-                              Voit_IdPucedeContrôle
+                              Voit_IdPucedeContrÃ´le
                         FROM voiture
                         WHERE IdVoiture = '".$infoConcurrent[$i]['IdVoiture']."'";
             $infoPieces[$i] = mysql_fetch_assoc(mysql_query($requetePieces));
@@ -147,7 +147,7 @@
             }
             $infoConcurrent[$i]['IC_AccelerationInitiale'] *= (1+(niveauCarre($infoConcurrentTour['Pil_XPShifts']) - $niveauCritique['Shifts'])/100);
           }
-      //Voiture non opérationnelle
+      //Voiture non opÃ©rationnelle
           else
           {
             $infoConcurrent[$i]['IC_TempsParcours'] = "Non couru";
@@ -171,7 +171,7 @@
   //Suppression course si pas assez de participants
       if($Cou_NbCompetiteurs <= 1 )
       {
-  //Suppression des tronçons
+  //Suppression des tronÃ§ons
         if($debug == 0)
         {
           $infoTroncon['Tron_IdTronconSuivant'] = $infoCourse['Cou_IdTronconDepart'];
@@ -190,7 +190,7 @@
 
           }while(!empty($infoTroncon['Tron_IdTronconSuivant']));
 
-    //Remboursement des paris éventuels et suppression de l'inscription
+    //Remboursement des paris Ã©ventuels et suppression de l'inscription
           if($Cou_NbCompetiteurs)
           {
             $infoConcurrent = mysql_fetch_assoc($resultatInscriptionCourse);
@@ -219,7 +219,7 @@
         }
         $sujet = "Suppression de course";
 
-        $mess .= "La course ".$infoCourse['Cou_Nom']." a été annulée faute de concurrent";
+        $mess .= "La course ".$infoCourse['Cou_Nom']." a Ã©tÃ© annulÃ©e faute de concurrent";
 
         Envoyer_Message ( $infoCourse['Cou_IdManager'], $mess, 1, $sujet);
 
@@ -243,13 +243,13 @@
 
         if($debug)
         {
-          echo "Début tour : InfoConcurrent(";
+          echo "DÃ©but tour : InfoConcurrent(";
           foreach($infoConcurrent as $Concurrent)
             echo $Concurrent['IdInscriptionCourse']." , ";
           echo ")<br>";
         }
 
-    //Pour chaque tronçon
+    //Pour chaque tronÃ§on
         do
         {
           $requeteTronconCourant = "  SELECT IdTroncon, Tron_IdTronconSuivant, Sec_Nom, Sec_Longueur, Sec_TurboRequis, Sec_TypeXP, Sec_UsurePneus, Sec_UsureAmortisseurs, Sec_VitesseMaximum
@@ -261,7 +261,7 @@
 
           if($debug)
           {
-            echo "Début tronçon : InfoConcurrent(";
+            echo "DÃ©but tronÃ§on : InfoConcurrent(";
             foreach($infoConcurrent as $Concurrent)
               echo $Concurrent['IdInscriptionCourse']." , ";
             echo ")<br>";
@@ -269,12 +269,12 @@
       //Pour chaque concurrent
           foreach($infoConcurrent as $i => $infoConcurrentTour)
           {
-        //Récupération de la liste des pièces détachées
+        //RÃ©cupÃ©ration de la liste des piÃ¨ces dÃ©tachÃ©es
             if(isset($infoConcurrentTour['IdVoiture']))
             {
               if(dispoVoiture($infoConcurrentTour['IdVoiture'])!=1)
               {
-            //Voiture non opérationnelle
+            //Voiture non opÃ©rationnelle
                 $infoConcurrent[$i]['IC_TempsParcours'] = "Voiture HS";
                 unset($infoConcurrent[$i]['IdVoiture']);
                 $infoConcurrent[$i]['IC_Reputation'] = 0;
@@ -297,9 +297,9 @@
                                   Voit_IdOptiques,
                                   Voit_IdAileron,
                                   Voit_IdChassis,
-                                  Voit_IdPucedeContrôle,
+                                  Voit_IdPucedeContrÃ´le,
                                   Voit_IdNOS,
-                                  Voit_IdNéons,
+                                  Voit_IdNÃ©ons,
                                   Voit_IdSono
                             FROM voiture
                             WHERE IdVoiture = '".$infoConcurrent[$i]['IdVoiture']."'";
@@ -331,7 +331,7 @@
                   }
                 }
 
-          //Calcul des caractéristiques voiture+pilote
+          //Calcul des caractÃ©ristiques voiture+pilote
                 $Acceleration = $VitesseMaxVoiture = $Freinage = $Turbo = $Adherence = $SoliditeMoteur = $AspectExterieur = $Poids = 0;
 
                 foreach($infoPieces[$i] as $typePiece => $infoPiece)
@@ -356,11 +356,11 @@
 ?>
   <table border="1">
   <tr>
-    <th colspan="10">Caractéristiques du concurrent <?php echo $infoConcurrentTour['Pil_Nom']?></th>
+    <th colspan="10">CaractÃ©ristiques du concurrent <?php echo $infoConcurrentTour['Pil_Nom']?></th>
   </tr>
   <tr>
     <th>Acc</th><th>VitMax</th><th>Frein</th><th>Turbo</th><th>Adh</th><th>SolMot</th><th>Aspect</th><th>Poids</th>
-    <th>Accélération Initiale</th>
+    <th>AccÃ©lÃ©ration Initiale</th>
     <th>Vitesse Initiale</th>
   </tr>
   <tr>
@@ -437,9 +437,9 @@
                     echo ($debug>1)?"Vitesse max :":"";
                     if($distanceVitesseMax > $infoTroncon['Sec_Longueur'] / 2)
                     {
-                      echo ($debug>1)?"Dérapage":"";
+                      echo ($debug>1)?"DÃ©rapage":"";
                       $tempsTotalTroncon = $tempsVitesseMax + ($infoTroncon['Sec_Longueur'] - $distanceVitesseMax)/ $vitesseMax;
-              //Traitement dérapage
+              //Traitement dÃ©rapage
                       $infoConcurrent[$i]['IC_VitesseInitiale'] = $vitesseMax * (1-(($distanceVitesseMax*(1 - niveauCarre($infoConcurrentTour['Pil_XPSpe'])/100) - $infoTroncon['Sec_Longueur'] / 2)/($infoTroncon['Sec_Longueur'] / 2))/2);
 
                       if($debug>1)
@@ -451,10 +451,10 @@
                     }
                     else
                     {
-                      echo ($debug>1)?"Pas dérapage":"";
+                      echo ($debug>1)?"Pas dÃ©rapage":"";
                       $tempsTotalTroncon = $tempsVitesseMax + (($infoTroncon['Sec_Longueur'] / 2 - $distanceVitesseMax)/ $infoConcurrent[$i]['IC_VitesseInitiale']) + $infoTroncon['Sec_Longueur'] / $vitesseMax / 2 ;
 
-                      echo ($debug>1)?"Temps Tronçon : $tempsTotalTroncon = $tempsVitesseMax + ((".$infoTroncon['Sec_Longueur']." / 2 - $distanceVitesseMax)/ ".$infoConcurrent[$i]['IC_VitesseInitiale'].") + ".$infoTroncon['Sec_Longueur']." / $vitesseMax / 2<br>":"";
+                      echo ($debug>1)?"Temps TronÃ§on : $tempsTotalTroncon = $tempsVitesseMax + ((".$infoTroncon['Sec_Longueur']." / 2 - $distanceVitesseMax)/ ".$infoConcurrent[$i]['IC_VitesseInitiale'].") + ".$infoTroncon['Sec_Longueur']." / $vitesseMax / 2<br>":"";
                       $infoConcurrent[$i]['IC_VitesseInitiale'] = $vitesseMax;
                     }
                   }
@@ -465,9 +465,9 @@
 
                 $infoConcurrent[$i]['IC_TempsTour'][$indiceTour] += $tempsTotalTroncon*(1 - $malus / 100);
                 $infoConcurrent[$i]['IC_TempsParcours'] += $tempsTotalTroncon*(1 - $malus / 100);
-                echo ($debug>1)?"Temps tronçon : $tempsTotalTroncon s <br>":"";
+                echo ($debug>1)?"Temps tronÃ§on : $tempsTotalTroncon s <br>":"";
 
-    //Traitement expérience
+    //Traitement expÃ©rience
                 $typeXP = explode(",",$infoTroncon['Sec_TypeXP']);
                 $XPgagnes = $infoTroncon['Sec_Longueur'] / 10 / $infoCourse['Cou_NbTours'] / count($typeXP);
                 foreach($typeXP as $NomDomaine)
@@ -480,10 +480,10 @@
                 if($infoConcurrent[$i]['IC_VitesseMaximale'] < $infoConcurrent[$i]['IC_VitesseInitiale'])
                   $infoConcurrent[$i]['IC_VitesseMaximale'] = $infoConcurrent[$i]['IC_VitesseInitiale'];
 
-    //Traitement réputation
-                echo ($debug>1)?"Reputation tronçon : $AspectExterieur * ".$infoTroncon['Sec_Longueur']." m / 10<br>":"";
+    //Traitement rÃ©putation
+                echo ($debug>1)?"Reputation tronÃ§on : $AspectExterieur * ".$infoTroncon['Sec_Longueur']." m / 10<br>":"";
                 $reputationTroncon = $AspectExterieur * $infoTroncon['Sec_Longueur'] / 10;
-                echo ($debug>1)?"Réputation : ".$infoConcurrent[$i]['IC_Reputation']." += ".$reputationTroncon."points<br>":"";
+                echo ($debug>1)?"RÃ©putation : ".$infoConcurrent[$i]['IC_Reputation']." += ".$reputationTroncon."points<br>":"";
                 $infoConcurrent[$i]['IC_Reputation'] += $reputationTroncon;
 
     //Traitement usure
@@ -531,7 +531,7 @@
 
           if($debug)
           {
-            echo "Fin tronçon : InfoConcurrent(";
+            echo "Fin tronÃ§on : InfoConcurrent(";
             foreach($infoConcurrent as $Concurrent)
               echo $Concurrent['IdInscriptionCourse']." , ";
             echo ")<br>";
@@ -546,7 +546,7 @@
           echo ")<br>";
         }
       }
-  //Traitement des résultats
+  //Traitement des rÃ©sultats
 
       if($debug)
       {
@@ -579,11 +579,11 @@
           $infoConcurrent[$id]['Cou_SoldeCourseManager'] += $Cou_NbCompetiteurs * $infoCourse['Cou_PrixEngagement'] * (100 - $infoConcurrent[$id]['Pil_PourcentageGains'])/100;
           $infoConcurrent[$id]['Cou_SoldeCoursePilote'] += $Cou_NbCompetiteurs * $infoCourse['Cou_PrixEngagement'] * ($infoConcurrent[$id]['Pil_PourcentageGains'])/100;
 
-          $mess = "Félicitations, ".$infoConcurrent[$id]['Pil_Nom']." a remporté la course en arrivant 1er.\nIl empoche donc ".$infoConcurrent[$id]['Cou_SoldeCoursePilote']." &euro; et vous ".$infoConcurrent[$id]['Cou_SoldeCourseManager']." &euro; !\n";
+          $mess = "FÃ©licitations, ".$infoConcurrent[$id]['Pil_Nom']." a remportÃ© la course en arrivant 1er.\nIl empoche donc ".$infoConcurrent[$id]['Cou_SoldeCoursePilote']." &euro; et vous ".$infoConcurrent[$id]['Cou_SoldeCourseManager']." &euro; !\n";
          }
         else
         {
-          $mess = "Dommage, ".$infoConcurrent[$id]['Pil_Nom']." est arrivé $position ème de la course.\n";
+          $mess = "Dommage, ".$infoConcurrent[$id]['Pil_Nom']." est arrivÃ© $position Ã¨me de la course.\n";
         }
 
         if($debug)
@@ -598,7 +598,7 @@
                                   IC_Temps = '$temps'
                               WHERE IdInscriptionCourse = '".$infoConcurrent[$id]['IdInscriptionCourse']."'";
         mysql_query($requeteMAJInscriptionCourse)or die("Requete MAJ IC :".mysql_error());
-        if($debug) echo "Requête MAJ Inscription Course :<br>".$requeteMAJInscriptionCourse."<br>";
+        if($debug) echo "RequÃªte MAJ Inscription Course :<br>".$requeteMAJInscriptionCourse."<br>";
 
         $requeteMAJPilote= "  UPDATE pilote
                       SET  Pil_Reputation = Pil_Reputation + '".$infoConcurrent[$id]['IC_Reputation']."',
@@ -609,23 +609,23 @@
                           Pil_Solde = Pil_Solde + '".$infoConcurrent[$id]['Cou_SoldeCoursePilote']."'
                       WHERE IdPilote = '".$infoConcurrent[$id]['IdPilote']."'";
         mysql_query($requeteMAJPilote)or die("Requete MAJ Pilote :".mysql_error());
-        if($debug) echo "Requête MAJ Inscription Course :<br>".$requeteMAJPilote."<br>";
+        if($debug) echo "RequÃªte MAJ Inscription Course :<br>".$requeteMAJPilote."<br>";
 
         $requeteMAJManager="  UPDATE manager
                       SET   Man_Solde = Man_Solde + '".$infoConcurrent[$id]['Cou_SoldeCourseManager']."',
                           Man_Reputation = Man_Reputation + '".$infoConcurrent[$id]['IC_Reputation']."'
                       WHERE IdManager = '".$infoConcurrent[$id]['IdManager']."'";
         mysql_query($requeteMAJManager)or die("Requete MAJ Manager :".mysql_error());
-        if($debug) echo "Requête MAJ Inscription Course :<br>".$requeteMAJManager."<br>";
+        if($debug) echo "RequÃªte MAJ Inscription Course :<br>".$requeteMAJManager."<br>";
 
         $position++;
 
-        $sujet = "Résultat de la course ".$infoCourse['Cou_Nom'];
+        $sujet = "RÃ©sultat de la course ".$infoCourse['Cou_Nom'];
 
 
         if($temps == "Non couru")
         {
-          $mess .= "Votre voiture n\'était pas prête pour la course !";
+          $mess .= "Votre voiture n\'Ã©tait pas prÃªte pour la course !";
         }
         else
         {
@@ -635,7 +635,7 @@
           }
           if($temps == "Voiture HS")
           {
-            $mess .= "Votre voiture est tombée en rade pendant la course !";
+            $mess .= "Votre voiture est tombÃ©e en rade pendant la course !";
           }
           else
           {
@@ -644,7 +644,7 @@
             $vitesseMoyenne = round((longueurCourse($infoCourse['Cou_IdTronconDepart'])/ ($temps / 1000))*3.6,2);
 
             $mess .= "Vitesse moyenne : ".$vitesseMoyenne." km/h\n";
-            $mess .= "Vous avez gagné ".$infoConcurrent[$id]['IC_Reputation']." points de réputation.\n";
+            $mess .= "Vous avez gagnÃ© ".$infoConcurrent[$id]['IC_Reputation']." points de rÃ©putation.\n";
           }
         }
 if($debug) echo"</pre>";

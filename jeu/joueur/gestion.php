@@ -38,7 +38,7 @@ function verifForm(form)
 				chaineErreur += is_eMail(Jou_Email.value);
 				if(!is_Null(Jou_MotDePasse.value) && !is_Null(Jou_MotDePasse2.value))
 					if(Jou_MotDePasse.value != Jou_MotDePasse2.value)
-						chaineErreur += "\t- Les deux mots de passe entrés sont différents\n";
+						chaineErreur += "\t- Les deux mots de passe entrÃ©s sont diffÃ©rents\n";
 
 				if (chaineErreur != "")
 				{
@@ -125,7 +125,7 @@ Il y a une ou plusieurs erreurs dans le formulaire :<BR>
 <input type="hidden" name="verificationJs" value="false">
 	<table border="1">
 		<tr>
-			<th colspan="2">Modifier les informations du joueur n°<?php echo $infoJoueur['IdGestionJoueur'];?></td>
+			<th colspan="2">Modifier les informations du joueur nÂ°<?php echo $infoJoueur['IdGestionJoueur'];?></td>
 		</tr>
 		<tr>
 			<th>Pseudo<font color="#FF0000">*</font> :</th>
@@ -164,10 +164,10 @@ Il y a une ou plusieurs erreurs dans le formulaire :<BR>
 			<td><input type="text" name="Mail_Sujet" size="90" value="UTR : "></td>
 		</tr>
 		<tr>
-			<td colspan="2">Bonjour [pseudo],<br>ceci est un mail commun envoyé à tous les joueurs d'UTR.<br><hr>
+			<td colspan="2">Bonjour [pseudo],<br>ceci est un mail commun envoyÃ© Ã  tous les joueurs d'UTR.<br><hr>
 				<textarea name="Mail_Texte" cols="100" rows="10"></textarea><br>
 				<hr>
-				Si vous ne souhaitez plus jouer à UTR, faites-le savoir au Webmaster.<br>-----<br>Le Pacha
+				Si vous ne souhaitez plus jouer Ã  UTR, faites-le savoir au Webmaster.<br>-----<br>Le Pacha
 			</td>
 		</tr>
 	</table>

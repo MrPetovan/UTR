@@ -114,7 +114,7 @@
 	{
 ?>
 <br>
-Insertion effectuée avec succès !
+Insertion effectuÃ©e avec succÃ¨s !
 <br>
 <?php
 	}
@@ -132,7 +132,7 @@ Insertion effectuée avec succès !
 			<td colspan="2"><input type="text" size="30" name="Marq_Libelle" value="<?php echo $infoMarque['Marq_Libelle'];?>"></td>
 		</tr>
 		<tr>
-			<th>Type de pièces :</th>
+			<th>Type de piÃ¨ces :</th>
 			<td colspan="2"><select size="21" name="Marq_IdTypePiece[]" multiple="multiple">
 				<option value="-1"<?php echo (in_array("-1",$infoMarque['Marq_IdTypePiece']))?" selected":"";?>>Voiture</option>
 				<option value="0"<?php echo (in_array("0",$infoMarque['Marq_IdTypePiece']))?" selected":"";?>>Tout type</option>
@@ -154,7 +154,7 @@ Insertion effectuée avec succès !
 	{
 ?>
 		<tr>
-			<td><input type="radio" name="Ajouter_Bis" value="false" checked> Retourner à la liste
+			<td><input type="radio" name="Ajouter_Bis" value="false" checked> Retourner Ã  la liste
 			</td>
 			<td><input type="radio" name="Ajouter_Bis" value="true"> Ajouter une autre marque
 			</td>

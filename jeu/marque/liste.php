@@ -92,7 +92,7 @@ function changerFormulaire(indice)
 		<th colspan="4">Liste des marques</th>
 	</tr>
 	<tr>
-		<td id="0" onClick="changerFormulaire(0)" colspan="4" align="center">Marques de pièces</td>
+		<td id="0" onClick="changerFormulaire(0)" colspan="4" align="center">Marques de piÃ¨ces</td>
 	</tr>
 	<tr>
 		<td id="-1" onClick="changerFormulaire(-1)" colspan="4" align="center">Marques de voitures</td>
@@ -146,7 +146,7 @@ function changerFormulaire(indice)
 <br>
 <table border="0" id="remove0" class="liste">
 <tr class="piece">
-	<th>Marque de pièces</th>
+	<th>Marque de piÃ¨ces</th>
 	<th colspan="2"><a href="gestion.php?action=Ajouter&IdTypePiece=0">Ajouter une marque</a></th>
 </tr>
 <?php

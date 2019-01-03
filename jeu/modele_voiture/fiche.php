@@ -24,8 +24,8 @@
 		function confirmSuppr(form)
 		{
 			var action=form.action.value;
-			//if(action=="Supprimer") confirmation = "Etes-vous sûr de vouloir supprimer ce modèle de voiture ?";
-			var confirmation = "Etes-vous sûr de vouloir "+action+" ce modèle ?";
+			//if(action=="Supprimer") confirmation = "Etes-vous sÃ»r de vouloir supprimer ce modÃ¨le de voiture ?";
+			var confirmation = "Etes-vous sÃ»r de vouloir "+action+" ce modÃ¨le ?";
 			if(confirm(confirmation))
 			{
 				form.method="POST";
@@ -80,9 +80,9 @@
 															ModVoi_IdOptiques,
 															ModVoi_IdAileron,
 															ModVoi_IdChassis,
-															ModVoi_IdPucedeContrôle,
+															ModVoi_IdPucedeContrÃ´le,
 															ModVoi_IdNOS,
-															ModVoi_IdNéons,
+															ModVoi_IdNÃ©ons,
 															ModVoi_IdSono
 												FROM modele_voiture, marque
 												WHERE IdMarque = ModVoi_IdMarque
@@ -143,7 +143,7 @@
 
 	<table border="1">
 		<tr>
-			<th colspan="3">Fiche du modèle <?php echo $infoModeleVoiture['ModVoi_NomModele']?></th>
+			<th colspan="3">Fiche du modÃ¨le <?php echo $infoModeleVoiture['ModVoi_NomModele']?></th>
 		</tr>
 		<tr>
 			<th colspan="1">Marque :</th>
@@ -166,7 +166,7 @@
 			<td colspan="2"><?php echo $infoModeleVoiture['ModVoi_PoidsCarrosserie']?> kg</td>
 		</tr>
 		<tr>
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
+			<th><img alt="Aspect ExtÃ©rieur" src="../../images/aspect.gif"></th>
 			<td><?php echo $infoModeleVoiture['ModVoi_AspectExterieur'];?></td>
 		</tr>
 		<tr>
@@ -181,15 +181,15 @@
 <br>
 	<table border="1">
 		<tr>
-			<th>Caractéristiques techniques</th>
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th>CaractÃ©ristiques techniques</th>
+			<th><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 			<th><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
 			<th><img alt="Freinage" src="../../images/frein.gif"></th>
 			<th><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
+			<th><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
+			<th><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="CapacitÃ© Max" src="../../images/capamax.gif"></th>
 		</tr>
 		<tr>
 			<th></th>
@@ -206,18 +206,18 @@
 	<br>
 	<table border="1">
 		<tr>
-			<th colspan="2">Performances estimées</th>
+			<th colspan="2">Performances estimÃ©es</th>
 		</tr>
 		<tr>
 			<th>Vitesse maximum :</th>
 			<td><?php echo msTOKmh($infoModeleVoiture['ModVoi_VitesseMax']);?> km/h</td>
 		</tr>
 		<tr>
-			<th>de 0 à 100 km/h :</th>
+			<th>de 0 Ã  100 km/h :</th>
 			<td><?php echo TempsAcc($infoModeleVoiture['ModVoi_Acceleration'], $infoModeleVoiture['ModVoi_VitesseMax']);?> s</td>
 		</tr>
 		<tr>
-			<th>1000 m départ arrêté</th>
+			<th>1000 m dÃ©part arrÃªtÃ©</th>
 			<td>
 <?php
 	$vInit = 0;
@@ -245,26 +245,26 @@
 			<th colspan="2">Distances Freinage</th>
 		</tr>
 		<tr>
-			<th>à 50 km/h:</th>
+			<th>Ã  50 km/h:</th>
 			<td><?php echo DistanceFreinage($infoModeleVoiture['ModVoi_Freinage'],50);?> m</td>
 		</tr>
 		<tr>
-			<th>à 100 km/h:</th>
+			<th>Ã  100 km/h:</th>
 			<td><?php echo DistanceFreinage($infoModeleVoiture['ModVoi_Freinage'],100);?> m</td>
 		</tr>
 		<tr>
-			<th>à 150 km/h:</th>
+			<th>Ã  150 km/h:</th>
 			<td><?php echo DistanceFreinage($infoModeleVoiture['ModVoi_Freinage'],150);?> m</td>
 		</tr>
 	</table>
 <br>
 	<table border="1">
 		<tr>
-			<th colspan="6">Pièces installées :</th>
+			<th colspan="6">PiÃ¨ces installÃ©es :</th>
 		</tr>
 		<tr>
 			<th>Type</th>
-			<th>Modèle</th>
+			<th>ModÃ¨le</th>
 			<th>Marque</th>
 			<th>Duree de vie</th>
 		</tr>

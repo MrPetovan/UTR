@@ -68,7 +68,7 @@
                                         <td width=482
                 background="/UTR/design/nav.jpg"
                 height=34><div align="left">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp; &nbsp;Courses proposées</div></td>
+                                            &nbsp; &nbsp;Courses proposÃ©es</div></td>
                                         <td align=right
                 background="/UTR/design/navtile.jpg">&nbsp;</td>
                                         <td align=right
@@ -92,7 +92,7 @@
                                               <th class="titre">Niveau Min/Max</th>
                                               <th class="titre">Longueur</th>
                                               <th class="titre">Difficulte</th>
-                                              <th class="titre">Disponibilité</th>
+                                              <th class="titre">DisponibilitÃ©</th>
                                               <th class="titre">Organisateur</th>
                                             </tr>
                                             <?php
@@ -134,7 +134,7 @@
 		echo "Moyen";
 	else if($difficulte > 90)
 		echo "Difficile";
-	else echo "Très difficile";
+	else echo "TrÃ¨s difficile";
 ?>
                                               </td>
                                               <td>
@@ -181,7 +181,7 @@
                           <td width=482
                 background="/UTR/design/nav.jpg"
                 height=34><div align="left">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                              &nbsp; &nbsp;Courses complètes</div></td>
+                              &nbsp; &nbsp;Courses complÃ¨tes</div></td>
                           <td align=right
                 background="/UTR/design/navtile.jpg">&nbsp;</td>
                           <td align=right
@@ -199,7 +199,7 @@
 									<th class="titre">Date</th>
 									<th class="titre">Niveau Min/Max</th>
 									<th class="titre">Longueur</th>
-									<th class="titre">Difficulté</th>
+									<th class="titre">DifficultÃ©</th>
 									<th class="titre">Participants</th>
 									<th class="titre">Organisateur</th>
 								</tr>
@@ -235,7 +235,7 @@
 		echo "Moyen";
 	else if($difficulte > 90)
 		echo "Difficile";
-	else echo "Très difficile";
+	else echo "TrÃ¨s difficile";
 ?>
 									</td>
 									<td><?php echo $courseComplete['Cou_NbCompetiteursMax']?></td>
@@ -276,7 +276,7 @@
                           <td width=482
                 background="/UTR/design/nav.jpg"
                 height=34><div align="left">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                              &nbsp; &nbsp;Courses terminées</div></td>
+                              &nbsp; &nbsp;Courses terminÃ©es</div></td>
                           <td align=right
                 background="/UTR/design/navtile.jpg">&nbsp;</td>
                           <td align=right
@@ -298,7 +298,7 @@
                                 <th class="titre">Type</th>
                                 <th class="titre">Date</th>
                                 <th class="titre">Longueur</th>
-                                <th class="titre">Difficulté</th>
+                                <th class="titre">DifficultÃ©</th>
                                 <th class="titre">Participants</th>
                                 <th class="titre">Organisateur</th>
                               </tr>
@@ -337,7 +337,7 @@
 		echo "Moyen";
 	else if($difficulte > 90)
 		echo "Difficile";
-	else echo "Très difficile";
+	else echo "TrÃ¨s difficile";
 ?>
                                 </td>
                                 <td>

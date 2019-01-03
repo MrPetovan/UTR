@@ -49,7 +49,7 @@
 				 	<TABLE border = "1" width = "85%" cellspacing = "0">
 						<TR>
 							<TD align="center"><A HREF="messagerie.php?choix=<?php echo  POS_RECEPT ?>">Messagerie</A></TD>
-							<TD align="center"><A HREF="messagerie.php?choix=<?php echo  POS_ENVOI ?>">Messages Envoyés</A></TD>
+							<TD align="center"><A HREF="messagerie.php?choix=<?php echo  POS_ENVOI ?>">Messages EnvoyÃ©s</A></TD>
 							<TD align="center"><A HREF="messagerie.php?choix=<?php echo  POS_ARCHIVE ?>">Archives</A></TD>
 							<TD align="center"><A HREF="ecriremess.php">Ecrire Message</A></TD>
 						</TR>
@@ -84,7 +84,7 @@
 						<TD align="center">
 							<FORM method="post" action="ecriremess.php">
 								<INPUT type="hidden" name="id" value="<?php echo  $_GET["id"] ?>">
-								<INPUT type="submit" value="Répondre">
+								<INPUT type="submit" value="RÃ©pondre">
 							</FORM>
 						</TD>
 <?php
@@ -106,7 +106,7 @@
 	}
 	else {
 ?>
-	 						<TD align="center" width="25%">Expéditeur</TD>
+	 						<TD align="center" width="25%">ExpÃ©diteur</TD>
 <?php
 	}
 ?>

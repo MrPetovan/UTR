@@ -181,13 +181,13 @@
 			exit;
 		}
 //////////////////////////////////
-//Traitement des désinscriptions//
+//Traitement des dÃ©sinscriptions//
 //////////////////////////////////
-		if($_POST['action']=="Désinscrire")
+		if($_POST['action']=="DÃ©sinscrire")
 		{
 			$IC_IdPilote = $_POST['IC_IdPiloteDesinscrire'];
 
-//On regarde si des paris ont été lancés sur le pilote
+//On regarde si des paris ont Ã©tÃ© lancÃ©s sur le pilote
 			$requetePari= "	SELECT IdPari, Pari_Montant, Pari_IdManager
 									FROM pari, inscription_course
 									WHERE IdInscriptionCourse = Pari_IdInscriptionCourse
@@ -221,20 +221,20 @@
 ////////////////////////
 		if($_POST['action']=="Parier")
 		{
-//On regarde si il n'y a pas déjà un pari sur le même pilote
+//On regarde si il n'y a pas dÃ©jÃ  un pari sur le mÃªme pilote
 			$requetePari= "	SELECT IdPari, Pari_Montant
 									FROM pari
 									WHERE Pari_IdManager = '$IdManager'
 									AND Pari_IdInscriptionCourse = '$IdInscriptionCourse'";
 			$resultatPari = mysql_query($requetePari)or die(mysql_error());
-			//Si non, on crée un pari
+			//Si non, on crÃ©e un pari
 			if(mysql_num_rows($resultatPari)==0)
 			{
 				$requeteAjouterPari = "	INSERT INTO pari(Pari_IdManager, Pari_IdInscriptionCourse, Pari_Montant)
 										VALUES('$IdManager','$IdInscriptionCourse','$Pari_Montant')";
 				mysql_query($requeteAjouterPari) or die(mysql_error());
 			}
-			//Si oui, on ajoute au pari existant la valeur ajoutée
+			//Si oui, on ajoute au pari existant la valeur ajoutÃ©e
 			else
 			{
 				$infoPari = mysql_fetch_assoc($resultatPari);
@@ -253,7 +253,7 @@
 			exit;
 		}
 
-//Gestion des erreurs de saisie si la vérification n'a pas été faite en JavaScript
+//Gestion des erreurs de saisie si la vÃ©rification n'a pas Ã©tÃ© faite en JavaScript
 		if($verificationJs == "false")
 		{
 			$codesErreur = "";
@@ -273,10 +273,10 @@
 				exit();
 			}
 		}
-		//requête permettant la modification d'un course
+		//requÃªte permettant la modification d'un course
 		if($_POST["action"]=="Terminer")
 		{
-/*			echo "<pre>Tronçons :<br>";
+/*			echo "<pre>TronÃ§ons :<br>";
 			print_r($troncons);
 			echo "</pre>";*/
 			for($i = count($troncons)-1; $i >= 0 ;$i--)

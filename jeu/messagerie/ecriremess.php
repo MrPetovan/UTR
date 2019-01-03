@@ -42,7 +42,7 @@
 ?>
   <script language="javascript">
 function Confirm(obj) {
-	alert('suis là');
+	alert('suis lÃ ');
 	if ( obj.dest[].value == '' ) {
 		alert('erreur pas de destinataire');
 		return false;
@@ -75,7 +75,7 @@ function Confirm(obj) {
 				 	<TABLE border = "1" width = "85%" cellspacing = "0">
 						<TR>
 							<TD align="center"><A HREF="messagerie.php?choix=<?php echo  POS_RECEPT ?>">Messagerie</A></TD>
-							<TD align="center"><A HREF="messagerie.php?choix=<?php echo  POS_ENVOI ?>">Messages Envoyés</A></TD>
+							<TD align="center"><A HREF="messagerie.php?choix=<?php echo  POS_ENVOI ?>">Messages EnvoyÃ©s</A></TD>
 							<TD align="center"><A HREF="messagerie.php?choix=<?php echo  POS_ARCHIVE ?>">Archives</A></TD>
 							<TD align="center"><B><A HREF="ecriremess.php">Ecrire Message</A></B></TD>
 						</TR>
@@ -146,7 +146,7 @@ function Confirm(obj) {
 	if ( $rep ) {
 ?>
 						<TR>
-							<TD colspan="3"><input name="ajout_prec" type="checkbox" checked>Ajouter le texte du message précédent</TD>
+							<TD colspan="3"><input name="ajout_prec" type="checkbox" checked>Ajouter le texte du message prÃ©cÃ©dent</TD>
 						</TR>
 						<TR>
 							<TD colspan="3">

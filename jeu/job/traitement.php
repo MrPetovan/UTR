@@ -29,7 +29,7 @@
 	{
 		$IdJob = $_POST['IdJob'];
 		$Job_NomMasculin = addslashes(trim($_POST['Job_NomMasculin']));
-		$Job_NomFéminin = addslashes(trim($_POST['Job_NomFéminin']));
+		$Job_NomFÃ©minin = addslashes(trim($_POST['Job_NomFÃ©minin']));
 		$Job_Niveau = $_POST['Job_Niveau'];
 		$Job_Salaire = $_POST['Job_Salaire'];
 
@@ -37,7 +37,7 @@
 
 		$verificationJs=$_POST['verificationJs'];
 
-//Gestion des erreurs de saisie si la vérification n'a pas été faite en JavaScript
+//Gestion des erreurs de saisie si la vÃ©rification n'a pas Ã©tÃ© faite en JavaScript
 		if($verificationJs == "false")
 		{
 			$codesErreur = ",";
@@ -62,12 +62,12 @@
 		{
 			$requeteAjouterJob="	INSERT INTO job(
 												Job_NomMasculin,
-												Job_NomFéminin,
+												Job_NomFÃ©minin,
 												Job_Niveau,
 												Job_Salaire)
 											VALUES(
 												'$Job_NomMasculin',
-												'$Job_NomFéminin',
+												'$Job_NomFÃ©minin',
 												'$Job_Niveau',
 												'$Job_Salaire')";
 			mysql_query($requeteAjouterJob);
@@ -98,7 +98,7 @@
 		{
 			$requeteModifierJob = "	UPDATE job
 											SET	Job_NomMasculin = '$Job_NomMasculin',
-													Job_NomFéminin = '$Job_NomFéminin',
+													Job_NomFÃ©minin = '$Job_NomFÃ©minin',
 													Job_Niveau = '$Job_Niveau',
 													Job_Salaire = '$Job_Salaire'
 											WHERE IdJob = '$IdJob'";

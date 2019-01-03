@@ -7,7 +7,7 @@
 <?php
 function calcTemps($acc, $accInit, $vMax, $vInit, $dist) {
 
-	echo "test rÈussit $acc, $accInit, $vMax, $vInit, $dist<br />";
+	echo "test r√©ussit $acc, $accInit, $vMax, $vInit, $dist<br />";
 	$pi = pi();
 
 	$resultat = array();

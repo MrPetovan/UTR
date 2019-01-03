@@ -23,7 +23,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<title>UTR : Liste Modèles Voiture</title>
+	<title>UTR : Liste ModÃ¨les Voiture</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="../../include/style.css" rel="stylesheet" type="text/css" />
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
@@ -47,10 +47,10 @@
 		<br>
 <table border="0" width="90%" class="liste">
 	<tr>
-		<th colspan="5" class="titre">Liste des modèles de voiture<?php echo ($Man_Niveau >= 3)?" | <a href=\"gestion.php?action=Ajouter\">Ajouter un modèle</a>":""?></th>
+		<th colspan="5" class="titre">Liste des modÃ¨les de voiture<?php echo ($Man_Niveau >= 3)?" | <a href=\"gestion.php?action=Ajouter\">Ajouter un modÃ¨le</a>":""?></th>
 	</tr>
 	<tr class="piece">
-		<th class="titre">Marque | Modèle</th>
+		<th class="titre">Marque | ModÃ¨le</th>
 		<th class="titre">Niveau</th>
 		<th class="titre">Prix</th>
 		<th class="titre">Action</th>

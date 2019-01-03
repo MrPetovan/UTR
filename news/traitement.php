@@ -99,7 +99,7 @@ table width="100%">
 		$verificationJs=$_POST['verificationJs'];
 
 	//	print_r($_POST);
-//requÍte supprimant une news
+//requ√™te supprimant une news
 		if($_POST["action"]=="Supprimer")
 		{
 			if($_POST["reponse"]=="Oui")
@@ -129,7 +129,7 @@ table width="100%">
 			exit;
 		}
 		$codesErreur=",";
-//Gestion des erreurs de saisie si la vÈrification n'a pas ÈtÈ faite en JavaScript
+//Gestion des erreurs de saisie si la v√©rification n'a pas √©t√© faite en JavaScript
 /*		if($verificationJs == "false");
 		{
 			$codesErreur .=	is_NotNull($Bat_Numero,"102").",";
@@ -155,7 +155,7 @@ table width="100%">
 			exit();
 		}*/
 
-		//requËte permettant la modification d'un bÍtiment
+		//requ√®te permettant la modification d'un b√™timent
 		if($_POST["action"]=="Modifier")
 		{
 			$requeteModifierNews = "UPDATE news
@@ -169,7 +169,7 @@ table width="100%">
 		exit;
 		}
 
-//pour Ajouter un b‚timent
+//pour Ajouter un b√¢timent
 		if($_POST["action"]=="Ajouter")
 		{
 			$requeteAjouterNews = "	INSERT INTO news(	Nws_Titre,

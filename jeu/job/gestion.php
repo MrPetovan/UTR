@@ -31,7 +31,7 @@
 				var chaineErreur = "";
 
 				chaineErreur +=	is_NotNull(Job_NomMasculin.value,"Le nom masculin du job");
-				chaineErreur +=	is_NotNull(Job_NomFéminin.value,"Le nom féminin du job");
+				chaineErreur +=	is_NotNull(Job_NomFÃ©minin.value,"Le nom fÃ©minin du job");
 				chaineErreur +=	is_Number(Job_Niveau.value,'',"Le niveau du job");
 				chaineErreur +=	is_Number(Job_Salaire.value,'',"Le salaire du job");
 
@@ -79,7 +79,7 @@
 
 			$requeteInfoJob="	SELECT	IdJob,
 												Job_NomMasculin,
-												Job_NomFéminin,
+												Job_NomFÃ©minin,
 												Job_Niveau,
 												Job_Salaire
 									FROM job
@@ -118,7 +118,7 @@
 	{
 ?>
 <br>
-Insertion effectuée avec succès !
+Insertion effectuÃ©e avec succÃ¨s !
 <br>
 <?php
 	}
@@ -141,8 +141,8 @@ Insertion effectuée avec succès !
 			<td colspan="1"><input type="text" size="30" name="Job_NomMasculin" value="<?php echo $infoJob['Job_NomMasculin']?>"></td>
 		</tr>
 		<tr>
-			<th>Féminin<font color="#FF0000">*</font> :</th>
-			<td colspan="1"><input type="text" size="30" name="Job_NomFéminin" value="<?php echo $infoJob['Job_NomFéminin']?>"></td>
+			<th>FÃ©minin<font color="#FF0000">*</font> :</th>
+			<td colspan="1"><input type="text" size="30" name="Job_NomFÃ©minin" value="<?php echo $infoJob['Job_NomFÃ©minin']?>"></td>
 		</tr>
 		<tr>
 			<th colspan="2">Salaire<font color="#FF0000">*</font> :</th>
@@ -154,7 +154,7 @@ Insertion effectuée avec succès !
 	{
 ?>
 		<tr>
-			<td><input type="radio" name="Ajouter_Bis" value="false" checked> Retourner à la liste
+			<td><input type="radio" name="Ajouter_Bis" value="false" checked> Retourner Ã  la liste
 			</td>
 			<td><input type="radio" name="Ajouter_Bis" value="true"> Ajouter un autre job
 			</td>

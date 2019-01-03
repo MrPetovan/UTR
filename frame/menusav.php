@@ -20,7 +20,7 @@
                       <td> <p align="left"><img height=8
                         src="/UTR/design/fleche.gif"
                         width=8> <a
-                        href="/UTR/frame/regles.php">Les règles</a><br>
+                        href="/UTR/frame/regles.php">Les rÃ¨gles</a><br>
                           <img
                         height=8
                         src="/UTR/design/fleche.gif"
@@ -64,7 +64,7 @@
                           <br>
                           <img height=8
                         src="/UTR/design/fleche.gif"
-                        width=8> <a href="/UTR/jeu/piece/liste.php">Pieces détachées</a>
+                        width=8> <a href="/UTR/jeu/piece/liste.php">Pieces dÃ©tachÃ©es</a>
                           <br>
                           <img height=8
                         src="/UTR/design/fleche.gif"
@@ -76,7 +76,7 @@
                           <br>
                           <img height=8
                         src="/UTR/design/fleche.gif"
-                        width=8> <a href="/UTR/jeu/logout.php">Déconnexion</a>
+                        width=8> <a href="/UTR/jeu/logout.php">DÃ©connexion</a>
                           <br>
                         </p></td>
                     </tr>
@@ -107,7 +107,7 @@
       <div align="center">
         <table>
           <tr>
-            <th>Manager n°
+            <th>Manager nÂ°
               <?php echo $infoManager['IdManager']?>
             </th>
           </tr>
@@ -125,7 +125,7 @@
             </td>
           </tr>
           <tr>
-            <th>Réputation</th>
+            <th>RÃ©putation</th>
           </tr>
           <tr>
             <td>
@@ -138,7 +138,7 @@
           <tr>
             <td>
               <?php echo $infoManager['Man_Solde']?>
-              €</td>
+              â‚¬</td>
           </tr>
         </table>
         <?php

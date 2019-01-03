@@ -48,7 +48,7 @@
 			}
 
 			if ( isset ( $_POST["ajout_prec"] ) ) {
-				$mess = $mess."<BR /><BR /><BR />".$_POST["aut_prec"]." a écrit : <BR /><BR />".addslashes ( $_POST["mess_prec"] );
+				$mess = $mess."<BR /><BR /><BR />".$_POST["aut_prec"]." a Ã©crit : <BR /><BR />".addslashes ( $_POST["mess_prec"] );
 			}
 
 
@@ -71,25 +71,25 @@
 
 
 
-			$log = '<DIV align="center">Votre message a bien été envoyé</DIV><BR />';
+			$log = '<DIV align="center">Votre message a bien Ã©tÃ© envoyÃ©</DIV><BR />';
 
 			break;
 		case "sup" :
 			Supprimer_Message ( $_POST["id"] );
 
-			$log = '<DIV align="center">Le message a bien été supprimé</DIV><BR />';
+			$log = '<DIV align="center">Le message a bien Ã©tÃ© supprimÃ©</DIV><BR />';
 
 			break;
 		case "supall" :
 			Supprimer_Messages( $IdManager, $_POST["supall_pos"] );
 
-			$log = '<DIV align="center">Les messages ont bien été supprimés</DIV><BR />';
+			$log = '<DIV align="center">Les messages ont bien Ã©tÃ© supprimÃ©s</DIV><BR />';
 
 			break;
 		case "arc" :
 			Archiver_Message ( $_POST["id"] );
 
-			$log = '<DIV align="center">Votre message a bien été archivé</DIV><BR />';
+			$log = '<DIV align="center">Votre message a bien Ã©tÃ© archivÃ©</DIV><BR />';
 
 			break;
 		default :
@@ -137,12 +137,12 @@
 <?php
 	if ( $position == POS_ENVOI ) {
 ?>
-							<TD align="center"><B><A HREF="messagerie.php?choix=<?php echo  POS_ENVOI ?>">Messages Envoyés</A></B></TD>
+							<TD align="center"><B><A HREF="messagerie.php?choix=<?php echo  POS_ENVOI ?>">Messages EnvoyÃ©s</A></B></TD>
 <?php
 	}
 	else {
 ?>
-							<TD align="center"><A HREF="messagerie.php?choix=<?php echo  POS_ENVOI ?>">Messages Envoyés</A></TD>
+							<TD align="center"><A HREF="messagerie.php?choix=<?php echo  POS_ENVOI ?>">Messages EnvoyÃ©s</A></TD>
 <?php
 	}
 ?>
@@ -176,7 +176,7 @@
 	}
 	else {
 ?>
-							<TD align="center" width="25%">Expéditeur</TD>
+							<TD align="center" width="25%">ExpÃ©diteur</TD>
 <?php
 	}
 ?>
@@ -192,7 +192,7 @@
 <?php
 	if ( $position == POS_RECEPT ) {
 ?>
-							<TD align="center" width="5%">Rép</TD>
+							<TD align="center" width="5%">RÃ©p</TD>
 <?php
 	}
 ?>
@@ -204,12 +204,12 @@
 ?>
 						<TR>
 <?php
-		//si le message à été lu
+		//si le message Ã  Ã©tÃ© lu
 		if ( $ligne[TABLE_MESS_LU] == LU ) {
 ?>
 							<TD align="center" width="45%"><A HREF="liremess.php?id=<?php echo  $ligne[TABLE_MESS_ID] ?>"><?php echo  stripslashes ( $ligne[TABLE_MESS_SUJET] ) ?></A></TD>
 <?php
-			//si on est dans les messages envoyés
+			//si on est dans les messages envoyÃ©s
 			if ( $position == POS_ENVOI ) {
 ?>
 							<TD align="center" width="25%"><?php echo  Id_To_Nom( $ligne[TABLE_MESS_DEST] ) ?></TD>
@@ -219,7 +219,7 @@
 ?>
 							<TD align="center" width="25%"><?php echo  Id_To_Nom( $ligne[TABLE_MESS_EXP] ) ?></TD>
 <?php
-			}//end else message envoyé
+			}//end else message envoyÃ©
 ?>
 							<TD align="center" width="15%"><?php echo  $ligne[TABLE_MESS_DATE] ?></TD>
 <?php
@@ -228,7 +228,7 @@
 ?>
 							<TD align="center" width="45%"><A HREF="liremess.php?id=<?php echo  $ligne[TABLE_MESS_ID] ?>"><B><?php echo  stripslashes ( $ligne[TABLE_MESS_SUJET] ) ?></B></A></TD>
 <?php
-			//si on est dans les messages envoyés
+			//si on est dans les messages envoyÃ©s
 			if ( $position == POS_ENVOI ) {
 ?>
 							<TD align="center" width="25%"><B><?php echo  Id_To_Nom( $ligne[TABLE_MESS_DEST] ) ?></B></TD>
@@ -238,7 +238,7 @@
 ?>
 							<TD align="center" width="25%"><B><?php echo  Id_To_Nom( $ligne[TABLE_MESS_EXP] ) ?></B></TD>
 <?php
-			}//end else message envoyé
+			}//end else message envoyÃ©
 ?>
 							<TD align="center" width="15%"><B><?php echo  $ligne[TABLE_MESS_DATE] ?></B></TD>
 <?php

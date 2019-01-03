@@ -59,7 +59,7 @@
 
 	$requeteInfoJob = "	SELECT	IdJob,
 											Job_NomMasculin,
-											Job_NomFéminin,
+											Job_NomFÃ©minin,
 											Job_Niveau,
 											Job_Salaire
 									FROM job

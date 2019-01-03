@@ -54,18 +54,18 @@
 		$resultatInfoJoueur = mysql_query($requeteInfoJoueur) or die("Info Joueur : $requeteInfoJoueur<br>".mysql_error());
 		$infoJoueur = mysql_fetch_assoc($resultatInfoJoueur);
 
-//Récupération de l'id du joueur créé pour la suite
+//RÃ©cupÃ©ration de l'id du joueur crÃ©Ã© pour la suite
 		$IdJoueur = $infoJoueur['IdJoueur'];
 		$Man_Nom = $infoJoueur['Jou_Pseudo'];
 
-//Détermination du job
+//DÃ©termination du job
 		$requeteChoixJob = " SELECT IdJob FROM job WHERE Job_Niveau = '1'";
 
 		$resultatChoixJob = mysql_query($requeteChoixJob) or die("Requete Choix Job : $requeteChoixJob<br>".mysql_error());
 		while($infoJob = mysql_fetch_row($resultatChoixJob))
 			$IdJob[] = $infoJob[0];
 
-//Création du manager
+//CrÃ©ation du manager
 		$requeteAjouterManager = "	INSERT INTO manager(Man_Nom,
 														Man_Sexe,
 														Man_Niveau,
@@ -84,7 +84,7 @@
 														'$IdJoueur')";
 		mysql_query($requeteAjouterManager)or die(mysql_error());
 
-//Récupération de l'id du manager pour la suite
+//RÃ©cupÃ©ration de l'id du manager pour la suite
 		$IdManager = mysql_fetch_row(mysql_query("SELECT MAX(IdManager) FROM manager"));
 		$IdManager = $IdManager[0];
 
@@ -153,8 +153,8 @@
 						<tr>
 							<td width="61"><img src="/UTR/design/spacer.gif" width="61" height="64"></td>
 							<td width="329">
-								<p>Votre voiture et votre pilote ont été créés !</p>
-								<p>Vous pouvez maintenant commencer à jouer <a href="accueilJeu.php">en vous loguant</a>.</p>
+								<p>Votre voiture et votre pilote ont Ã©tÃ© crÃ©Ã©s !</p>
+								<p>Vous pouvez maintenant commencer Ã  jouer <a href="accueilJeu.php">en vous loguant</a>.</p>
 								<p>Bon jeu !</p>
 							</td>
                 </tr>

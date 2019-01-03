@@ -13,7 +13,7 @@
 ?>
 <html>
 <head>
-	<title>UTR : Fiche d'un modele de pièce</title>
+	<title>UTR : Fiche d'un modele de piÃ¨ce</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="../../include/style.css" rel="stylesheet" type="text/css" />
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
@@ -21,8 +21,8 @@
 		function confirmSuppr(form)
 		{
 			var action=form.action.value;
-			//if(action=="Supprimer") confirmation = "Etes-vous sûr de vouloir supprimer ce modele_piece ?";
-			var confirmation = "Etes-vous sûr de vouloir "+action+" ce modèle ?";
+			//if(action=="Supprimer") confirmation = "Etes-vous sÃ»r de vouloir supprimer ce modele_piece ?";
+			var confirmation = "Etes-vous sÃ»r de vouloir "+action+" ce modÃ¨le ?";
 			if(confirm(confirmation))
 			{
 				form.method="POST";
@@ -84,7 +84,7 @@
 		$resultatInfoModelePiece=mysql_query($requeteInfoModelePiece) or die(mysql_error());
 		$infoModelePiece=mysql_fetch_assoc($resultatInfoModelePiece);
 ?>
-<a href="liste.php?IdTypePiece=<?php echo $infoModelePiece['ModPi_IdTypePiece']?>"><< Revenir à la liste</a>
+<a href="liste.php?IdTypePiece=<?php echo $infoModelePiece['ModPi_IdTypePiece']?>"><< Revenir Ã  la liste</a>
 <br>
 <br>
 <div align="center">
@@ -93,7 +93,7 @@
 
 	<table border="1">
 		<tr>
-			<th colspan="2">Fiche du Modèle <?php echo $infoModelePiece['ModPi_NomModele']?></th>
+			<th colspan="2">Fiche du ModÃ¨le <?php echo $infoModelePiece['ModPi_NomModele']?></th>
 		</tr>
 		<tr>
 			<th>Marque :</th>
@@ -118,22 +118,22 @@
 	<br>
 	<table border="1">
 		<tr>
-			<th>Caractéristiques</th>
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th>CaractÃ©ristiques</th>
+			<th><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 			<th><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
 			<th><img alt="Freinage" src="../../images/frein.gif"></th>
 			<th><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
+			<th><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
+			<th><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="Aspect ExtÃ©rieur" src="../../images/aspect.gif"></th>
+			<th><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="CapacitÃ© Max" src="../../images/capamax.gif"></th>
 			<th><img alt="Poids" src="../../images/poids.gif"></th>
-			<th><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+			<th><img alt="DurÃ©e de vie Max" src="../../images/dureeviemax.gif"></th>
 			<th><img alt="Prix Neuve" src="../../images/prix.gif"></th>
 		</tr>
 		<tr>
-			<th>Données standard</th>
+			<th>DonnÃ©es standard</th>
 			<td><?php echo $infoModelePiece['ModPi_Acceleration'];?></td>
 			<td><?php echo $infoModelePiece['ModPi_VitesseMax'];?></td>
 			<td><?php echo $infoModelePiece['ModPi_Freinage'];?></td>

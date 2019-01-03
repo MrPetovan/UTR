@@ -44,7 +44,7 @@
 													Man_Niveau,
 													Man_Solde,
 													Job_NomMasculin,
-													Job_NomFéminin,
+													Job_NomFÃ©minin,
 													Job_Salaire,
 													Pil_Nom,
 													Pil_Age,
@@ -74,7 +74,7 @@
 <br>
 <table border="0" class="liste">
 	<tr class="piece">
-		<th colspan="4" class="titre">Informations générales</td>
+		<th colspan="4" class="titre">Informations gÃ©nÃ©rales</td>
 	</tr>
 	<tr class="piece">
 		<th>Nom du manager/pilote</th>
@@ -103,7 +103,7 @@
 		<td colspan="2"><?php echo $infoJoueur['Pil_Age'];?> ans</td>
 	</tr>
 	<tr class="piece">
-		<th>Réputation</th>
+		<th>RÃ©putation</th>
 		<td colspan="2"><?php echo $infoJoueur['Pil_Reputation'];?></td>
 	</tr>
 <?php
@@ -122,7 +122,7 @@
 			}
 ?>
 	<tr>
-		<th class="titre" colspan="3">Compétences</th>
+		<th class="titre" colspan="3">CompÃ©tences</th>
 	</tr>
 	<tr class="piece">
 		<th></th>
@@ -145,12 +145,12 @@
 		<td><?php echo $infoJoueur['Pil_XPVirage'];?> pts</td>
 	</tr>
 	<tr class="piece">
-		<th>Spécial</th>
+		<th>SpÃ©cial</th>
 		<td><?php echo niveauAdd($infoJoueur['Pil_XPSpe'],1000);?></td>
 		<td><?php echo $infoJoueur['Pil_XPSpe'];?> pts</td>
 	</tr>
 	<tr class="piece">
-		<th>Général</th>
+		<th>GÃ©nÃ©ral</th>
 		<td><?php echo 	niveauAdd($infoJoueur['Pil_XPShifts'],1000)+
 					niveauAdd($infoJoueur['Pil_XPFreinage'],1000)+
 					niveauAdd($infoJoueur['Pil_XPVirage'],1000)+
@@ -256,7 +256,7 @@
 		<td width="67"><?php echo $infoJoueur['Marq_Libelle'];?></td>
 	</tr>
 	<tr class="piece">
-		<th>Modèle</th>
+		<th>ModÃ¨le</th>
 		<td><?php echo $infoJoueur['ModVoi_NomModele'];?></td>
 	</tr>
 	<tr class="piece">
@@ -272,10 +272,10 @@
 			{
 ?>
 	<tr>
-		<th colspan="2" class="titre">Caractéristiques</th>
+		<th colspan="2" class="titre">CaractÃ©ristiques</th>
 	</tr>
 	<tr class="piece">
-		<th>Accélération</th>
+		<th>AccÃ©lÃ©ration</th>
 		<td><?php echo $infoVoiture['Voit_Acceleration'];?></td>
 	</tr>
 	<tr class="piece">
@@ -291,26 +291,26 @@
 		<td><?php echo $infoVoiture['Voit_Turbo'];?></td>
 	</tr>
 	<tr class="piece">
-		<th>Adhérence</th>
+		<th>AdhÃ©rence</th>
 		<td><?php echo $infoVoiture['Voit_Adherence'];?></td>
 	</tr>
 	<tr class="piece">
-		<th>Solidité Moteur</th>
+		<th>SoliditÃ© Moteur</th>
 		<td><?php echo $infoVoiture['Voit_SoliditeMoteur'];?></td>
 	</tr>
 <?php
 			}
 ?>
 	<tr class="piece">
-		<th>Aspect Extérieur</th>
+		<th>Aspect ExtÃ©rieur</th>
 		<td><?php echo $infoVoiture['Voit_AspectExterieur'];?></td>
 	</tr>
 	<tr class="piece">
-		<th>Capacité Moteur</th>
+		<th>CapacitÃ© Moteur</th>
 		<td><?php echo $infoVoiture['Voit_CapaciteMoteur'];?></td>
 	</tr>
 	<tr class="piece">
-		<th>Capacité Maximum</th>
+		<th>CapacitÃ© Maximum</th>
 		<td><?php echo $infoVoiture['Voit_CapaciteMax'];?></td>
 	</tr>
 	<tr class="piece">
@@ -339,7 +339,7 @@
 <br>
 <table border="0" class="liste">
 	<tr class="piece">
-		<th class="titre" colspan="5">Informations générales</th>
+		<th class="titre" colspan="5">Informations gÃ©nÃ©rales</th>
 	</tr>
 	<tr class="piece">
 		<th>Nom du manager</th>
@@ -348,11 +348,11 @@
 		<td colspan="2"><?php echo $infoJoueur['Man_Solde'];?> &euro;</td>
 	</tr>
 	<tr class="piece">
-		<th colspan="2">Nombre de voitures possédées</th>
+		<th colspan="2">Nombre de voitures possÃ©dÃ©es</th>
 		<td colspan="3"><?php echo $infoJoueur['Man_NbVoiture']?></td>
 	</tr>
 	<tr class="piece">
-		<th colspan="2">Nombre de pilotes engagés</th>
+		<th colspan="2">Nombre de pilotes engagÃ©s</th>
 		<td colspan="3"><?php echo $infoJoueur['Man_NbPilote']?></td>
 	</tr>
 	<tr class="piece">
@@ -367,7 +367,7 @@
 ?>
 <br />
 <div class="actions">
-<br/>Classement général
+<br/>Classement gÃ©nÃ©ral
 <br />
 <br />
 	<table>
@@ -383,16 +383,16 @@
 										WHERE Man_Niveau < 3
 										ORDER BY Man_Reputation DESC
 										LIMIT 0,10";
-	$resultatTop10ManagersReput = mysql_query($requeteTop10ManagersReput) or die("Requête Top 10 Managers Réputation".mysql_error());
+	$resultatTop10ManagersReput = mysql_query($requeteTop10ManagersReput) or die("RequÃªte Top 10 Managers RÃ©putation".mysql_error());
 ?>
 				<table border="0" class="liste">
 					<tr>
-						<th colspan="3" class="titre">Top 10 Réputation</th>
+						<th colspan="3" class="titre">Top 10 RÃ©putation</th>
 					</tr>
 					<tr>
 						<th class="titre">#</th>
 						<th class="titre">Nom</th>
-						<th class="titre">Réputation</th>
+						<th class="titre">RÃ©putation</th>
 					</tr>
 <?php
 	$i = 1;
@@ -417,7 +417,7 @@
 										WHERE Man_Niveau < 3
 										ORDER BY Man_Solde DESC
 										LIMIT 0,10";
-	$resultatTop10ManagersSolde = mysql_query($requeteTop10ManagersSolde) or die("Requête Top 10 Managers Solde".mysql_error());
+	$resultatTop10ManagersSolde = mysql_query($requeteTop10ManagersSolde) or die("RequÃªte Top 10 Managers Solde".mysql_error());
 ?>
 				<table border="0" class="liste">
 					<tr>
@@ -450,16 +450,16 @@
 											FROM pilote
 											ORDER BY Pil_Reputation DESC
 											LIMIT 0,10";
-	$resultatTop10PilotesReput = mysql_query($requeteTop10PilotesReput) or die("Requête Top 10 Pilotes Réputation".mysql_error());
+	$resultatTop10PilotesReput = mysql_query($requeteTop10PilotesReput) or die("RequÃªte Top 10 Pilotes RÃ©putation".mysql_error());
 ?>
 				<table border="0" class="liste">
 					<tr>
-						<th colspan="3" class="titre">Top 10 Réputation</th>
+						<th colspan="3" class="titre">Top 10 RÃ©putation</th>
 					</tr>
 					<tr>
 						<th class="titre">#</th>
 						<th class="titre">Nom</th>
-						<th class="titre">Réputation</th>
+						<th class="titre">RÃ©putation</th>
 					</tr>
 <?php
 	$i = 1;
@@ -484,11 +484,11 @@
 										FROM pilote
 										ORDER BY Pil_Solde DESC
 										LIMIT 0,10";
-	$resultatTop10PilotesSolde = mysql_query($requeteTop10PilotesSolde) or die("Requête Top 10 Pilotes Solde".mysql_error());
+	$resultatTop10PilotesSolde = mysql_query($requeteTop10PilotesSolde) or die("RequÃªte Top 10 Pilotes Solde".mysql_error());
 ?>
 				<table border="0" class="liste">
 					<tr>
-						<th colspan="3" class="titre">Top 10 Réputation</th>
+						<th colspan="3" class="titre">Top 10 RÃ©putation</th>
 					</tr>
 					<tr>
 						<th class="titre">#</th>

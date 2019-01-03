@@ -8,7 +8,7 @@ function calcTemps(acc,vmax,dist)
 	for(k=0;k<=2;k++) {x[k]=0};
 	with (Math)
 	{
-		//a x t^3 + b x t² + c x t + d = 0
+		//a x t^3 + b x tÂ² + c x t + d = 0
 		var a = -a*a/12/vmax;
 		var b = a/2;
 		var c = 0;

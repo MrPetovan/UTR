@@ -13,7 +13,7 @@
 ?>
 <html>
 <head>
-	<title>UTR : Modifier un modèle de voiture</title>
+	<title>UTR : Modifier un modÃ¨le de voiture</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="../style/style.css" rel="stylesheet" type="text/css" />
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
@@ -155,9 +155,9 @@
 																ModVoi_IdOptiques,
 																ModVoi_IdAileron,
 																ModVoi_IdChassis,
-																ModVoi_IdPucedeContrôle,
+																ModVoi_IdPucedeContrÃ´le,
 																ModVoi_IdNOS,
-																ModVoi_IdNéons,
+																ModVoi_IdNÃ©ons,
 																ModVoi_IdSono
 												FROM modele_voiture, marque
 												WHERE IdMarque = ModVoi_IdMarque
@@ -193,7 +193,7 @@
 	{
 ?>
 <br>
-Insertion effectuée avec succès !
+Insertion effectuÃ©e avec succÃ¨s !
 <br>
 <?php
 	}
@@ -204,7 +204,7 @@ Insertion effectuée avec succès !
 <input type="hidden" name="verificationJs" value="false">
 	<table border="1">
 		<tr>
-			<th colspan="3"><?php echo ($_GET['action']=="Ajouter")?"Ajouter un modèle":"Modifier le modèle de la voiture ".$infoModeleVoiture['Marq_Libelle']." ".$infoModeleVoiture['ModVoi_NomModele']?></td>
+			<th colspan="3"><?php echo ($_GET['action']=="Ajouter")?"Ajouter un modÃ¨le":"Modifier le modÃ¨le de la voiture ".$infoModeleVoiture['Marq_Libelle']." ".$infoModeleVoiture['ModVoi_NomModele']?></td>
 		</tr>
 		<tr>
 			<th>Marque :</th>
@@ -222,7 +222,7 @@ Insertion effectuée avec succès !
 			</select></td>
 		</tr>
 		<tr>
-			<th>Modèle<font color="#FF0000">*</font> :</th>
+			<th>ModÃ¨le<font color="#FF0000">*</font> :</th>
 			<td colspan="2"><input type="text" size="30" name="ModVoi_NomModele" value="<?php echo $infoModeleVoiture['ModVoi_NomModele'];?>"></td>
 		</tr>
 		<tr>
@@ -250,7 +250,7 @@ Insertion effectuée avec succès !
 
 <table border="0">
 	<tr>
-		<th colspan="18">Pièces par défaut</th>
+		<th colspan="18">PiÃ¨ces par dÃ©faut</th>
 	</tr>
 	<tr>
 <?php
@@ -310,7 +310,7 @@ Insertion effectuée avec succès !
 			<th colspan="13"><?php echo $TypPi_Libelle?></th>
 		</tr>
 		<tr>
-			<th>Modèle existant : <input type="radio" name="ajouterModele[<?php echo $IdTypePiece?>]" onClick="choixAjouter(<?php echo $IdTypePiece?>,this.value,this.form)" value="false" checked></th>
+			<th>ModÃ¨le existant : <input type="radio" name="ajouterModele[<?php echo $IdTypePiece?>]" onClick="choixAjouter(<?php echo $IdTypePiece?>,this.value,this.form)" value="false" checked></th>
 			<td colspan="12">
 				<select size="1" id="ModPiExist<?php echo $IdTypePiece?>" name="ModVoi_IdModelePiece[<?php echo $IdTypePiece?>]">
 					<option value="">N/A</option>
@@ -328,9 +328,9 @@ Insertion effectuée avec succès !
 			</td>
 		</tr>
 		<tr>
-			<th rowspan="2">Ajouter Modèle : <input type="radio" name="ajouterModele[<?php echo $IdTypePiece?>]" onClick="choixAjouter(<?php echo $IdTypePiece?>,this.value,this.form)" value="true"></th>
+			<th rowspan="2">Ajouter ModÃ¨le : <input type="radio" name="ajouterModele[<?php echo $IdTypePiece?>]" onClick="choixAjouter(<?php echo $IdTypePiece?>,this.value,this.form)" value="true"></th>
 			<th colspan="6">Marque</th>
-			<th colspan="6">Modèle</th>
+			<th colspan="6">ModÃ¨le</th>
 		<tr>
 
 			<td colspan="6"><select size="1" id="ModPi<?php echo $IdTypePiece?>" name="ModPi_IdMarque[<?php echo $IdTypePiece?>]" disabled>
@@ -349,18 +349,18 @@ Insertion effectuée avec succès !
 			<td colspan="6"><input type="text" id="ModPi<?php echo $IdTypePiece?>" size="30" name="ModPi_NomModele[<?php echo $IdTypePiece?>]" value="<?php echo $infoModelePiece['ModPi_NomModele'];?>" disabled></td>
 		</tr>
 		<tr>
-			<th rowspan="2">Caractéristiques</th>
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th rowspan="2">CaractÃ©ristiques</th>
+			<th><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 			<th><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
 			<th><img alt="Freinage" src="../../images/frein.gif"></th>
 			<th><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
+			<th><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
+			<th><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="Aspect ExtÃ©rieur" src="../../images/aspect.gif"></th>
+			<th><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="CapacitÃ© Max" src="../../images/capamax.gif"></th>
 			<th><img alt="Poids" src="../../images/poids.gif"></th>
-			<th><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+			<th><img alt="DurÃ©e de vie Max" src="../../images/dureeviemax.gif"></th>
 			<th><img alt="Prix Neuve" src="../../images/prix.gif"></th>
 		</tr>
 		<tr>
@@ -388,9 +388,9 @@ Insertion effectuée avec succès !
 	{
 ?>
 		<tr>
-			<td><input type="radio" name="Ajouter_Bis" value="false" checked> Retourner à la fiche
+			<td><input type="radio" name="Ajouter_Bis" value="false" checked> Retourner Ã  la fiche
 			</td>
-			<td><input type="radio" name="Ajouter_Bis" value="true"> Ajouter un autre modèle
+			<td><input type="radio" name="Ajouter_Bis" value="true"> Ajouter un autre modÃ¨le
 			</td>
 		</tr>
 <?php

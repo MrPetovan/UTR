@@ -105,7 +105,7 @@
 
 		$verificationJs=$_POST['verificationJs'];
 
-//requête supprimant une news
+//requÃªte supprimant une news
 		if($_POST["action"]=="Supprimer")
 		{
 			if($_POST["reponse"]=="Oui")
@@ -205,7 +205,7 @@
 			exit;
 		}
 
-		//Gestion des erreurs de saisie si la vérification n'a pas été faite en JavaScript
+		//Gestion des erreurs de saisie si la vÃ©rification n'a pas Ã©tÃ© faite en JavaScript
 		if($verificationJs == "false");
 		{
 			$codesErreur=",";

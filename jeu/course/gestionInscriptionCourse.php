@@ -57,7 +57,7 @@
 ?>
 <html>
 <head>
-	<title>UTR : Gérer une course</title>
+	<title>UTR : GÃ©rer une course</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="../style/style.css" rel="stylesheet" type="text/css" />
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
@@ -139,7 +139,7 @@
 <input type="hidden" name="IdCourse" value="<?php echo $infoCourse["IdCourse"]; ?>">
 <br>
 <input type="button" onClick="formulaire(1)" value="Inscrire un de ses pilotes">
-<input type="button" onClick="formulaire(2)" value="Désinscrire un de ses pilotes">
+<input type="button" onClick="formulaire(2)" value="DÃ©sinscrire un de ses pilotes">
 <input type="button" onClick="formulaire(3)" value="Parier sur un pilote">
 <br>
 <br>
@@ -171,7 +171,7 @@
 	</table>
 	<br><br>
 <!--////////////////////////////////////
-//Formulaire d'inscription à la course//
+//Formulaire d'inscription Ã  la course//
 /////////////////////////////////////-->
 	<table width="100%" border="1" id="formulaire1">
 		<tr>
@@ -209,7 +209,7 @@
 	if(count($piloteDisponible)==0)
 	{
 ?>
-Aucun pilote libre ce jour-là
+Aucun pilote libre ce jour-lÃ 
 <?php
 	}
 	else
@@ -265,7 +265,7 @@ Aucun pilote libre ce jour-là
 	if(count($voitureDisponible)==0)
 	{
 ?>
-Aucune voiture libre ce jour-là
+Aucune voiture libre ce jour-lÃ 
 <?php
 	}
 	else
@@ -292,10 +292,10 @@ Aucune voiture libre ce jour-là
 
 	<table width="100%" border="1" id="formulaire2">
 		<tr>
-			<td>Désinscrire un de ses pilotes</td>
+			<td>DÃ©sinscrire un de ses pilotes</td>
 		</tr>
 		<tr>
-			<td>Pilote à désinscrire :
+			<td>Pilote Ã  dÃ©sinscrire :
 <?php
 	$requetePilotesInscrits = "	SELECT IdPilote, Pil_Nom
 											FROM pilote
@@ -324,7 +324,7 @@ Aucun pilote inscrit
 ?>
 		</tr>
 		<tr>
-			<td><input type="Submit" name="action" value="Désinscrire" <?php if(mysql_num_rows($resultatPilotesInscrits)!="1")echo "disabled";?>></td>
+			<td><input type="Submit" name="action" value="DÃ©sinscrire" <?php if(mysql_num_rows($resultatPilotesInscrits)!="1")echo "disabled";?>></td>
 		</tr>
 	</table>
 

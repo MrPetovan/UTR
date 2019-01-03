@@ -21,7 +21,7 @@
 				chaineErreur += is_NotNull(Jou_MotDePasse2.value,"Le 2e mot de passe");
 				if(!is_Null(Jou_MotDePasse.value) && !is_Null(Jou_MotDePasse2.value))
 					if(Jou_MotDePasse.value != Jou_MotDePasse2.value)
-						chaineErreur += "\t- Les deux mots de passe entrés sont différents\n";
+						chaineErreur += "\t- Les deux mots de passe entrÃ©s sont diffÃ©rents\n";
 
 				if (chaineErreur != "")
 				{
@@ -92,7 +92,7 @@
 		{
 
 ?>
-		<br><br>Ce login existe déjà, veuillez en choisir un autre.</b><br>
+		<br><br>Ce login existe dÃ©jÃ , veuillez en choisir un autre.</b><br>
 <?php
 			unset($_SESSION['Erreur_Inscription']);
 			unset($_SESSION['Post']);
@@ -114,7 +114,7 @@
 		}
 	}
 ?>
-									<br><blockquote>Une fois l'inscription enregistrée, un mail vous sera envoyé à l'adresse e-mail que vous aurez entrée. Ce mail contient un lien qu'il vous faudra cliquer pour valider l'inscription.</blockquote>
+									<br><blockquote>Une fois l'inscription enregistrÃ©e, un mail vous sera envoyÃ© Ã  l'adresse e-mail que vous aurez entrÃ©e. Ce mail contient un lien qu'il vous faudra cliquer pour valider l'inscription.</blockquote>
 								</td>
 							</tr>
 							<tr>
@@ -127,13 +127,13 @@
 										<td colspan="3"><input type="text" name="Man_Nom" value="<?php echo $erreur['Man_Nom']?>"></td>
 									</tr>
 									<tr>
-										<th>Login (8 caractères max) : </th>
+										<th>Login (8 caractÃ¨res max) : </th>
 										<td colspan="3"><input type="text" size="8" maxlength="8" name="Jou_Login" value="<?php echo $erreur['Jou_Login']?>"></td>
 									</tr>
 									<tr>
-										<th>Mot de passe (8 caractères max) : </th>
+										<th>Mot de passe (8 caractÃ¨res max) : </th>
 										<td width="114"><input type="password" size="8" maxlength="8" name="Jou_MotDePasse" value="<?php echo $erreur['Jou_MotDePasse']?>"></td>
-										<th width="198">Mot de passe (vérification) : </th>
+										<th width="198">Mot de passe (vÃ©rification) : </th>
 										<td width="118"><input type="password" size="8" maxlength="8" name="Jou_MotDePasse2" value="<?php echo $erreur['Jou_MotDePasse2']?>"></td>
 									</tr>
 									<tr>

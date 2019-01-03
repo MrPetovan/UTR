@@ -47,7 +47,7 @@
 			<table width="75%" border="1" align="center">
 				<tr>
 					<td align="center">
-						Pour supprimer un joueur, vous devez indiquer les raisons dans la boîte de dialogue ci-dessus.
+						Pour supprimer un joueur, vous devez indiquer les raisons dans la boÃ®te de dialogue ci-dessus.
 					</td>
 				</tr>
 				<tr>
@@ -97,7 +97,7 @@
 
 		$verificationJs=$_POST['verificationJs'];
 
-//requête supprimant une voiture
+//requÃªte supprimant une voiture
 		if($_POST['action']=="Envoyer")
 		{
 			$requeteEmailJoueurs= "	SELECT IdJoueur, Jou_Pseudo, Jou_Email
@@ -136,7 +136,7 @@
 					<th>Id</th>
 					<th>Pseudo</th>
 					<th>E-mail</th>
-					<th>Mail envoyé</th>
+					<th>Mail envoyÃ©</th>
 				</tr>
 <?php
 			while($infoJoueur = mysql_fetch_assoc($resultatEmailJoueurs))
@@ -148,10 +148,10 @@
 				<head>
 				</head>
 				<body>
-				<p>Bonjour ".$infonJoueur['Jou_Pseudo'].",<br>ceci est un mail commun envoyé à tous les joueurs d'UTR.</p>
+				<p>Bonjour ".$infonJoueur['Jou_Pseudo'].",<br>ceci est un mail commun envoyÃ© Ã  tous les joueurs d'UTR.</p>
 				<p>$Mail_Texte</p>
 				<hr>
-				Si vous ne souhaitez plus jouer à UTR, faites-le savoir au Webmaster.<br>-----<br>Le Pacha
+				Si vous ne souhaitez plus jouer Ã  UTR, faites-le savoir au Webmaster.<br>-----<br>Le Pacha
 				</body>
 				</html>
 				";
@@ -210,10 +210,10 @@
 					<title>Suppression du profil</title>
 					</head>
 					<body>
-					<p>Votre profil a été supprimé, en voici les raisons :</p>
+					<p>Votre profil a Ã©tÃ© supprimÃ©, en voici les raisons :</p>
 					<p>$Raison_Suppression</p>
 					<hr>
-					Merci d'avoir joué !
+					Merci d'avoir jouÃ© !
 					</body>
 					</html>
 					";
@@ -252,7 +252,7 @@
 													AND((	Voit_IdManager =  '$IdGestionManager'
 															AND Pil_IdManager =  '$IdGestionManager')
 															OR ( Pari_IdManager =  '$IdGestionManager'))";
-						$resultatIdParis = mysql_query($requeteIdParis) or die("Requête Id Paris : $requeteIdParis<br>".mysql_error());
+						$resultatIdParis = mysql_query($requeteIdParis) or die("RequÃªte Id Paris : $requeteIdParis<br>".mysql_error());
 
 						while($idPari = mysql_fetch_row($resultatIdParis))
 						{
@@ -306,7 +306,7 @@
 				exit;
 			}
 		}
-//Gestion des erreurs de saisie si la vérification n'a pas été faite en JavaScript
+//Gestion des erreurs de saisie si la vÃ©rification n'a pas Ã©tÃ© faite en JavaScript
 		if($verificationJs == "false")
 		{
 			$codesErreur = ",";
@@ -350,8 +350,8 @@
 			<title>Modification du profil</title>
 			</head>
 			<body>
-			<p>Votre profil a été modifié.</p>
-			<p>Voici un rappel de vos coordonnées :
+			<p>Votre profil a Ã©tÃ© modifiÃ©.</p>
+			<p>Voici un rappel de vos coordonnÃ©es :
 			- Login : $Jou_Login<br>
 			- Mot de passe : $Jou_MotDePasse</p>
 			<hr>

@@ -27,8 +27,8 @@
 		function confirmSuppr(form)
 		{
 			var action=form.action.value;
-			//if(action=="Supprimer") confirmation = "Etes-vous sûr de vouloir supprimer ce pilote ?";
-			var confirmation = "Etes-vous sûr de vouloir "+action+" ce pilote ?";
+			//if(action=="Supprimer") confirmation = "Etes-vous sÃ»r de vouloir supprimer ce pilote ?";
+			var confirmation = "Etes-vous sÃ»r de vouloir "+action+" ce pilote ?";
 			if(confirm(confirmation))
 			{
 				form.method="POST";
@@ -122,7 +122,7 @@
 			<td colspan="2"><?php echo $infoPilote['Pil_Age'];?> ans</td>
 		</tr>
 		<tr>
-			<th colspan="1">Réputation :</th>
+			<th colspan="1">RÃ©putation :</th>
 			<td colspan="2"><?php echo $infoPilote['Pil_Reputation'];?></td>
 		</tr>
 		<tr>
@@ -146,7 +146,7 @@
 			<td colspan="2"><?php echo $infoPilote['Pil_Satisfaction'];?> %</td>
 		</tr>
 		<tr>
-			<th colspan="1">Argent gagné :</th>
+			<th colspan="1">Argent gagnÃ© :</th>
 			<td colspan="2"><?php echo $infoPilote['Pil_Solde'];?> &euro;</td>
 		</tr>
 		<tr>
@@ -157,7 +157,7 @@
 	}
 ?>
 		<tr>
-			<th>Compétences</th>
+			<th>CompÃ©tences</th>
 			<th>Niveau</th>
 			<th>XP</th>
 		</tr>
@@ -177,12 +177,12 @@
 			<td><?php echo $infoPilote['Pil_XPVirage'];?></td>
 		</tr>
 		<tr>
-			<th>Spécial</th>
+			<th>SpÃ©cial</th>
 			<td><?php echo niveauAdd($infoPilote['Pil_XPSpe'],1000);?></td>
 			<td><?php echo $infoPilote['Pil_XPSpe'];?></td>
 		</tr>
 		<tr>
-			<th>Général</th>
+			<th>GÃ©nÃ©ral</th>
 			<td><?php echo 	niveauAdd($infoPilote['Pil_XPShifts'],1000)+
 						niveauAdd($infoPilote['Pil_XPFreinage'],1000)+
 						niveauAdd($infoPilote['Pil_XPVirage'],1000)+
@@ -215,7 +215,7 @@
 	if($nbCoursesPrevues == 0)
 	{
 ?>
-			<td>Aucune course prévue</td>
+			<td>Aucune course prÃ©vue</td>
 <?php
 	}
 	else

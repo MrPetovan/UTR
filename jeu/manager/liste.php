@@ -52,7 +52,7 @@
 												Man_Chance,
 												Man_IdJob,
 												Job_NomMasculin,
-												Job_NomFéminin,
+												Job_NomFÃ©minin,
 												Job_Salaire,
 												Man_IdSponsor,
 												Spon_IdMarque,
@@ -76,7 +76,7 @@
 			<th class="titre">Nom</th>
 			<th class="titre">Niveau</th>
 			<th class="titre">Solde</th>
-			<th class="titre">Réputation</th>
+			<th class="titre">RÃ©putation</th>
 			<th class="titre">Chance</th>
 			<th class="titre">Job/Sponsor</th>
 			<th class="titre">Salaire</th>

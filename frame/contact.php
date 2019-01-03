@@ -31,7 +31,7 @@
           <td><img src="/UTR/design/spacer.gif" width="55" height="64"></td>
           <td><p>Programmeurs :<br>
             </p>
-            <blockquote><a href="mailto:ertaii@aeriesguard.com">Ertaï</a><br>
+            <blockquote><a href="mailto:ertaii@aeriesguard.com">ErtaÃ¯</a><br>
               Aka Guymelef</blockquote>
             <br>
             Designer :

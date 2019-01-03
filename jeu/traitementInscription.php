@@ -15,9 +15,9 @@
 
 		$verificationJs = $_POST['verificationJs'];
 
-		//Vérification de la non-présence du login
+		//VÃ©rification de la non-prÃ©sence du login
 		$requetePresenceLogin = "	SELECT IdJoueur FROM joueur, manager WHERE Jou_Login = '$Jou_Login' OR Man_Nom = '$Jou_Login'";
-		$resultatPresenceLogin = mysql_query($requetePresenceLogin) or die("Requête Présence Login : $requetePresenceLogin\n".mysql_error());
+		$resultatPresenceLogin = mysql_query($requetePresenceLogin) or die("RequÃªte PrÃ©sence Login : $requetePresenceLogin\n".mysql_error());
 		$nbResultat = mysql_num_rows($resultatPresenceLogin);
 
 		if($verificationJs == "false")
@@ -83,17 +83,17 @@
 		/* destinataire */
 		$to  = "$Man_Nom <$Jou_Email>";
 		/* sujet */
-		$subject = "Confirmation d'inscription à UTR";
+		$subject = "Confirmation d'inscription Ã  UTR";
 
 		/* message */
 		$message = "
 		<html>
 		<head>
-		<title>Confirmation d'inscription à UTR</title>
+		<title>Confirmation d'inscription Ã  UTR</title>
 		</head>
 		<body>
-		<p>Merci de vous être inscrit à UTR !</p>
-		<p>Voici un rappel de vos coordonnées :<p>
+		<p>Merci de vous Ãªtre inscrit Ã  UTR !</p>
+		<p>Voici un rappel de vos coordonnÃ©es :<p>
 		<p>- login : $Jou_Login<br>
 		<p>- Mot de passe : $Jou_MotDePasse</p>
 		<p>Pour valider votre inscription, cliquez sur <a href=\"/UTR/jeu/creationManager.php?code=$Jou_CodeInscription\">ce lien</a>, ou recopiez cette adresse dans votre navigateur :<br>
@@ -106,10 +106,10 @@
 		$headers  = "MIME-Version: 1.0\r\n";
 		$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 
-		/* D'autres en-têtes */
+		/* D'autres en-tÃªtes */
 		$headers .= "From: Le Pacha <ben.lort@oreka.com>\r\n";
 
-		/* et hop, à la poste */
+		/* et hop, Ã  la poste */
 		$mailOk = mail($to, $subject, $message, $headers);
 	}
 ?>
@@ -149,15 +149,15 @@
 	if($mailOk)
 	{
 ?>
-								<p>Votre inscription est enregistrée !</p>
-								<p>Un mail vous a été envoyé à votre adresse. Il contient un lien permettant d'activer votre compte.</p>
+								<p>Votre inscription est enregistrÃ©e !</p>
+								<p>Un mail vous a Ã©tÃ© envoyÃ© Ã  votre adresse. Il contient un lien permettant d'activer votre compte.</p>
 <?php
 	}
 	else
 	{
 ?>
 								<p>Une erreur est survenue !</p>
-								<p>Le mail n'a pas pu étre envoyé. Contactez l'administrateur du site qui pourra peut-être faire quelquechose pour vous.</p>
+								<p>Le mail n'a pas pu Ã©tre envoyÃ©. Contactez l'administrateur du site qui pourra peut-Ãªtre faire quelquechose pour vous.</p>
 <?php
 	}
 ?>

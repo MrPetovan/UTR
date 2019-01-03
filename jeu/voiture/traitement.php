@@ -107,9 +107,9 @@
 		$IdOptiques = $_POST['IdOptiques'];
 		$IdAileron = $_POST['IdAileron'];
 		$IdChassis = $_POST['IdChassis'];
-		$IdPucedeContrôle = $_POST['IdPucedeContrôle'];
+		$IdPucedeContrÃ´le = $_POST['IdPucedeContrÃ´le'];
 		$IdNOS = $_POST['IdNOS'];
-		$IdNéons = $_POST['IdNéons'];
+		$IdNÃ©ons = $_POST['IdNÃ©ons'];
 		$IdSono = $_POST['IdSono'];
 
 		$IdModeleVoiture = $_POST['IdModeleVoiture'];
@@ -121,7 +121,7 @@
 
 		$verificationJs=$_POST['verificationJs'];
 
-//requête supprimant une voiture
+//requÃªte supprimant une voiture
 		if($_POST["action"]=="Supprimer")
 		{
 			if($_POST["reponse"]=="Oui")
@@ -189,7 +189,7 @@
 			header("Location: fiche.php?IdVoiture=$IdVoiture&page=pieces");
 			exit();
 		}
-//Gestion des erreurs de saisie si la vérification n'a pas été faite en JavaScript
+//Gestion des erreurs de saisie si la vÃ©rification n'a pas Ã©tÃ© faite en JavaScript
 /*		if($verificationJs == "false")
 		{
 			$codesErreur = is_NotNull($ModVoi_NomModele,"102");
@@ -211,7 +211,7 @@
 
 		if($_POST["action"]=="Modifier")
 		{
-			//Attribution à la voiture du pilote
+			//Attribution Ã  la voiture du pilote
 			$requeteModifierVoiture = "	UPDATE voiture
 										SET ModVoi_NomModele = '$ModVoi_NomModele'
 										WHERE IdVoiture='$IdVoiture'";

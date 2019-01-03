@@ -26,8 +26,8 @@
 		function confirmSuppr(form)
 		{
 			var action=form.action.value;
-			//if(action=="Supprimer") confirmation = "Etes-vous sûr de vouloir supprimer ce pilote ?";
-			var confirmation = "Etes-vous sûr de vouloir "+action+" ce pilote ?";
+			//if(action=="Supprimer") confirmation = "Etes-vous sÃ»r de vouloir supprimer ce pilote ?";
+			var confirmation = "Etes-vous sÃ»r de vouloir "+action+" ce pilote ?";
 			if(confirm(confirmation))
 			{
 				form.method="POST";
@@ -79,7 +79,7 @@
 
 	<table border="1">
 		<tr>
-			<th colspan="3">Fiche du joueur n°<?php echo $infoJoueur['IdGestionJoueur'];?></th>
+			<th colspan="3">Fiche du joueur nÂ°<?php echo $infoJoueur['IdGestionJoueur'];?></th>
 		</tr>
 		<tr>
 			<th colspan="1">Pseudo :</th>
@@ -98,7 +98,7 @@
 			<td colspan="2"><?php echo $infoJoueur['Jou_DernierLogin'] ?></td>
 		</tr>
 		<tr>
-			<th colspan="1">Inscription validée :</th>
+			<th colspan="1">Inscription validÃ©e :</th>
 			<td colspan="2"><?php echo (empty($infoJoueur['Jou_CodeInscription']))?"Oui":"Non";?></td>
 		</tr>
 	</table>
@@ -113,7 +113,7 @@
 												Man_Chance,
 												Man_IdJob,
 												Job_NomMasculin,
-												Job_NomFéminin,
+												Job_NomFÃ©minin,
 												Job_Salaire
 									FROM manager, job
 									WHERE Man_IdJoueur = '$IdGestionJoueur'
@@ -129,7 +129,7 @@
 			<th>Nom</th>
 			<th>Niveau</th>
 			<th>Solde</th>
-			<th>Réputation</th>
+			<th>RÃ©putation</th>
 			<th>Chance</th>
 			<th>Job</th>
 			<th>Salaire</th>

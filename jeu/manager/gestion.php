@@ -36,7 +36,7 @@ function verifForm(form)
 			{
 				var chaineErreur = is_NotNull(Man_Nom.value,"Le nom");
 				chaineErreur += is_Number(Man_Solde.value,'',"Le solde");
-				chaineErreur += is_Number(Man_Reputation.value,'',"La réputation");
+				chaineErreur += is_Number(Man_Reputation.value,'',"La rÃ©putation");
 				chaineErreur += is_Number(Man_Chance.value,'',"La chance");
 
 				if (chaineErreur != "")
@@ -90,7 +90,7 @@ function verifForm(form)
 													Man_Chance,
 													Man_IdJob,
 													Job_NomMasculin,
-													Job_NomFéminin,
+													Job_NomFÃ©minin,
 													Job_Salaire
 										FROM manager, job
 										WHERE IdJob = Man_IdJob
@@ -127,7 +127,7 @@ Il y a une ou plusieurs erreurs dans le formulaire :<BR>
 <div align="center">
 	<table border="1">
 		<tr>
-			<th colspan="2">Modifier les informations du manager n°<?php echo $infoManager['IdGestionManager'];?></td>
+			<th colspan="2">Modifier les informations du manager nÂ°<?php echo $infoManager['IdGestionManager'];?></td>
 		</tr>
 		<tr>
 			<th>Nom<font color="#FF0000">*</font> :</th>
@@ -135,7 +135,7 @@ Il y a une ou plusieurs erreurs dans le formulaire :<BR>
 		</tr>
 		<tr>
 			<th>Sexe :</th>
-			<td><input type="radio" name="Man_Sexe" value="Masculin"<?php echo ($infoManager['Man_Sexe']=='Masculin')?" checked":""?>>Masculin<input type="radio" name="Man_Sexe" value="Féminin"<?php echo ($infoManager['Man_Sexe']=='Féminin')?" checked":""?>>Féminin</td></td>
+			<td><input type="radio" name="Man_Sexe" value="Masculin"<?php echo ($infoManager['Man_Sexe']=='Masculin')?" checked":""?>>Masculin<input type="radio" name="Man_Sexe" value="FÃ©minin"<?php echo ($infoManager['Man_Sexe']=='FÃ©minin')?" checked":""?>>FÃ©minin</td></td>
 		</tr>
 		<tr>
 			<th>Niveau :</th>
@@ -151,14 +151,14 @@ Il y a une ou plusieurs erreurs dans le formulaire :<BR>
 		if($Man_Niveau > 3)
 		{
 ?>
-					<option value="3"<?php echo ($infoManager['Man_Niveau']==3)?" checked":""?>>Modérateur</option>
+					<option value="3"<?php echo ($infoManager['Man_Niveau']==3)?" checked":""?>>ModÃ©rateur</option>
 <?php
 		}
 ?>
 				</select>
 <?php
 	}
-	else echo($infoManager['Man_Niveau'] == 3)?"Modérateur":"Administrateur";
+	else echo($infoManager['Man_Niveau'] == 3)?"ModÃ©rateur":"Administrateur";
 ?>
 			</td>
 		</tr>
@@ -179,14 +179,14 @@ Il y a une ou plusieurs erreurs dans le formulaire :<BR>
 			<td>
 				<select name="Man_IdJob">
 <?php
-	$requeteJobs = "	SELECT IdJob, Job_NomMasculin, Job_NomFéminin, Job_Salaire
+	$requeteJobs = "	SELECT IdJob, Job_NomMasculin, Job_NomFÃ©minin, Job_Salaire
 							FROM job
 							ORDER BY Job_Niveau";
 	$resultatJobs = mysql_query($requeteJobs);
 	while($infoJob = mysql_fetch_assoc($resultatJobs))
 	{
 ?>
-					<option value="<?php echo $infoJob['IdJob']?>"<?php echo ($infoManager['Man_IdJob']==$infoJob['IdJob'])?" checked":""?>><?php echo $infoJob['Job_Nom'.$infoManager['Man_Sexe']]." ( ".$infoJob['Job_Salaire']." à )"?></option>
+					<option value="<?php echo $infoJob['IdJob']?>"<?php echo ($infoManager['Man_IdJob']==$infoJob['IdJob'])?" checked":""?>><?php echo $infoJob['Job_Nom'.$infoManager['Man_Sexe']]." ( ".$infoJob['Job_Salaire']." Ã  )"?></option>
 <?php
 	}
 ?>

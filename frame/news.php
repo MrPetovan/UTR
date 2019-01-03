@@ -33,13 +33,13 @@
                 <td width="2%"><img src="/UTR/design/spacer.gif" width="46" height="64"></td>
                 <td width="98%"><p align="center">
                     <?php
-	$requeteNews ="	SELECT IdNews, Nws_Titre, Nws_Texte, Nws_IdPosteur, Jou_Pseudo, Nws_NomPosteur, DATE_FORMAT( Nws_Date, '%d/%m/%Y à %H:%i') AS Nws_DateFormat
+	$requeteNews ="	SELECT IdNews, Nws_Titre, Nws_Texte, Nws_IdPosteur, Jou_Pseudo, Nws_NomPosteur, DATE_FORMAT( Nws_Date, '%d/%m/%Y Ã  %H:%i') AS Nws_DateFormat
 							FROM news
 							LEFT JOIN joueur ON IdJoueur = Nws_IdPosteur
 							WHERE Nws_Acceptee = '1'
 							ORDER BY Nws_Date DESC";
 
-	$resultatNews = mysql_query($requeteNews)or die("Erreur dans la requête de news : ".mysql_error());
+	$resultatNews = mysql_query($requeteNews)or die("Erreur dans la requÃªte de news : ".mysql_error());
 
 	if(mysql_num_rows($resultatNews)!=0)
 	{
@@ -107,7 +107,7 @@ border=0>
                                                 <tr>
                                                   <td valign=top width="2%"
 bgcolor=#000000>&nbsp;</td>
-                                                  <td valign=top width="53%"><div align="left">Posté
+                                                  <td valign=top width="53%"><div align="left">PostÃ©
                                                       par :<?php echo ($news['Jou_Pseudo']!='')?$news['Jou_Pseudo']:$news['Nws_NomPosteur'];?></div></td>
                                                   <td valign=top align=right width="45%">&nbsp;</td>
                                                 </tr>
@@ -163,7 +163,7 @@ bgcolor=#000000>&nbsp;</td>
 	}
 	else
 	{
-		echo "Aucune news n'a été postée ou aucune news postée n'a été acceptée...";
+		echo "Aucune news n'a Ã©tÃ© postÃ©e ou aucune news postÃ©e n'a Ã©tÃ© acceptÃ©e...";
 	}
 	?>
                     <?php

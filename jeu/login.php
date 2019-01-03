@@ -1,9 +1,9 @@
 <?php
 //Nommage de la session :
 	session_name("Joueur");
-//Démarrage de la session :
+//DÃ©marrage de la session :
 	session_start();
-//Destruction de la session si déjà loggué
+//Destruction de la session si dÃ©jÃ  logguÃ©
 	session_unset();
 	session_set_cookie_params(session_name(),'',0,"/");
 
@@ -12,7 +12,7 @@
 	$login = trim($_POST['Jou_Login']);
 	$password = trim($_POST['Jou_PassWord']);
 
-	// Réalisation des traitements
+	// RÃ©alisation des traitements
 	if ($login!=""&& $password != "" )
 	{
 		$requeteMdp= "	SELECT Jou_MotDePasse

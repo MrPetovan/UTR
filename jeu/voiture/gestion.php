@@ -176,14 +176,14 @@
 
 	<table border="0" class="liste">
 		<tr class="piece">
-			<th colspan="2" class="titre">Créer une <?php echo $infoModeleVoiture['Marq_Libelle']." ".$infoModeleVoiture['ModVoi_NomModele'];?></td>
+			<th colspan="2" class="titre">CrÃ©er une <?php echo $infoModeleVoiture['Marq_Libelle']." ".$infoModeleVoiture['ModVoi_NomModele'];?></td>
 		</tr>
 		<tr class="piece">
 			<th>Marque :</th>
 			<td><?php echo $infoModeleVoiture['Marq_Libelle'];?></td>
 		</tr>
 		<tr class="piece">
-			<th>Modèle :</th>
+			<th>ModÃ¨le :</th>
 			<td><?php echo $infoModeleVoiture['ModVoi_NomModele'];?></td>
 		</tr>
 		<tr class="piece">
@@ -195,7 +195,7 @@
 			<td><?php echo $infoModeleVoiture['ModVoi_NbVictoires']."/$nbCoursesCourues"?></td>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
+			<th><img alt="Aspect ExtÃ©rieur" src="../../images/aspect.gif"></th>
 			<td><?php echo $infoModeleVoiture['ModVoi_AspectExterieur'];?></td>
 		</tr>
 		<tr class="piece">
@@ -226,16 +226,16 @@
 
 	<table border="0" class="liste">
 		<tr class="piece">
-			<th colspan="7" class="titre">Caractéristiques techniques</th>
+			<th colspan="7" class="titre">CaractÃ©ristiques techniques</th>
 		</tr>
 		<tr class="piece">
-			<th class="titre"><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th class="titre"><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 			<th class="titre"><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
 			<th class="titre"><img alt="Freinage" src="../../images/frein.gif"></th>
 			<th class="titre"><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th class="titre"><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th class="titre"><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th class="titre"><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
+			<th class="titre"><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
+			<th class="titre"><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
+			<th class="titre"><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
 		</tr>
 		<tr class="piece">
 			<td><?php echo round($infoModeleVoiture['ModVoi_Acceleration'],2);?></td>
@@ -250,37 +250,37 @@
 <br>
 	<table border="0" class="liste">
 		<tr class="piece">
-			<th colspan="2" class="titre">Performances estimées</th>
+			<th colspan="2" class="titre">Performances estimÃ©es</th>
 		</tr>
 		<tr class="piece">
 			<th>Vitesse maximum</th>
 			<td><?php echo msTOKmh($infoModeleVoiture['ModVoi_VitesseMax']);?> km/h</td>
 		</tr>
 		<tr class="piece">
-			<th>de 0 à 100 km/h</th>
+			<th>de 0 Ã  100 km/h</th>
 			<td><?php echo TempsAcc($infoModeleVoiture['ModVoi_Acceleration'], $infoModeleVoiture['ModVoi_VitesseMax']);?> s</td>
 		</tr>
 		<tr class="piece">
-			<th>1000 m départ arrêté</th>
+			<th>1000 m dÃ©part arrÃªtÃ©</th>
 			<td><?php echo MilleMetreArrete($infoModeleVoiture['ModVoi_Acceleration'], $infoModeleVoiture['ModVoi_VitesseMax']);?>&nbsp;s</td>
 		</tr>
 		<tr class="piece">
 			<th colspan="2" class="titre">Distances Freinage</th>
 		</tr>
 		<tr class="piece">
-			<th>à 50 km/h</th>
+			<th>Ã  50 km/h</th>
 			<td><?php echo DistanceFreinage($infoModeleVoiture['ModVoi_Freinage'],50);?> m</td>
 		</tr>
 		<tr class="piece">
-			<th>à 100 km/h</th>
+			<th>Ã  100 km/h</th>
 			<td><?php echo DistanceFreinage($infoModeleVoiture['ModVoi_Freinage'],100);?> m</td>
 		</tr>
 		<tr class="piece">
-			<th>à 130 km/h</th>
+			<th>Ã  130 km/h</th>
 			<td><?php echo DistanceFreinage($infoModeleVoiture['ModVoi_Freinage'],130);?> m</td>
 		</tr>
 		<tr class="piece">
-			<th>à 150 km/h</th>
+			<th>Ã  150 km/h</th>
 			<td><?php echo DistanceFreinage($infoModeleVoiture['ModVoi_Freinage'],150);?> m</td>
 		</tr>
 	</table>
@@ -289,11 +289,11 @@
 
 	<table border="0" class="liste" width="100%">
 		<tr class="piece">
-			<th colspan="5" class="titre">Pièces de sûrie</th>
+			<th colspan="5" class="titre">PiÃ¨ces de sÃ»rie</th>
 		</tr>
 		<tr class="piece">
 			<th class="titre">Type</th>
-			<th class="titre">Modèle</th>
+			<th class="titre">ModÃ¨le</th>
 			<th class="titre">Marque</th>
 			<th class="titre">Duree de vie</th>
 			<th class="titre">Poids</th>

@@ -13,7 +13,7 @@
 ?>
 <html>
 <head>
-	<title>UTR : <?php echo $_GET['action']?> une pièce détachée</title>
+	<title>UTR : <?php echo $_GET['action']?> une piÃ¨ce dÃ©tachÃ©e</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="../style/style.css" rel="stylesheet" type="text/css" />
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
@@ -29,8 +29,8 @@
 			{
 				var chaineErreur = "";
 
-				chaineErreur +=	is_Number(PiDet_Usure.value,"","L'usure de la pièce");
-				chaineErreur +=	is_Number(PiDet_Qualite.value,"","La qualité de la pièce");
+				chaineErreur +=	is_Number(PiDet_Usure.value,"","L'usure de la piÃ¨ce");
+				chaineErreur +=	is_Number(PiDet_Qualite.value,"","La qualitÃ© de la piÃ¨ce");
 
 				if (chaineErreur != "")
 				{
@@ -144,7 +144,7 @@ Il y a une ou plusieurs erreurs dans le formulaire :
 											WHERE IdTypePiece = ModPi_IdTypePiece
 											AND IdMarque = ModPi_IdMarque
 											AND IdModelePiece = '$IdModelePiece'";
-		$resultatInfoModelePiece = mysql_query($requeteInfoModelePiece) or die ("Requête Info Modèle Pièce : ".mysql_error());
+		$resultatInfoModelePiece = mysql_query($requeteInfoModelePiece) or die ("RequÃªte Info ModÃ¨le PiÃ¨ce : ".mysql_error());
 		$infoModelePiece = mysql_fetch_assoc($resultatInfoModelePiece);
 ?>
 </div>
@@ -154,14 +154,14 @@ Il y a une ou plusieurs erreurs dans le formulaire :
 <input type="hidden" name="verificationJs" value="false">
 	<table border="1">
 		<tr>
-			<th colspan="3"><?php echo ($_GET['action']=="Ajouter")?"Ajouter une pièce":"Modifier la pièce n°".$infoPieceDetachee['IdPieceDetachee'];?></td>
+			<th colspan="3"><?php echo ($_GET['action']=="Ajouter")?"Ajouter une piÃ¨ce":"Modifier la piÃ¨ce nÂ°".$infoPieceDetachee['IdPieceDetachee'];?></td>
 		</tr>
 		<tr>
 			<th>Marque :</th>
 			<td><?php echo $infoModelePiece['Marq_Libelle']?></td>
 		</tr>
 		<tr>
-			<th>Modèle :</th>
+			<th>ModÃ¨le :</th>
 			<td><input type="hidden" name="PiDet_IdModele" value="<?php echo $IdModelePiece?>"><?php echo $infoModelePiece['ModPi_NomModele']?></td>
 		</tr>
 		<tr>
@@ -173,7 +173,7 @@ Il y a une ou plusieurs erreurs dans le formulaire :
 			<td><input type="text" size="3" name="PiDet_Usure" value="<?php echo $infoPieceDetachee['PiDet_Usure'];?>"> %</td>
 		</tr>
 		<tr>
-			<th>Qualité :</th>
+			<th>QualitÃ© :</th>
 			<td><input type="text" size="3" name="PiDet_Qualite" value="<?php echo $infoPieceDetachee['PiDet_Qualite'];?>"> %</td>
 		</tr>
 		<tr>
@@ -200,7 +200,7 @@ Il y a une ou plusieurs erreurs dans le formulaire :
 			<td><?php echo round($infoPieceDetachee['PiDet_Age'] / 86400,0);?> jours</td>
 		</tr>
 		<tr>
-			<th><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+			<th><img alt="DurÃ©e de vie Max" src="../../images/dureeviemax.gif"></th>
 			<td><?php echo $infoModelePiece['ModPi_DureeVieMax']?></td>
 		</tr>
 		<tr>
@@ -211,20 +211,20 @@ Il y a une ou plusieurs erreurs dans le formulaire :
 <br>
 	<table border="1" id="Modifier">
 		<tr>
-			<th>Caractéristiques</th>
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th>CaractÃ©ristiques</th>
+			<th><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 			<th><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
 			<th><img alt="Freinage" src="../../images/frein.gif"></th>
 			<th><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
+			<th><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
+			<th><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="Aspect ExtÃ©rieur" src="../../images/aspect.gif"></th>
+			<th><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="CapacitÃ© Max" src="../../images/capamax.gif"></th>
 
 		</tr>
 		<tr>
-			<th>Données standard</th>
+			<th>DonnÃ©es standard</th>
 			<td><?php echo $infoModelePiece['ModPi_Acceleration'];?></td>
 			<td><?php echo $infoModelePiece['ModPi_VitesseMax'];?></td>
 			<td><?php echo $infoModelePiece['ModPi_Freinage'];?></td>

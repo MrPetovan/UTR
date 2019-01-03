@@ -2,7 +2,7 @@
 	<tr>
 		<td>
 			<p>Menu</p>
-			<p><a href="/UTR/frame/regles.php">Les Règles</a></p>
+			<p><a href="/UTR/frame/regles.php">Les RÃ¨gles</a></p>
 			<p><a href="/UTR/jeu/accueilJeu.php">Jouer !</a></p>
 <?php
 			if(isset($_SESSION['IdJoueur']))
@@ -10,10 +10,10 @@
 ?>
 			<p>Menu de jeu</p>
 			<p><a href="/UTR/jeu/voiture/liste.php">Voiture</a></p>
-			<p><a href="/UTR/jeu/piece/liste.php">Pieces détachées</a></p>
+			<p><a href="/UTR/jeu/piece/liste.php">Pieces dÃ©tachÃ©es</a></p>
 			<p><a href="/UTR/jeu/pilote/liste.php">Pilotes</a></p>
 			<p><a href="/UTR/jeu/course/liste.php">Courses</a></p>
-			<p><a href="/UTR/jeu/logout.php">Déconnexion</a></p>
+			<p><a href="/UTR/jeu/logout.php">DÃ©connexion</a></p>
 <?php
 			$IdManager=$_SESSION['IdManager'];
 
@@ -25,7 +25,7 @@
 ?>
 			<table>
 				<tr>
-					<th>Manager n°<?php echo $infoManager['IdManager']?></th>
+					<th>Manager nÂ°<?php echo $infoManager['IdManager']?></th>
 				</tr>
 				<tr>
 					<td><?php echo $infoManager['Man_Nom']?></td>
@@ -37,7 +37,7 @@
 					<td><?php echo $infoManager['Man_Niveau']?></td>
 				</tr>
 				<tr>
-					<th>Réputation</th>
+					<th>RÃ©putation</th>
 				</tr>
 				<tr>
 					<td><?php echo $infoManager['Man_Reputation']?></td>

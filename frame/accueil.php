@@ -32,7 +32,7 @@
                 <tr>
                   <td width="61"><img src="/UTR/design/spacer.gif" width="61" height="64"></td>
                   <td width="329"><p>Bienvenue dans le jeu !</p>
-                    <p>Le jeu est encore en pleine construction ... Ertaï se charge
+                    <p>Le jeu est encore en pleine construction ... ErtaÃ¯ se charge
                       du code et Moi (tomy) je me charge du design. Ces deux
                       op&eacute;rations &eacute;tant des parties importantes du jeu
                       il est possible que lorsque nous modifions des pages vous
@@ -40,7 +40,7 @@
                       en sommes d&eacute;sol&eacute;. Nous esssayons toutefois
                       de travailler le soir afin d'&eacute;viter ces probl&egrave;mes
                       pendant votre surf.</p>
-                    <p>A bientôt </p>
+                    <p>A bientÃ´t </p>
                     <p>Tomy</p>
                     </td>
                 </tr>

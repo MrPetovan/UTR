@@ -1,5 +1,5 @@
 <?php
-/* Cette fonction détermine si une pièce est cassée ou pas*/
+/* Cette fonction dÃ©termine si une piÃ¨ce est cassÃ©e ou pas*/
 	function dispoPiece($IdPiece)
 	{
 		$requeteUsurePiece = "	SELECT	IdPieceDetachee,
@@ -16,8 +16,8 @@
 		$dureeVieActuelle = $usurePiece['ModPi_DureeVieMax']*($usurePiece['PiDet_Qualite']/100) * sqrt(100 - $usurePiece['PiDet_Usure']) / 10;
 		//Passage aux secondes
 		$dureeVieActuelle *= 365*24*60*60;
-		//echo "dispoPiece($IdPiece) : Piece Detachee n°".$usurePiece['IdPieceDetachee']." : DVA = $dureeVieActuelle <=> ".$usurePiece['PiDet_Age']." = Age<br>";
-		//Pièce cassée
+		//echo "dispoPiece($IdPiece) : Piece Detachee nÂ°".$usurePiece['IdPieceDetachee']." : DVA = $dureeVieActuelle <=> ".$usurePiece['PiDet_Age']." = Age<br>";
+		//PiÃ¨ce cassÃ©e
 		return($usurePiece['PiDet_Age'] < $dureeVieActuelle);
 	}
 
@@ -34,7 +34,7 @@
 									FROM voiture
 									WHERE IdVoiture = '$IdVoiture'";
 			$IdPiece = mysql_fetch_row(mysql_query($requeteIdPiece));
-			//Pièce manque
+			//PiÃ¨ce manque
 			if(empty($IdPiece[0])) return 0;
 			else
 			{
@@ -102,7 +102,7 @@
 			return($longueurTroncon*$vitesseTroncon + difficulteCourse($IdTronconSuivant));
 	}
 
-	//Fonction permettant de calculer le temps de 0 à 100 km/h
+	//Fonction permettant de calculer le temps de 0 Ã  100 km/h
 	function TempsAcc($acceleration, $vitesseMax )
 	{
 		$a = (float)-pow($acceleration,2)/(4 * $vitesseMax);
@@ -110,7 +110,7 @@
 		$c = 100/3.6;
 		return round((((-$b+(sqrt(pow($a,2)-(4*$a*$c))))/(2*$a))),2);
 	}
-	//Fonction permettant de calculer le temps du 1000 m départ arrêté
+	//Fonction permettant de calculer le temps du 1000 m dÃ©part arrÃªtÃ©
 	function MilleMetreArrete($acceleration, $vitesseMax)
 	{
 		$vInit = 0;
@@ -143,7 +143,7 @@
 
 	function creerVoiture($IdModeleVoiture, $IdManager)
 	{
-		//Création des pièces
+		//CrÃ©ation des piÃ¨ces
 		$requetePiecesDefaut= "	SELECT	ModVoi_IdInjection,
 													ModVoi_IdTurbo,
 													ModVoi_IdRefroidissement,
@@ -159,9 +159,9 @@
 													ModVoi_IdOptiques,
 													ModVoi_IdAileron,
 													ModVoi_IdChassis,
-													ModVoi_IdPucedeContrôle,
+													ModVoi_IdPucedeContrÃ´le,
 													ModVoi_IdNOS,
-													ModVoi_IdNéons,
+													ModVoi_IdNÃ©ons,
 													ModVoi_IdSono
 										FROM modele_voiture
 										WHERE IdModeleVoiture = '$IdModeleVoiture'";
@@ -194,7 +194,7 @@
 			$indexChamp++;
 		}
 
-//Création de la voiture
+//CrÃ©ation de la voiture
 		$requeteAjouterVoiture = "	INSERT INTO voiture(	Voit_IdModele,
 																		Voit_IdInjection,
 																		Voit_IdTurbo,
@@ -211,9 +211,9 @@
 																		Voit_IdOptiques,
 																		Voit_IdAileron,
 																		Voit_IdChassis,
-																		Voit_IdPuceDeContrôle,
+																		Voit_IdPuceDeContrÃ´le,
 																		Voit_IdNOS,
-																		Voit_IdNéons,
+																		Voit_IdNÃ©ons,
 																		Voit_IdSono,
 																		Voit_IdManager)
 									VALUES(	'".$IdModeleVoiture."',
@@ -232,12 +232,12 @@
 												'".$Voit_IdPiece['Optiques']."',
 												'".$Voit_IdPiece['Aileron']."',
 												'".$Voit_IdPiece['Chassis']."',
-												'".$Voit_IdPiece['PuceDeContrôle']."',
+												'".$Voit_IdPiece['PuceDeContrÃ´le']."',
 												'".$Voit_IdPiece['NOS']."',
-												'".$Voit_IdPiece['Néons']."',
+												'".$Voit_IdPiece['NÃ©ons']."',
 												'".$Voit_IdPiece['Sono']."',
 												'$IdManager')";
-		mysql_query($requeteAjouterVoiture)or die("Requête Ajouter Voiture :<br>$requeteAjouterVoiture<br><br>".mysql_error());
+		mysql_query($requeteAjouterVoiture)or die("RequÃªte Ajouter Voiture :<br>$requeteAjouterVoiture<br><br>".mysql_error());
 	}
 
 	function infoVoiture($IdVoiture,&$pieceInstallee,&$infoVoiture)

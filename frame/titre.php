@@ -1,6 +1,6 @@
 <!--
 Nom : titre.php
-Fonction : Barre de titre générique
+Fonction : Barre de titre gÃ©nÃ©rique
 Version : 1.0
 -->
 <LINK href="/UTR/design/utr.css"type=text/css rel=styleSheet>

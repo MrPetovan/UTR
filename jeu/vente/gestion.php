@@ -72,8 +72,8 @@
 	if($infoVente['Ven_IdTypeVente']==2)
 	{
 ?>
-				chaineErreur += is_Number(Ven_Usure.value,'',"L'usure annoncée");
-				chaineErreur += is_Number(Ven_Qualite.value,'',"La qualite annoncée");
+				chaineErreur += is_Number(Ven_Usure.value,'',"L'usure annoncÃ©e");
+				chaineErreur += is_Number(Ven_Qualite.value,'',"La qualite annoncÃ©e");
 <?php
 	}
 ?>
@@ -138,7 +138,7 @@
 	{
 		switch($infoVente['Ven_IdTypeVente'])
 		{
-			case '1' : //Voiture entière
+			case '1' : //Voiture entiÃ¨re
 				$requeteInfoItem = "	SELECT	IdVoiture AS IdItem,
 														Marq_Libelle,
 														ModVoi_NomModele AS Item_Modele
@@ -147,7 +147,7 @@
 											AND IdMarque = ModVoi_IdMarque
 											AND IdVoiture = '".$infoVente['Ven_IdItem']."'";
 				break;
-			case '2' : //Pièce détachée seule
+			case '2' : //PiÃ¨ce dÃ©tachÃ©e seule
 				$requeteInfoItem = "	SELECT 	IdPieceDetachee AS IdItem,
 														Marq_Libelle,
 														ModPi_NomModele AS Item_Modele,
@@ -196,7 +196,7 @@
 			<td colspan="1"><?php echo $infoItem['Item_PrixNeuf']?> &euro;</td>
 		</tr>
 		<tr>
-			<th>Prix demandé<font color="#FF0000">*</font> :</th>
+			<th>Prix demandÃ©<font color="#FF0000">*</font> :</th>
 			<td colspan="1"><input type="text" size="7" name="Ven_Prix" value="<?php echo (isset($infoVente['Ven_Prix']))?$infoVente['Ven_Prix']:$infoItem['Item_PrixNeuf']?>"> &euro;</td>
 		</tr>
 <?php
@@ -208,15 +208,15 @@
 			<td colspan="1"><?php echo $infoItem['PiDet_Usure'];?> %</td>
 		</tr>
 		<tr>
-			<th>Usure annoncée<font color="#FF0000">*</font> :</th>
+			<th>Usure annoncÃ©e<font color="#FF0000">*</font> :</th>
 			<td colspan="1"><input type="text" size="7" name="Ven_Usure" value="<?php echo (isset($infoVente['Ven_Usure']))?$infoVente['Ven_Usure']:$infoItem['PiDet_Usure'];?>"> %</td>
 		</tr>
 		<tr>
-			<th>Qualité :</th>
+			<th>QualitÃ© :</th>
 			<td colspan="1"><?php echo $infoItem['PiDet_Qualite'];?> %</td>
 		</tr>
 		<tr>
-			<th>Qualité annoncée<font color="#FF0000">*</font> :</th>
+			<th>QualitÃ© annoncÃ©e<font color="#FF0000">*</font> :</th>
 			<td colspan="1"><input type="text" size="7" name="Ven_Qualite" value="<?php echo (isset($infoVente['Ven_Qualite']))?$infoVente['Ven_Qualite']:$infoItem['PiDet_Qualite'];?>"> %</td>
 		</tr>
 <?php

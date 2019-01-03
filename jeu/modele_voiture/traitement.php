@@ -27,10 +27,10 @@
 		$Ajouter_Bis = $_POST['Ajouter_Bis'];
 
 
-//Gestion des id des piËces par dÈfaut
+//Gestion des id des pi√®ces par d√©faut
 		for($i = 1; $i <= 21; $i++)
 		{
-			//Ajout d'un modËle de piËce
+			//Ajout d'un mod√®le de pi√®ce
 			if($_POST['ajouterModele'][$i]=="true")
 			{
 				$ModPi_IdMarque[$i] = $_POST['ModPi_IdMarque'][$i];
@@ -90,7 +90,7 @@
 				$IdModelePiece = mysql_fetch_row(mysql_query("SELECT MAX(IdModelePiece) FROM modele_piece"));
 				$ModVoi_IdModelePiece[$i] = "'".$IdModelePiece[0]."'";
 
-				echo " PiËce ajoutÈe : ".$IdModelePiece[0]."<br>";
+				echo " Pi√®ce ajout√©e : ".$IdModelePiece[0]."<br>";
 			}
 			else $ModVoi_IdModelePiece[$i] = ($_POST['ModVoi_IdModelePiece'][$i]!="")?"'".$_POST['ModVoi_IdModelePiece'][$i]."'":"NULL";
 		}
@@ -101,7 +101,7 @@
 
 		$verificationJs=$_POST['verificationJs'];
 
-//Gestion des erreurs de saisie si la vÈrification n'a pas ÈtÈ faite en JavaScript
+//Gestion des erreurs de saisie si la v√©rification n'a pas √©t√© faite en JavaScript
 		if($verificationJs == "false")
 		{
 			$codesErreur = ",";
@@ -143,9 +143,9 @@
 														   ModVoi_IdOptiques,
 														   ModVoi_IdAileron,
 														   ModVoi_IdChassis,
-														   ModVoi_IdPucedeContrÙle,
+														   ModVoi_IdPucedeContr√¥le,
 														   ModVoi_IdNOS,
-														   ModVoi_IdNÈons,
+														   ModVoi_IdN√©ons,
 														   ModVoi_IdSono,
 														   ModVoi_IdEchappement,
 														   ModVoi_IdTurbo,
@@ -214,9 +214,9 @@
 															   ModVoi_IdOptiques = $ModVoi_IdModelePiece[10],
 															   ModVoi_IdAileron = $ModVoi_IdModelePiece[11],
 															   ModVoi_IdChassis = $ModVoi_IdModelePiece[13],
-															   ModVoi_IdPucedeContrÙle = $ModVoi_IdModelePiece[14],
+															   ModVoi_IdPucedeContr√¥le = $ModVoi_IdModelePiece[14],
 															   ModVoi_IdNOS = $ModVoi_IdModelePiece[15],
-															   ModVoi_IdNÈons = $ModVoi_IdModelePiece[16],
+															   ModVoi_IdN√©ons = $ModVoi_IdModelePiece[16],
 															   ModVoi_IdSono = $ModVoi_IdModelePiece[17],
 															   ModVoi_IdEchappement = $ModVoi_IdModelePiece[19],
 															   ModVoi_IdTurbo = $ModVoi_IdModelePiece[20],

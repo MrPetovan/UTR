@@ -2,7 +2,7 @@
 	//Nommage de la session :
 		session_name("Joueur");
 
-	//Démarrage de la session :
+	//DÃ©marrage de la session :
 		session_start();
 
 		session_unset();

@@ -35,7 +35,7 @@
 <br>
 <hr>
 <blockquote>
-	News publiées :<br><br>
+	News publiÃ©es :<br><br>
 
 <table border="0">
 <?php
@@ -53,7 +53,7 @@
 ?>
 	<tr>
 		<td><a href="fiche.php?IdNews=<?php echo $ligneNewsPubliees["IdNews"]; ?>"><?php echo $ligneNewsPubliees["Nws_Titre"];?></td>
-		<td></a> du <?php echo "$jour/$mois/$annee à $heure:$minute";?></td>
+		<td></a> du <?php echo "$jour/$mois/$annee Ã  $heure:$minute";?></td>
 	</tr>
 <?php
 	}
@@ -81,7 +81,7 @@
 ?>
 	<tr>
 		<td><a href="fiche.php?IdNews=<?php echo $ligneNewsAttente["IdNews"]; ?>"><?php echo $ligneNewsAttente["Nws_Titre"];?></a></td>
-		<td> du <?php echo "$jour/$mois/$annee à $heure:$minute";?><br></td>
+		<td> du <?php echo "$jour/$mois/$annee Ã  $heure:$minute";?><br></td>
 	</tr>
 <?php
 	}

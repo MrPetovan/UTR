@@ -54,7 +54,7 @@
 		$ExtensionsAutorisees=Array("txt","htm","html");
 		
 		$VerifTexte = explode(".",$FILES["Com_EmplacementFichierTexte"]["name"]);
-		//Vérification du nom, du type et de l'extension
+		//VÃ©rification du nom, du type et de l'extension
 		if(ereg("[a-zA-Z0-9\-_]*",$VerifTexte[0]) && in_array($VerifTexte[1],$ExtensionsAutorisees) && 
 				in_array($FILES["Com_EmplacementFichierTexte"]["type"],$TypesAutorises))
 		{

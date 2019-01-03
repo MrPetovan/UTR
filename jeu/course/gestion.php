@@ -44,8 +44,8 @@
 				chaineErreur += is_Number(Cou_NbTours.value,'',"Le nombre de tours");
 				chaineErreur += is_Number(Cou_PrixInscription.value,'',"Le prix de l'inscription");
 				chaineErreur += is_Number(Cou_PrixEngagement.value,'',"Le prix d'engagement");
-				chaineErreur += is_Number(Cou_DensiteCirculation.value,'',"La densité de circulation");
-				chaineErreur += is_Number(Cou_NbCompetiteursMax.value,'1',"Le nombre maximum de compétiteurs");
+				chaineErreur += is_Number(Cou_DensiteCirculation.value,'',"La densitÃ© de circulation");
+				chaineErreur += is_Number(Cou_NbCompetiteursMax.value,'1',"Le nombre maximum de compÃ©titeurs");
 				chaineErreur += is_Number(Cou_NiveauMin.value,'',"Le niveau minimum");
 				chaineErreur += is_Number(Cou_NiveauMax.value,'',"Le niveau maximum");
 
@@ -147,7 +147,7 @@
 <div align="center">
 <table border="1">
 	<tr>
-		<th colspan="3"><?php echo(isset($_GET['action']))?"Organiser une nouvelle course":"Ajouter un tronçon";?></th>
+		<th colspan="3"><?php echo(isset($_GET['action']))?"Organiser une nouvelle course":"Ajouter un tronÃ§on";?></th>
 	</tr>
 	<tr>
 		<th>Nom</th>
@@ -236,11 +236,11 @@
 			<td><input type="text" name="Cou_PrixEngagement" onChange="prixTotal(this.form)" value="<?php echo  $infoCourse['Cou_PrixEngagement'];?>"> &euro;</td>
 		</tr>
 		<tr>
-			<td>Densité de circulation :</td>
+			<td>DensitÃ© de circulation :</td>
 			<td><input type="text" name="Cou_DensiteCirculation" size="2" value="<?php echo(isset($infoCourse['Cou_DensiteCirculation']))?$infoCourse['Cou_DensiteCirculation']:"0";?>"> %</td>
 		</tr>
 		<tr>
-			<td>Nombre maximum de compétiteurs (2-4) :</td>
+			<td>Nombre maximum de compÃ©titeurs (2-4) :</td>
 			<td><input type="text" name="Cou_NbCompetiteursMax" size="2" onChange="prixTotal(this.form);risquePolice(this.form);" value="<?php echo(isset($infoCourse['Cou_NbCompetiteursMax']))?$infoCourse['Cou_NbCompetiteursMax']:"4";?>"></td>
 		</tr>
 		<tr>
@@ -269,7 +269,7 @@
 				<td><input type="text" name="Cou_PrixTotal" size="6" value="0" readonly > &euro;</td>
 			</tr>
 			<tr>
-				<th>Intérêt de la police :</th>
+				<th>IntÃ©rÃªt de la police :</th>
 				<td><input type="text" name="Cou_RisquePolice" size="1" value="33.3" readonly > % de chance</td>
 			</tr>
 		</table>

@@ -25,7 +25,7 @@
 		{
 			var confirmation;
 			var action=form.action.value;
-			if(action=="Supprimer") confirmation = "Etes-vous sûr de vouloir supprimer cette voiture ?";
+			if(action=="Supprimer") confirmation = "Etes-vous sÃ»r de vouloir supprimer cette voiture ?";
 			else confirmation = (action+" cette voiture ?");
 			if(confirm(confirmation))
 			{
@@ -191,7 +191,7 @@
 <a href="liste.php?page=parking" align="left">&nbsp;Le garage</a>&nbsp;>&nbsp;<?php echo $infoVoiture['Marq_Libelle']." ".$infoVoiture['ModVoi_NomModele']?></div>
 <br/>
 <a href="fiche.php?IdVoiture=<?php echo $IdVoiture?>&page=infos">Infos</a>&nbsp;|&nbsp;
-<a href="fiche.php?IdVoiture=<?php echo $IdVoiture?>&page=caracs">Caractéristiques</a>&nbsp;|&nbsp;
+<a href="fiche.php?IdVoiture=<?php echo $IdVoiture?>&page=caracs">CaractÃ©ristiques</a>&nbsp;|&nbsp;
 <a href="fiche.php?IdVoiture=<?php echo $IdVoiture?>&page=pieces">Pieces</a>&nbsp;|&nbsp;
 <a href="fiche.php?IdVoiture=<?php echo $IdVoiture?>&page=planning">Planning</a>
 <br>
@@ -224,7 +224,7 @@
 			<td><?php echo $infoVoiture['Marq_Libelle'];?></td>
 		</tr>
 		<tr class="piece">
-			<th>Modèle</th>
+			<th>ModÃ¨le</th>
 			<td><?php echo $infoVoiture['ModVoi_NomModele'];?></td>
 		</tr>
 		<tr class="piece">
@@ -236,7 +236,7 @@
 			<td><?php echo $infoVoiture['Voit_NbVictoires']."/$nbCoursesCourues"?></td>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
+			<th><img alt="Aspect ExtÃ©rieur" src="../../images/aspect.gif"></th>
 			<td><?php echo $infoVoiture['Voit_AspectExterieur'];?></td>
 		</tr>
 		<tr class="piece">
@@ -264,7 +264,7 @@
 			}
 ?>
 		<tr class="piece">
-			<th>Propriétaire</th>
+			<th>PropriÃ©taire</th>
 			<td><?php echo $infoVoiture['Man_Nom']?></td>
 		</tr>
 <?php
@@ -277,10 +277,10 @@
 			switch($EtatVoiture)
 			{
 				case -1 :
-					echo "Pièce(s) cassée(s) !";
+					echo "PiÃ¨ce(s) cassÃ©e(s) !";
 					break;
 				case 0 :
-					echo "Pièce(s) manquante(s) !";
+					echo "PiÃ¨ce(s) manquante(s) !";
 					break;
 				case 1 :
 					echo "Voiture OK";
@@ -299,16 +299,16 @@
 ?>
 	<table border="0" class="liste">
 		<tr class="piece">
-			<th colspan="7" class="titre">Caractéristiques techniques</th>
+			<th colspan="7" class="titre">CaractÃ©ristiques techniques</th>
 		</tr>
 		<tr class="piece">
-			<th class="titre"><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th class="titre"><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 			<th class="titre"><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
 			<th class="titre"><img alt="Freinage" src="../../images/frein.gif"></th>
 			<th class="titre"><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th class="titre"><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th class="titre"><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th class="titre"><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
+			<th class="titre"><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
+			<th class="titre"><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
+			<th class="titre"><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
 		</tr>
 		<tr class="piece">
 			<td><?php echo round($infoVoiture['Voit_Acceleration'],2);?></td>
@@ -326,37 +326,37 @@
 ?>
 	<table border="0" class="liste">
 		<tr class="piece">
-			<th colspan="2" class="titre">Performances estimées</th>
+			<th colspan="2" class="titre">Performances estimÃ©es</th>
 		</tr>
 		<tr class="piece">
 			<th>Vitesse maximum</th>
 			<td><?php echo msTOKmh($infoVoiture['Voit_VitesseMax']);?> km/h</td>
 		</tr>
 		<tr class="piece">
-			<th>de 0 à 100 km/h</th>
+			<th>de 0 Ã  100 km/h</th>
 			<td><?php echo TempsAcc($infoVoiture['Voit_Acceleration'], $infoVoiture['Voit_VitesseMax']);?> s</td>
 		</tr>
 		<tr class="piece">
-			<th>1000 m départ arrêté</th>
+			<th>1000 m dÃ©part arrÃªtÃ©</th>
 			<td><?php echo MilleMetreArrete($infoVoiture['Voit_Acceleration'], $infoVoiture['Voit_VitesseMax']);?>&nbsp;s</td>
 		</tr>
 		<tr class="piece">
 			<th colspan="2" class="titre">Distances Freinage</th>
 		</tr>
 		<tr class="piece">
-			<th>à 50 km/h</th>
+			<th>Ã  50 km/h</th>
 			<td><?php echo DistanceFreinage($infoVoiture['Voit_Freinage'],50);?> m</td>
 		</tr>
 		<tr class="piece">
-			<th>à 100 km/h</th>
+			<th>Ã  100 km/h</th>
 			<td><?php echo DistanceFreinage($infoVoiture['Voit_Freinage'],100);?> m</td>
 		</tr>
 		<tr class="piece">
-			<th>à 130 km/h</th>
+			<th>Ã  130 km/h</th>
 			<td><?php echo DistanceFreinage($infoVoiture['Voit_Freinage'],130);?> m</td>
 		</tr>
 		<tr class="piece">
-			<th>à 150 km/h</th>
+			<th>Ã  150 km/h</th>
 			<td><?php echo DistanceFreinage($infoVoiture['Voit_Freinage'],150);?> m</td>
 		</tr>
 	</table>
@@ -367,11 +367,11 @@
 ?>
 	<table border="0" class="liste">
 		<tr class="piece">
-			<th colspan="6" class="titre">Pièces installées</th>
+			<th colspan="6" class="titre">PiÃ¨ces installÃ©es</th>
 		</tr>
 		<tr class="piece">
 			<th class="titre">Type</th>
-			<th class="titre">Modèle</th>
+			<th class="titre">ModÃ¨le</th>
 			<th class="titre">Marque</th>
 			<th class="titre">Usure</th>
 			<th class="titre">Age</th>
@@ -381,7 +381,7 @@
 <?php
 	foreach($pieceInstallee as $IdTypePiece => $infoPiece)
 	{
-		//echo "Id Pièce : ".$infoPiece['IdPieceDetachee']." Oblig. = ".$infoPiece['TypPi_Obligatoire']."<br>";
+		//echo "Id PiÃ¨ce : ".$infoPiece['IdPieceDetachee']." Oblig. = ".$infoPiece['TypPi_Obligatoire']."<br>";
 		if($infoPiece['IdPieceDetachee'] != "")
 			$classe = (dispoPiece($infoPiece['IdPieceDetachee']))?"piece":"casse";
 		elseif($infoPiece['TypPi_Obligatoire']==1)
@@ -427,7 +427,7 @@
 			if($nbCoursesPrevues == 0)
 			{
 ?>
-			<td>Aucune course prévue</td>
+			<td>Aucune course prÃ©vue</td>
 <?php
 			}
 			else
@@ -500,7 +500,7 @@
 ?>
 <form action="changerPiece.php" method="get">
 	<input type="hidden" name="IdVoiture" value="<?php echo $infoVoiture['IdVoiture']; ?>">
-	<input type="submit" value="Ajouter/Changer une pièce">
+	<input type="submit" value="Ajouter/Changer une piÃ¨ce">
 </form>
 <?php
 		}

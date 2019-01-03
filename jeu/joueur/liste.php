@@ -56,7 +56,7 @@
 ?>
 <table border="1" width="90%" class="liste">
 	<tr>
-		<th colspan="18">Liste des joueurs | <a href="gestion.php?action=Envoyer">Mail général</a></th>
+		<th colspan="18">Liste des joueurs | <a href="gestion.php?action=Envoyer">Mail gÃ©nÃ©ral</a></th>
 	</tr>
 	<tr>
 		<th class="titre">Id</th>
@@ -64,7 +64,7 @@
 		<th class="titre">E-Mail</th>
 		<th class="titre">Date Inscription</th>
 		<th class="titre">Dernier Login</th>
-		<th class="titre">Inscription validée</th>
+		<th class="titre">Inscription validÃ©e</th>
 	</tr>
 <?php
 	while($infoJoueur = mysql_fetch_assoc($resultatInfoJoueurs))

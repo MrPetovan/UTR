@@ -9,7 +9,7 @@
 		$niveauMax = niveauDouble($niveauMax[0],1000);
 
 		$requeteDateDerniereCreation = "	SELECT UNIX_TIMESTAMP(NOW()) - UNIX_TIMESTAMP(UTR_DateCreationPiece) FROM utr";
-		$resultatDateDerniereCreation = mysql_query($requeteDateDerniereCreation)or die("Requete Date Dernière Creation :<br />$requeteDateDerniereCreation<br /><br />".mysql_error());
+		$resultatDateDerniereCreation = mysql_query($requeteDateDerniereCreation)or die("Requete Date DerniÃ¨re Creation :<br />$requeteDateDerniereCreation<br /><br />".mysql_error());
 		$tempsCreation = mysql_fetch_row($resultatDateDerniereCreation);
 		//echo $tempsCreation[0];
 		$dureeJour = 24 * 3600;
@@ -41,7 +41,7 @@
 				mysql_query($requeteSupprimerPiece)or die("Requete Supprimer Piece Neuve : ".mysql_error());
 			}
 
-//On réapprovisionne le stock avec tout ce qui se fait.
+//On rÃ©approvisionne le stock avec tout ce qui se fait.
 			foreach($IdModele as $infoModele)
 			{
 				$Qualite = rand(95,99);
@@ -103,7 +103,7 @@
 												WHERE IdPieceDetachee = '".$infoPieceOccaz['IdPieceDetachee']."'";
 			mysql_query($requeteSupprimerPiece)or die("Requete Supprimer Piece Occaz : ".mysql_error());
 		}
-//On rajoute autant de pièces d'occasion que de managers
+//On rajoute autant de piÃ¨ces d'occasion que de managers
 		$nbManager = mysql_fetch_row(mysql_query("SELECT COUNT(IdManager) FROM manager"));
 		for($i = 0; $i < $nbManager[0]; $i ++)
 		{

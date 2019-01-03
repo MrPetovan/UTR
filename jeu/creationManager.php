@@ -22,7 +22,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>UTR : Création du Profil</title>
+	<title>UTR : CrÃ©ation du Profil</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<script type="text/javascript" language="JavaScript" src="../include/verif.js"></script>
 	<script language="JavaScript">
@@ -30,8 +30,8 @@
 	{
 		with (form)
 		{
-			var chaineErreur = is_NotNull(Pil_Age.value,"L'âge");
-			if(XPRestants.value != 0) chaineErreur += " - Il vous reste des points d'expérience à distribuer\n";
+			var chaineErreur = is_NotNull(Pil_Age.value,"L'Ã¢ge");
+			if(XPRestants.value != 0) chaineErreur += " - Il vous reste des points d'expÃ©rience Ã  distribuer\n";
 
 			if (chaineErreur != "")
 			{
@@ -127,7 +127,7 @@
 					<td width="579" height=34><div align="left">
 						<table width="100%" border="0" cellspacing="0" cellpadding="0">
 							<tr>
-								<td background="/UTR/design/nav.jpg" height="34" width="485"><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Création du pilote et de la voiture</b></div></td>
+								<td background="/UTR/design/nav.jpg" height="34" width="485"><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>CrÃ©ation du pilote et de la voiture</b></div></td>
 								<td align="right" background="/UTR/design/navtile.jpg"><img height="34" src="/UTR/design/navdroite.gif" width="2"></td>
 							</tr>
 						</table></div>
@@ -191,11 +191,11 @@
 										<tr>
 											<th width="150">Nom : </th>
 											<td colspan="2"><?php echo $infoJoueur['Jou_Pseudo']?></td>
-											<td rowspan="3">L'âge du pilote n'a aucune influence en terme de jeu, c'est uniquement un choix personnel : pilote jeune ou plus vieux ?</td>
+											<td rowspan="3">L'Ã¢ge du pilote n'a aucune influence en terme de jeu, c'est uniquement un choix personnel : pilote jeune ou plus vieux ?</td>
 										</tr>
 										<tr>
 											<th>Sexe :</th>
-											<td colspan="2"><input type="radio" name="Man_Sexe" value="Masculin" checked>&nbsp;Masculin&nbsp;<input type="radio" name="Man_Sexe" value="Féminin">&nbsp;Feminin</td>
+											<td colspan="2"><input type="radio" name="Man_Sexe" value="Masculin" checked>&nbsp;Masculin&nbsp;<input type="radio" name="Man_Sexe" value="FÃ©minin">&nbsp;Feminin</td>
 										</tr>
 										<tr>
 											<th>Age (18-25 ans) : </th>
@@ -204,35 +204,35 @@
 									</table>
 									<table width="579" border="1" cellpadding="1" cellspacing="0" bordercolor="#780000">
 										<tr>
-											<th colspan="5">Compétences</th>
+											<th colspan="5">CompÃ©tences</th>
 										</tr>
 										<tr>
-											<th colspan="2">Points d'expérience restant :</th>
+											<th colspan="2">Points d'expÃ©rience restant :</th>
 											<td colspan="1"><input type="text" name="XPRestants" size="4" value="<?php echo $erreur['XPRestants']?>" readonly></td>
 											<td>&nbsp;</td>
-											<td rowspan="5">Les points d'expérience servent à mesurer l'entraînement du pilote dans chacune des 4 grands domaines du pilotage.<br><br>
-												Ces points servent ensuite à déterminer le niveau de maîtrise de chaque compétences. A chaque niveau correspond un seuil de points d'expérience.</td>
+											<td rowspan="5">Les points d'expÃ©rience servent Ã  mesurer l'entraÃ®nement du pilote dans chacune des 4 grands domaines du pilotage.<br><br>
+												Ces points servent ensuite Ã  dÃ©terminer le niveau de maÃ®trise de chaque compÃ©tences. A chaque niveau correspond un seuil de points d'expÃ©rience.</td>
 										</tr>
 										<tr>
-											<th width="180">Expérience des drifts : </th>
+											<th width="180">ExpÃ©rience des drifts : </th>
 											<td><input name="Shifts" type="button" onClick="retirerPoints(this)" value=" - "></td>
 											<td><input type="text" name="Pil_XPShifts" size="4" id="Carac1" value="<?php echo $erreur['Pil_XPShifts']?>" readonly></td>
 											<td><input name="Shifts" type="button" onClick="ajouterPoints(this)" value=" + "></td>
 										</tr>
 										<tr>
-											<th>Expérience du freinage : </th>
+											<th>ExpÃ©rience du freinage : </th>
 											<td><input name="Freinage" type="button" onClick="retirerPoints(this)" value=" - "></td>
 											<td><input type="text" name="Pil_XPFreinage" size="4" id="Carac2" value="<?php echo $erreur['Pil_XPFreinage']?>" readonly></td>
 											<td><input name="Freinage" type="button" onClick="ajouterPoints(this)" value=" + "></td>
 										</tr>
 										<tr>
-											<th>Expérience des virages : </th>
+											<th>ExpÃ©rience des virages : </th>
 											<td><input name="Virage" type="button" onClick="retirerPoints(this)" value=" - "></td>
 											<td><input type="text" name="Pil_XPVirage" size="4" id="Carac3" value="<?php echo $erreur['Pil_XPVirage']?>" readonly>
 											<td><input name="Virage" type="button" onClick="ajouterPoints(this)" value=" + "></td>
 										</tr>
 										<tr>
-											<th>Expérience des "spécial" : </th>
+											<th>ExpÃ©rience des "spÃ©cial" : </th>
 											<td><input name="Spe" type="button" onClick="retirerPoints(this)" value=" - "></td>
 											<td><input type="text" name="Pil_XPSpe" size="4" id="Carac4" value="<?php echo $erreur['Pil_XPSpe']?>" readonly></td>
 											<td><input name="Spe" type="button" onClick="ajouterPoints(this)" value=" + "></td>

@@ -35,7 +35,7 @@
 ?>
 		</td>
     	<td width="78%">
-Cette pièce n'est plus en vente !
+Cette piÃ¨ce n'est plus en vente !
 		</td>
 	</tr>
 	<tr>

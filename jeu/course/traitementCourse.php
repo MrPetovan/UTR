@@ -85,7 +85,7 @@
 	//Suppression course si pas assez de participants
 			if($Cou_NbCompetiteurs <= 1 )
 			{
-	//Suppression des tronçons
+	//Suppression des tronÃ§ons
 				$infoTroncon['Tron_IdTronconSuivant'] = $infoCourse['Cou_IdTronconDepart'];
 				do
 				{
@@ -102,7 +102,7 @@
 
 				}while(!empty($infoTroncon['Tron_IdTronconSuivant']));
 
-	//Remboursement des paris éventuels et suppression de l'inscription
+	//Remboursement des paris Ã©ventuels et suppression de l'inscription
 				if($Cou_NbCompetiteurs)
 				{
 					$infoConcurrent = mysql_fetch_assoc($resultatInscriptionCourse);
@@ -151,9 +151,9 @@
 														Voit_IdOptiques,
 														Voit_IdAileron,
 														Voit_IdChassis,
-														Voit_IdPucedeContrôle,
+														Voit_IdPucedeContrÃ´le,
 														Voit_IdNOS,
-														Voit_IdNéons,
+														Voit_IdNÃ©ons,
 														Voit_IdSono
 											FROM voiture
 											WHERE IdVoiture = '".$infoConcurrent[$i]['IdVoiture']."'";
@@ -201,7 +201,7 @@
 			{
 				echo ($debug)?$infoCourse['Cou_Nom']." : Tour ".($indiceTour+1)."<br><hr>":"";
 				$IdTronconCourant = $infoCourse['Cou_IdTronconDepart'];
-		//Pour chaque tronçon
+		//Pour chaque tronÃ§on
 				do
 				{
 					$requeteTronconCourant = "	SELECT IdTroncon, Tron_IdTronconSuivant, Sec_Nom, Sec_Longueur, Sec_TurboRequis, Sec_UsurePneus, Sec_UsureAmortisseurs, Sec_VitesseMaximum
@@ -213,7 +213,7 @@
 			//Pour chaque concurrent
 					foreach($infoConcurrent as $i => $infoConcurrentTour)
 					{
-				//Calcul des caractéristiques voiture+pilote
+				//Calcul des caractÃ©ristiques voiture+pilote
 						$Acceleration = $VitesseMaxVoiture = $Freinage = $Turbo = $Adherence = $SoliditeMoteur = $AspectExterieur = $Poids = 0;
 
 						foreach($infoPieces[$i] as $typePiece => $infoPiece)
@@ -237,11 +237,11 @@
 	?>
 	<table border="1">
 	<tr>
-		<th colspan="10">Caractéristiques du concurrent <?php echo $infoConcurrentTour['Pil_Nom']?></th>
+		<th colspan="10">CaractÃ©ristiques du concurrent <?php echo $infoConcurrentTour['Pil_Nom']?></th>
 	</tr>
 	<tr>
 		<th>Acc</th><th>VitMax</th><th>Frein</th><th>Turbo</th><th>Adh</th><th>SolMot</th><th>Aspect</th><th>Poids</th>
-		<th>Accélération Initiale</th>
+		<th>AccÃ©lÃ©ration Initiale</th>
 		<th>Vitesse Initiale</th>
 	</tr>
 	<tr>
@@ -318,12 +318,12 @@
 							}
 						}
 						$infoConcurrent[$i]['Cou_TempsParcours'] += $tempsTotalTroncon;
-						echo "Temps tronçon : $tempsTotalTroncon s <br>";
+						echo "Temps tronÃ§on : $tempsTotalTroncon s <br>";
 					}
 					$IdTronconCourant = $infoTroncon['Tron_IdTronconSuivant'];
 				}while(!empty($IdTronconCourant));
 			}
-	//Traitement des résultats
+	//Traitement des rÃ©sultats
 
 			if($debug)
 			{
@@ -417,7 +417,7 @@
 		mysql_query($requeteMAJDate);
 	}
 
-	function creationPièce()
+	function creationPiÃ¨ce()
 	{
 		//Gestion des niveaux
 		$requeteModelesPiece= "	SELECT IdModelePiece, ModVoi_PrixNeuve FROM modele_piece";

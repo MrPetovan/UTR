@@ -21,7 +21,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<title>UTR : Liste Modèles Pièce</title>
+	<title>UTR : Liste ModÃ¨les PiÃ¨ce</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
 	<style>
@@ -119,7 +119,7 @@ function changerFormulaire(indice)
 <div align="center">
 <table border="0" width="90%">
 	<tr>
-		<th colspan="18">Liste des modèles de pièce</th>
+		<th colspan="18">Liste des modÃ¨les de piÃ¨ce</th>
 	</tr>
 	<tr>
 <?php
@@ -148,11 +148,11 @@ function changerFormulaire(indice)
 ?>
 <table border="1" id="remove<?php echo $typePiece['IdTypePiece']?>" class="liste">
 <tr>
-	<th colspan="5">Modèle pour le type : <?php echo $typePiece['TypPi_Libelle']?> | <a href="gestion.php?action=Ajouter&IdTypePiece=<?php echo $typePiece['IdTypePiece']?>">Ajouter un modèle</a></th>
+	<th colspan="5">ModÃ¨le pour le type : <?php echo $typePiece['TypPi_Libelle']?> | <a href="gestion.php?action=Ajouter&IdTypePiece=<?php echo $typePiece['IdTypePiece']?>">Ajouter un modÃ¨le</a></th>
 </tr>
 <tr>
 	<th class="titre">Niveau</th>
-	<th class="titre">Modèle</th>
+	<th class="titre">ModÃ¨le</th>
 	<th class="titre">Marque</th>
 	<th class="titre">Prix</th>
 	<th class="titre">Action</th>
@@ -182,7 +182,7 @@ function changerFormulaire(indice)
 	<td><a href="fiche.php?IdModelePiece=<?php echo $infoModelePiece['IdModelePiece']?>"><?php echo $infoModelePiece['ModPi_NomModele']?></a></td>
 	<td><?php echo $infoModelePiece['Marq_Libelle']?></td>
 	<td><?php echo $infoModelePiece['ModPi_PrixNeuve']?></td>
-	<td><a href="../piece/gestion.php?action=Ajouter&IdModelePiece=<?php echo $infoModelePiece['IdModelePiece']?>">Ajouter une pièce</a></td>
+	<td><a href="../piece/gestion.php?action=Ajouter&IdModelePiece=<?php echo $infoModelePiece['IdModelePiece']?>">Ajouter une piÃ¨ce</a></td>
 </tr>
 <?php
 		}

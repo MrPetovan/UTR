@@ -67,17 +67,17 @@
 		if($Man_Niveau > 2)
 		{
 ?>
-		<th class="titre"><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+		<th class="titre"><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 		<th class="titre"><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
 		<th class="titre"><img alt="Freinage" src="../../images/frein.gif"></th>
 		<th class="titre"><img alt="Turbo" src="../../images/turbo.gif"></th>
-		<th class="titre"><img alt="Adhérence" src="../../images/adh.gif"></th>
-		<th class="titre"><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
+		<th class="titre"><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
+		<th class="titre"><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
 <?php
 		}
 ?>
-		<th class="titre"><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
-		<th class="titre"><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
+		<th class="titre"><img alt="Aspect ExtÃ©rieur" src="../../images/aspect.gif"></th>
+		<th class="titre"><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
 		<th class="titre"><img alt="Poids" src="../../images/poids.gif"></th>
 		<th class="titre"><img alt="Prix" src="../../images/prix.gif"></th>
 	</tr>

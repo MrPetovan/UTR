@@ -16,7 +16,7 @@
                       <td> <p align="left"><img height=8
                         src="/UTR/design/fleche.gif"
                         width=8> <a
-                        href="/UTR/frame/regles.php">Les rËgles</a><br>
+                        href="/UTR/frame/regles.php">Les r√®gles</a><br>
                           <img
                         height=8
                         src="/UTR/design/fleche.gif"
@@ -66,13 +66,13 @@
                   <tbody>
                     <tr>
                       <td><p align="left"> <img height=8 src="/UTR/design/fleche.gif" width=8>
-                          &nbsp;<a href="/UTR/jeu/joueur/stat.php">Infos gÈnÈrales</a>
+                          &nbsp;<a href="/UTR/jeu/joueur/stat.php">Infos g√©n√©rales</a>
                           <br>
                           <img height=8 src="/UTR/design/fleche.gif" width=8>
                           &nbsp;<a href="/UTR/jeu/voiture/liste.php?page=parking">Le garage</a>
                           <br>
                           <img height=8 src="/UTR/design/fleche.gif" width=8>
-                          &nbsp;<a href="/UTR/jeu/piece/liste.php?page=stock&type=tous">L'entrepÙt</a>
+                          &nbsp;<a href="/UTR/jeu/piece/liste.php?page=stock&type=tous">L'entrep√¥t</a>
                           <br>
                           <img height=8 src="/UTR/design/fleche.gif" width=8>
                           &nbsp;<a href="/UTR/jeu/pilote/liste.php">Le vestiaire</a>
@@ -111,11 +111,11 @@
                           <br>
                           <img height=8
                         src="/UTR/design/fleche.gif"
-                        width=8> <a href="/UTR/jeu/modele_piece/liste.php">ModËles
-                          piËce</a> <br>
+                        width=8> <a href="/UTR/jeu/modele_piece/liste.php">Mod√®les
+                          pi√®ce</a> <br>
                           <img height=8
                         src="/UTR/design/fleche.gif"
-                        width=8> <a href="/UTR/jeu/modele_voiture/liste.php">ModËles
+                        width=8> <a href="/UTR/jeu/modele_voiture/liste.php">Mod√®les
                           voiture</a> <br>
                           <br>
                           <?php
@@ -123,7 +123,7 @@
 ?>
                           <img height=8
                         src="/UTR/design/fleche.gif"
-                        width=8> <a href="/UTR/jeu/logout.php">DÈconnexion</a>
+                        width=8> <a href="/UTR/jeu/logout.php">D√©connexion</a>
                           <br>
                           <br>
                         </p></td>

@@ -75,7 +75,7 @@
 		$resultatMaxCaracs = mysql_query($requeteMaxCaracs) or die("Requete Max Caracs : ".mysql_error());
 		$CaracMax = mysql_fetch_assoc($resultatMaxCaracs);
 
-//Pièce n'existe plus
+//PiÃ¨ce n'existe plus
 		if(!isset($infoPieceDetachee['IdPieceDetachee']))
 		{
 			header("Location: erreur.php");
@@ -84,7 +84,7 @@
 ?>
 <html>
 <head>
-	<title>UTR : Fiche d'une pièce détachée</title>
+	<title>UTR : Fiche d'une piÃ¨ce dÃ©tachÃ©e</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="../../include/style.css" rel="stylesheet" type="text/css" />
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
@@ -93,8 +93,8 @@
 		{
 			var confirmation;
 			var action=form.action.value;
-			if(action=="Supprimer") confirmation = "Etes-vous sûr de vouloir supprimer cette pièce détachée ?";
-			else confirmation = (action+" cette pièce détachée ?");
+			if(action=="Supprimer") confirmation = "Etes-vous sÃ»r de vouloir supprimer cette piÃ¨ce dÃ©tachÃ©e ?";
+			else confirmation = (action+" cette piÃ¨ce dÃ©tachÃ©e ?");
 			if(confirm(confirmation))
 			{
 				form.method="POST";
@@ -147,11 +147,11 @@
 
 		if(empty($infoPieceDetachee['IdVente']))
 		{
-			//Pièce pas en vente
+			//PiÃ¨ce pas en vente
 			switch($infoPieceDetachee['PiDet_IdManager'])
 			{
 				case $IdManager :
-					$submitFormGestion = "Vendre cette pièce";
+					$submitFormGestion = "Vendre cette piÃ¨ce";
 					$actionFormGestion = "Vendre";
 					$submitFormTraitement = "";
 					$actionFormTraitement = "";
@@ -166,7 +166,7 @@
 		}
 		else
 		{
-			//Pièce en vente
+			//PiÃ¨ce en vente
 			switch($infoPieceDetachee['PiDet_IdManager'])
 			{
 				case $IdManager :
@@ -179,9 +179,9 @@
 				default :
 					$submitFormGestion = "";
 					$actionFormGestion = "";
-					$submitFormTraitement = "Acheter cette pièce";
+					$submitFormTraitement = "Acheter cette piÃ¨ce";
 					$actionFormTraitement = "Acheter";
-					$confirmFormTraitement = "Etes-vous sûr de vouloir acheter cette pièce ?";
+					$confirmFormTraitement = "Etes-vous sÃ»r de vouloir acheter cette piÃ¨ce ?";
 					break;
 			}
 		}
@@ -233,17 +233,17 @@
 			else
 			{
 ?>
-<a href="liste.php?page=stock&type=<?php echo $infoPieceDetachee['ModPi_IdTypePiece']?>"><< Revenir à l'entrepôt</a>
+<a href="liste.php?page=stock&type=<?php echo $infoPieceDetachee['ModPi_IdTypePiece']?>"><< Revenir Ã  l'entrepÃ´t</a>
 <?php
 			}
 		}
 		else
 		{
 ?>
-<a href="liste.php?page=installee&type=<?php echo $infoPieceDetachee['ModPi_IdTypePiece']?>"><< Revenir à l'entrepôt</a>
+<a href="liste.php?page=installee&type=<?php echo $infoPieceDetachee['ModPi_IdTypePiece']?>"><< Revenir Ã  l'entrepÃ´t</a>
 <br />
 <br />
-<a href="../voiture/fiche.php?IdVoiture=<?php echo $infoVoiture['IdVoiture'];?>&page=pieces"><< Revenir à la voiture</a>
+<a href="../voiture/fiche.php?IdVoiture=<?php echo $infoVoiture['IdVoiture'];?>&page=pieces"><< Revenir Ã  la voiture</a>
 <?php
 		}
 ?>
@@ -252,14 +252,14 @@
 <br />
 	<table border="0" class="liste">
 		<tr class="piece">
-			<th colspan="2">Fiche technique de la pièce <?php echo $infoPieceDetachee['ModPi_NomModele']?></td>
+			<th colspan="2">Fiche technique de la piÃ¨ce <?php echo $infoPieceDetachee['ModPi_NomModele']?></td>
 		</tr>
 		<tr class="piece">
 			<th>Marque :</th>
 			<td><?php echo $infoPieceDetachee['Marq_Libelle']?></td>
 		</tr>
 		<tr class="piece">
-			<th>Modèle :</th>
+			<th>ModÃ¨le :</th>
 			<td><?php echo $infoPieceDetachee['ModPi_NomModele']?></td>
 		</tr>
 		<tr class="piece">
@@ -267,19 +267,19 @@
 			<td><?php echo $infoPieceDetachee['TypPi_Libelle'];?></td>
 		</tr>
 		<tr class="piece">
-			<th>Voiture équipée :</th>
+			<th>Voiture Ã©quipÃ©e :</th>
 			<td>
 <?php
 	if($infoPieceDetachee['IdVente'] != "")
 	{
 ?>
-		Aucune => Pièce en vente
+		Aucune => PiÃ¨ce en vente
 <?php
 	}
 	elseif($infoVoiture['IdVoiture']=="")
 	{
 ?>
-		Aucune => Pièce en stock
+		Aucune => PiÃ¨ce en stock
 <?php
 	}
 	else
@@ -291,7 +291,7 @@
 ?>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
+			<th><img alt="Aspect ExtÃ©rieur" src="../../images/aspect.gif"></th>
 			<td>
 <?php
 		if($infoPieceDetachee['ModPi_AspectExterieur']!="")
@@ -314,7 +314,7 @@
 		</tr>
 		<tr class="piece">
 			<th><img alt="Prix" src="../../images/prix.gif"></th>
-			<td><?php echo $infoPieceDetachee['ModPi_PrixNeuve']?> €</td>
+			<td><?php echo $infoPieceDetachee['ModPi_PrixNeuve']?> â‚¬</td>
 		</tr>
 		<tr class="piece">
 			<td colspan="2"><?php echo nl2br($infoPieceDetachee['ModPi_Commentaires'])?></td>
@@ -324,14 +324,14 @@
 
 	<table border="0" class="liste">
 		<tr class="piece">
-			<th colspan="2">Caractéristiques</th>
+			<th colspan="2">CaractÃ©ristiques</th>
 		</tr>
 <?php
 		if($infoPieceDetachee['ModPi_Acceleration']!="")
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 			<td>[
 <?php
 			for($i = 0;$i < 10;$i++)
@@ -387,7 +387,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
+			<th><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
 			<td>[
 <?php
 			for($i = 0;$i < 10;$i++)
@@ -401,7 +401,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
 			<td>[
 <?php
 			for($i = 0;$i < 10;$i++)
@@ -415,7 +415,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
 			<td><?php echo $infoPieceDetachee['ModPi_CapaciteMoteur'];?></td>
 		</tr>
 <?php
@@ -424,7 +424,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
+			<th><img alt="CapacitÃ© Max" src="../../images/capamax.gif"></th>
 			<td><?php echo $infoPieceDetachee['ModPi_CapaciteMax'];?></td>
 		</tr>
 <?php
@@ -433,7 +433,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+			<th><img alt="DurÃ©e de vie Max" src="../../images/dureeviemax.gif"></th>
 			<td><?php echo $infoPieceDetachee['ModPi_DureeVieMax'];?></td>
 		</tr>
 <?php
@@ -444,28 +444,28 @@
 			<td><?php echo ($infoPieceDetachee['PiDet_UsureMesuree']=="")?"?":$infoPieceDetachee['PiDet_UsureMesuree'];?> %</td>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Qualité" src="../../images/qualite.gif"></th>
+			<th><img alt="QualitÃ©" src="../../images/qualite.gif"></th>
 			<td><?php echo ($infoPieceDetachee['PiDet_QualiteMesuree']=='')?"?":$infoPieceDetachee['PiDet_QualiteMesuree'];?> %</td>
 		</tr>
 	</table>
 <br>
 	<table border="0" class="liste">
 		<tr class="piece">
-			<th>Caractéristiques</th>
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th>CaractÃ©ristiques</th>
+			<th><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 			<th><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
 			<th><img alt="Freinage" src="../../images/frein.gif"></th>
 			<th><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
-			<th><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+			<th><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
+			<th><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="CapacitÃ© Max" src="../../images/capamax.gif"></th>
+			<th><img alt="DurÃ©e de vie Max" src="../../images/dureeviemax.gif"></th>
 			<th><img alt="Usure" src="../../images/usure.gif"></th>
-			<th><img alt="Qualité" src="../../images/qualite.gif"></th>
+			<th><img alt="QualitÃ©" src="../../images/qualite.gif"></th>
 		</tr>
 		<tr class="piece">
-			<th>Données standard</th>
+			<th>DonnÃ©es standard</th>
 			<td><?php echo $infoPieceDetachee['ModPi_Acceleration'];?></td>
 			<td><?php echo $infoPieceDetachee['ModPi_VitesseMax'];?></td>
 			<td><?php echo $infoPieceDetachee['ModPi_Freinage'];?></td>
@@ -479,7 +479,7 @@
 			<td>100 %</td>
 		</tr>
 		<tr class="piece">
-			<th>Données mesurées</th>
+			<th>DonnÃ©es mesurÃ©es</th>
 			<td><?php if($infoPieceDetachee['ModPi_Acceleration']!="") echo ($infoPieceDetachee['PiDet_QualiteMesuree']=="")?"?":round($infoPieceDetachee['ModPi_Acceleration']*$infoPieceDetachee['PiDet_QualiteMesuree']/100,1);?></td>
 			<td><?php if($infoPieceDetachee['ModPi_VitesseMax']!="") echo ($infoPieceDetachee['PiDet_QualiteMesuree']=="")?"?":round($infoPieceDetachee['ModPi_VitesseMax']*$infoPieceDetachee['PiDet_QualiteMesuree']/100,1);?></td>
 			<td><?php if($infoPieceDetachee['ModPi_Freinage']!="") echo ($infoPieceDetachee['PiDet_QualiteMesuree']=="")?"?":round($infoPieceDetachee['ModPi_Freinage']*$infoPieceDetachee['PiDet_QualiteMesuree']/100,1);?></td>
@@ -507,7 +507,7 @@
 	<input type="hidden" name="IdPieceDetachee" value="<?php echo $infoPieceDetachee['IdPieceDetachee'];?>">
 	<input type="hidden" name="TypPi_PrixReparation" value="<?php echo ($infoPieceDetachee['TypPi_PrixReparation']*$infoPieceDetachee['PiDet_UsureMesuree'])?>">
 	<input type="hidden" name="action" value="Reparer">
-	<input type="submit" value="Réparer la pièce (<?php echo $infoPieceDetachee['TypPi_PrixReparation']*$infoPieceDetachee['PiDet_UsureMesuree']?> €)"<?php echo ($infoManager['Man_Solde'] < $infoPieceDetachee['TypPi_PrixReparation']*$infoPieceDetachee['PiDet_UsureMesuree'])?" disabled":""?>>
+	<input type="submit" value="RÃ©parer la piÃ¨ce (<?php echo $infoPieceDetachee['TypPi_PrixReparation']*$infoPieceDetachee['PiDet_UsureMesuree']?> â‚¬)"<?php echo ($infoManager['Man_Solde'] < $infoPieceDetachee['TypPi_PrixReparation']*$infoPieceDetachee['PiDet_UsureMesuree'])?" disabled":""?>>
 </form>
 <?php
 		}
@@ -519,7 +519,7 @@
 	<input type="hidden" name="TypPi_PrixEstimation" value="<?php echo $infoPieceDetachee['TypPi_PrixEstimation']?>">
 	<input type="hidden" name="action" value="Estimer">
 	<input type="hidden" name="TypPi_PrixEstimation" value="<?php echo $infoPieceDetachee['TypPi_PrixEstimation']?>">
-	<input type="submit" value="Estimer les caractéristiques (<?php echo $infoPieceDetachee['TypPi_PrixEstimation']?> €)"<?php echo ($infoManager['Man_Solde'] < $infoPieceDetachee['TypPi_PrixEstimation'])?" disabled":""?>>
+	<input type="submit" value="Estimer les caractÃ©ristiques (<?php echo $infoPieceDetachee['TypPi_PrixEstimation']?> â‚¬)"<?php echo ($infoManager['Man_Solde'] < $infoPieceDetachee['TypPi_PrixEstimation'])?" disabled":""?>>
 </form>
 <?php
 		}
@@ -533,7 +533,7 @@
 	<input type="hidden" name="IdVoiture" value="<?php echo $infoVoiture['IdVoiture']?>">
 
 	<input type="hidden" name="action" value="Retirer">
-	<input type="submit" value="Retirer la pièce de la voiture (<?php echo $infoPieceDetachee['TypPi_PrixDemontage']?> €)"<?php echo ($infoManager['Man_Solde'] < $infoPieceDetachee['TypPi_PrixDemontage'])?" disabled":""?>>
+	<input type="submit" value="Retirer la piÃ¨ce de la voiture (<?php echo $infoPieceDetachee['TypPi_PrixDemontage']?> â‚¬)"<?php echo ($infoManager['Man_Solde'] < $infoPieceDetachee['TypPi_PrixDemontage'])?" disabled":""?>>
 </form>
 <?php
 		}

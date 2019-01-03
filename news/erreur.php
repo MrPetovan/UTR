@@ -27,7 +27,7 @@
 		</td>
 		<td>
 Sorry,
-Vous devez être logué pour pouvoir poster une news...
+Vous devez Ãªtre loguÃ© pour pouvoir poster une news...
 		</td>
 	</tr>
 	<tr>

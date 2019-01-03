@@ -21,8 +21,8 @@
 		function confirmSuppr(form)
 		{
 			var action=form.action.value;
-			//if(action=="Supprimer") confirmation = "Etes-vous sûr de vouloir supprimer ce manager ?";
-			var confirmation = "Etes-vous sûr de vouloir "+action+" ce manager ?";
+			//if(action=="Supprimer") confirmation = "Etes-vous sÃ»r de vouloir supprimer ce manager ?";
+			var confirmation = "Etes-vous sÃ»r de vouloir "+action+" ce manager ?";
 			if(confirm(confirmation))
 			{
 				form.method="POST";
@@ -64,7 +64,7 @@
 													Man_Reputation,
 													Man_IdJob,
 													Job_NomMasculin,
-													Job_NomFéminin,
+													Job_NomFÃ©minin,
 													Job_Salaire,
 													Man_IdJoueur,
 													Jou_Pseudo

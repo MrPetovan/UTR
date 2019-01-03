@@ -13,7 +13,7 @@
 ?>
 <html>
 <head>
-	<title>UTR : Modifier un modèle de pièce détachée</title>
+	<title>UTR : Modifier un modÃ¨le de piÃ¨ce dÃ©tachÃ©e</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="../style/style.css" rel="stylesheet" type="text/css" />
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
@@ -113,7 +113,7 @@
 <input type="hidden" name="verificationJs" value="false">
 	<table border="1">
 		<tr>
-			<th colspan="3"><?php echo ($_GET['action']=="Ajouter")?"Ajouter une pièce":"Modifier le modèle de la pièce ".$infoModelePiece['ModPi_NomModele']?></td>
+			<th colspan="3"><?php echo ($_GET['action']=="Ajouter")?"Ajouter une piÃ¨ce":"Modifier le modÃ¨le de la piÃ¨ce ".$infoModelePiece['ModPi_NomModele']?></td>
 		</tr>
 		<tr>
 			<th>Marque :</th>
@@ -131,7 +131,7 @@
 			</select></td>
 		</tr>
 		<tr>
-			<th>Modèle<font color="#FF0000">*</font> :</th>
+			<th>ModÃ¨le<font color="#FF0000">*</font> :</th>
 			<td colspan="2"><input type="text" size="30" name="ModPi_NomModele" value="<?php echo $infoModelePiece['ModPi_NomModele'];?>"></td>
 		</tr>
 		<tr>
@@ -147,7 +147,7 @@
 			</td>
 		</tr>
 		<tr>
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
+			<th><img alt="Aspect ExtÃ©rieur" src="../../images/aspect.gif"></th>
 			<td colspan="2"><input type="text" name="ModPi_AspectExterieur" value="<?php echo $infoModelePiece['ModPi_AspectExterieur'];?>"></td>
 		</tr>
 		<tr>
@@ -166,19 +166,19 @@
 <br>
 	<table border="1" id="Modifier">
 		<tr>
-			<th>Caractéristiques</th>
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th>CaractÃ©ristiques</th>
+			<th><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 			<th><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
 			<th><img alt="Freinage" src="../../images/frein.gif"></th>
 			<th><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
-			<th><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+			<th><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
+			<th><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="CapacitÃ© Max" src="../../images/capamax.gif"></th>
+			<th><img alt="DurÃ©e de vie Max" src="../../images/dureeviemax.gif"></th>
 		</tr>
 		<tr>
-			<th>Données standard</th>
+			<th>DonnÃ©es standard</th>
 			<td><input type="text" name="ModPi_Acceleration" size="4" value="<?php echo $infoModelePiece['ModPi_Acceleration'];?>"></td>
 			<td><input type="text" name="ModPi_VitesseMax" size="4" value="<?php echo $infoModelePiece['ModPi_VitesseMax'];?>"></td>
 			<td><input type="text" name="ModPi_Freinage" size="4" value="<?php echo $infoModelePiece['ModPi_Freinage'];?>"></td>
@@ -190,7 +190,7 @@
 			<td rowspan="2"><input type="text" name="ModPi_DureeVieMax" size="4" value="<?php echo $infoModelePiece['ModPi_DureeVieMax'];?>"></td>
 		</tr>
 	<tr>
-			<th>Données mesurées</th>
+			<th>DonnÃ©es mesurÃ©es</th>
 			<td><?php if($infoModelePiece['ModPi_Acceleration']!="") echo (empty($infoModelePiece['ModPi_AccelerationMesuree']))?"?":$infoModelePiece['ModPi_AccelerationMesuree'];?></td>
 			<td><?php if($infoModelePiece['ModPi_VitesseMax']!="") echo (empty($infoModelePiece['ModPi_VitesseMaxMesuree']))?"?":$infoModelePiece['ModPi_VitesseMaxMesuree'];?></td>
 			<td><?php if($infoModelePiece['ModPi_Freinage']!="") echo (empty($infoModelePiece['ModPi_FreinageMesure']))?"?":$infoModelePiece['ModPi_FreinageMesure'];?></td>

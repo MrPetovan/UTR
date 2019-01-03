@@ -15,7 +15,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<title>UTR : Inventaire des pièces détachées</title>
+	<title>UTR : Inventaire des piÃ¨ces dÃ©tachÃ©es</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
 	<link href="../../include/style.css" rel="stylesheet" type="text/css" />
@@ -39,15 +39,15 @@
 		<td valign="top" align="center">
 <br>
 <a href="liste.php?page=stock&type=tous">Stock</a>&nbsp;|&nbsp;
-<a href="liste.php?page=installee&type=tous">Pièces installées</a>&nbsp;|&nbsp;
-<a href="liste.php?page=vente&type=tous">Pièces en vente</a>&nbsp;|&nbsp;
-<a href="liste.php?page=neuf&type=tous">Pièces Neuves</a>&nbsp;|&nbsp;
+<a href="liste.php?page=installee&type=tous">PiÃ¨ces installÃ©es</a>&nbsp;|&nbsp;
+<a href="liste.php?page=vente&type=tous">PiÃ¨ces en vente</a>&nbsp;|&nbsp;
+<a href="liste.php?page=neuf&type=tous">PiÃ¨ces Neuves</a>&nbsp;|&nbsp;
 <a href="liste.php?page=casseur&type=tous">Ferailleur</a>
 <br />
 <br />
 <table border="0" class="liste">
 	<tr class="piece">
-		<th colspan="4" class="titre">Type de pièce</th>
+		<th colspan="4" class="titre">Type de piÃ¨ce</th>
 	</tr>
 	<tr>
 <?php
@@ -108,7 +108,7 @@
 ?>
 <table border="0" class="liste">
 	<tr class="piece">
-		<th colspan="18" class="titre">Pièces en stock</th>
+		<th colspan="18" class="titre">PiÃ¨ces en stock</th>
 	</tr>
 	<tr class="piece">
 		<th class="titre">Modele</th>
@@ -123,23 +123,23 @@
 		if($Man_Niveau > 2)
 		{
 ?>
-		<th class="titre"><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+		<th class="titre"><img alt="AccÃ©lÃ©ration" height="20" src="../../images/acc.gif"></th>
 		<th class="titre"><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
 		<th class="titre"><img alt="Freinage" src="../../images/frein.gif"></th>
 		<th class="titre"><img alt="Turbo" src="../../images/turbo.gif"></th>
-		<th class="titre"><img alt="Adhérence" src="../../images/adh.gif"></th>
-		<th class="titre"><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
+		<th class="titre"><img alt="AdhÃ©rence" src="../../images/adh.gif"></th>
+		<th class="titre"><img alt="SoliditÃ© Moteur" src="../../images/solmot.gif"></th>
 
 <?php
 		}
 ?>
-		<th class="titre"><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
-		<th class="titre"><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-		<th class="titre"><img alt="Capacité Max" src="../../images/capamax.gif"></th>
+		<th class="titre"><img alt="Aspect ExtÃ©rieur" src="../../images/aspect.gif"></th>
+		<th class="titre"><img alt="CapacitÃ© Moteur" src="../../images/capa.gif"></th>
+		<th class="titre"><img alt="CapacitÃ© Max" src="../../images/capamax.gif"></th>
 		<th class="titre"><img alt="Poids" src="../../images/poids.gif"></th>
-		<th class="titre"><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+		<th class="titre"><img alt="DurÃ©e de vie Max" src="../../images/dureeviemax.gif"></th>
 		<th class="titre"><img alt="Usure" src="../../images/usure.gif"></th>
-		<th class="titre"><img alt="Qualité" src="../../images/qualite.gif"></th>
+		<th class="titre"><img alt="QualitÃ©" src="../../images/qualite.gif"></th>
 		<th class="titre"><img alt="Age" src="../../images/age.gif"></th>
 		<th class="titre"><img alt="Prix" src="../../images/prix.gif"></th>
 	</tr>
@@ -216,7 +216,7 @@
 		<td><?php echo (empty($pieceStock['PiDet_UsureMesuree']))?"?":$pieceStock['PiDet_UsureMesuree'];?> %</td>
 		<td><?php echo (empty($pieceStock['PiDet_QualiteMesuree']))?"?":$pieceStock['PiDet_QualiteMesuree'];?> %</td>
 		<td><?php echo round($pieceStock['PiDet_Age']/(24*3600),0);?> jours</td>
-		<td><?php echo $pieceStock['ModPi_PrixNeuve'];?> €</td>
+		<td><?php echo $pieceStock['ModPi_PrixNeuve'];?> â‚¬</td>
 	</tr>
 <?php
 			}
@@ -230,13 +230,13 @@
 ?>
 <table border="0" class="liste">
 	<tr class="piece">
-		<th colspan="4" class="titre">Pièces utilisées</th>
+		<th colspan="4" class="titre">PiÃ¨ces utilisÃ©es</th>
 	</tr>
 	<tr class="piece">
 		<th class="titre">Modele</th>
 		<th class="titre">Marque</th>
 		<th class="titre">Type</th>
-		<th class="titre">Voiture équipée</th>
+		<th class="titre">Voiture Ã©quipÃ©e</th>
 	</tr>
 <?php
 		$requetePieceUtilisees = "	SELECT 	IdPieceDetachee, ModPi_NomModele, ModPi_IdMarque, Marq_Libelle,
@@ -301,7 +301,7 @@
 ?>
 <table border="0" class="liste">
 	<tr class="piece">
-		<th colspan="4" class="titre">Pièces en vente</th>
+		<th colspan="4" class="titre">PiÃ¨ces en vente</th>
 	</tr>
 	<tr class="piece">
 <?php
@@ -324,7 +324,7 @@
 		else
 		{
 ?>
-		<td>Pas de pièces pour ce type</td>
+		<td>Pas de piÃ¨ces pour ce type</td>
 <?php
 		}
 ?>
@@ -344,7 +344,7 @@
 		}
 ?>
 		<td><?php echo $pieceVente['Man_Nom'];?></td>
-		<td><?php echo $pieceVente['Ven_Prix'];?> €</td>
+		<td><?php echo $pieceVente['Ven_Prix'];?> â‚¬</td>
 	</tr>
 <?php
 	}
@@ -357,7 +357,7 @@
 ?>
 <table border="0" class="liste">
 	<tr class="piece">
-		<th colspan="4" class="titre">Pièces Neuves</th>
+		<th colspan="4" class="titre">PiÃ¨ces Neuves</th>
 	</tr>
 	<tr class="piece">
 		<th class="titre">Marque Modele</th>
@@ -403,7 +403,7 @@
 <?php
 			}
 ?>
-		<td><?php echo $pieceNeuve['Ven_Prix'];?> €</td>
+		<td><?php echo $pieceNeuve['Ven_Prix'];?> â‚¬</td>
 	</tr>
 <?php
 		}
@@ -465,7 +465,7 @@
 <?php
 			}
 ?>
-		<td><?php echo $pieceCasseur['Ven_Prix'];?> €</td>
+		<td><?php echo $pieceCasseur['Ven_Prix'];?> â‚¬</td>
 		<td><?php echo $pieceCasseur['Ven_Usure'];?> %</td>
 	</tr>
 <?php
