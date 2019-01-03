@@ -134,7 +134,7 @@
 		$requeteInfoVoiture = "	SELECT IdVoiture, ModVoi_NomModele, ModVoi_IdMarque, Marq_Libelle
 										FROM voiture, modele_voiture, marque
 										WHERE IdModeleVoiture = Voit_IdModele
-										AND Voit_Id".ereg_replace(" ","",$infoPieceDetachee['TypPi_Libelle'])."='$IdPieceDetachee'
+										AND Voit_Id".str_replace(" ","",$infoPieceDetachee['TypPi_Libelle'])."='$IdPieceDetachee'
 										AND IdMarque = ModVoi_IdMarque";
 		$resultatInfoVoiture = mysql_query($requeteInfoVoiture) or die (mysql_error());
 		$infoVoiture = mysql_fetch_assoc($resultatInfoVoiture);
@@ -529,7 +529,7 @@
 <form action="traitement.php" method="post">
 	<input type="hidden" name="IdPieceDetachee" value="<?php echo $infoPieceDetachee['IdPieceDetachee'];?>">
 	<input type="hidden" name="TypPi_PrixDemontage" value="<?php echo $infoPieceDetachee['TypPi_PrixDemontage']?>">
-	<input type="hidden" name="TypPi_Libelle" value="<?php echo ereg_replace(" ","",$infoPieceDetachee['TypPi_Libelle'])?>">
+	<input type="hidden" name="TypPi_Libelle" value="<?php echo str_replace(" ","",$infoPieceDetachee['TypPi_Libelle'])?>">
 	<input type="hidden" name="IdVoiture" value="<?php echo $infoVoiture['IdVoiture']?>">
 
 	<input type="hidden" name="action" value="Retirer">

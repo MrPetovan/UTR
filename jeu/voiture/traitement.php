@@ -177,7 +177,7 @@
 				$TypPi_Libelle = $typePiece[0];
 
 				$requeteModifierVoiture= "	UPDATE voiture
-													SET	Voit_Id".ereg_replace(" ","",$TypPi_Libelle)." = '$IdPieceChangement'
+													SET	Voit_Id".str_replace(" ","",$TypPi_Libelle)." = '$IdPieceChangement'
 													WHERE IdVoiture = $IdVoiture";
 				mysql_query($requeteModifierVoiture) or die(mysql_error());
 

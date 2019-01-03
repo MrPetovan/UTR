@@ -116,7 +116,7 @@
 															ModPi_PrixNeuve
 												FROM modele_piece, marque, modele_voiture
 												WHERE IdMarque = ModPi_IdMarque
-												AND ModVoi_Id".ereg_replace(" ","",$TypPi_Libelle)." = IdModelePiece
+												AND ModVoi_Id".str_replace(" ","",$TypPi_Libelle)." = IdModelePiece
 												AND IdModeleVoiture = '$IdModeleVoiture'";
 			$resultatPieceDefaut = mysql_query($requeteInfoPieceDefaut)or die("Requete Info Piece Defaut : $requeteInfoPieceDefaut<br>".mysql_error());
 			$infoPieceDefaut = mysql_fetch_assoc($resultatPieceDefaut);

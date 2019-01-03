@@ -30,7 +30,7 @@
 		$resultatTypesObligatoires = mysql_query($requeteTypesObligatoires)or die(mysql_error());
 		while($typeObligatoire = mysql_fetch_assoc($resultatTypesObligatoires))
 		{
-			$requeteIdPiece="	SELECT Voit_Id".ereg_replace(" ","",$typeObligatoire['TypPi_Libelle'])."
+			$requeteIdPiece="	SELECT Voit_Id".str_replace(" ","",$typeObligatoire['TypPi_Libelle'])."
 									FROM voiture
 									WHERE IdVoiture = '$IdVoiture'";
 			$IdPiece = mysql_fetch_row(mysql_query($requeteIdPiece));
@@ -302,7 +302,7 @@
 																IdVente
 													FROM piece_detachee
 													INNER JOIN modele_piece ON IdModelePiece = PiDet_IdModele
-													INNER JOIN voiture ON Voit_Id".ereg_replace(" ","",$TypPi_Libelle)." = IdPieceDetachee
+													INNER JOIN voiture ON Voit_Id".str_replace(" ","",$TypPi_Libelle)." = IdPieceDetachee
 													INNER JOIN marque ON IdMarque = ModPi_IdMarque
 													INNER JOIN type_piece ON IdTypePiece = ModPi_IdTypePiece
 													LEFT JOIN vente ON Ven_IdItem = IdVoiture AND Ven_IdTypeVente = '1'

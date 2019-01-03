@@ -135,7 +135,7 @@ table width="100%">
 			$codesErreur .=	is_NotNull($Bat_Numero,"102").",";
 			if(!is_Null($Bat_CoordX1)) $codesErreur .= is_Number($Bat_CoordX1,"","103").",";
 
-			$codesErreur = ereg_replace(",{2,}",",",$codesErreur);
+			$codesErreur = preg_replace("/,{2,}/",",",$codesErreur);
 			$codesErreur = substr($codesErreur,1,-1);
 		}
 		if($codesErreur != "")

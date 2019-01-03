@@ -181,7 +181,7 @@
 		while($pieceStock=mysql_fetch_assoc($resultatPieceStock))
 		{
 			$requeteInfoVoiture = "	SELECT IdVoiture FROM voiture
-											WHERE Voit_Id".ereg_replace(" ","",$pieceStock['TypPi_Libelle'])."='".$pieceStock['IdPieceDetachee']."'";
+											WHERE Voit_Id".str_replace(" ","",$pieceStock['TypPi_Libelle'])."='".$pieceStock['IdPieceDetachee']."'";
 			$infoVoiture = mysql_fetch_assoc(mysql_query($requeteInfoVoiture));
 			if($infoVoiture['IdVoiture']=="")
 			{

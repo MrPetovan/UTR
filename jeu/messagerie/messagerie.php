@@ -41,9 +41,9 @@
 				$mess = "<I>pas de message</I>";
 			}
 			else {
-				$mess = ereg_replace("<", "&lt;",$mess);
-				$mess = ereg_replace(">", "&gt;",$mess);
-				$mess = ereg_replace("\r", "<BR />",$mess);
+				$mess = str_replace("<", "&lt;",$mess);
+				$mess = str_replace(">", "&gt;",$mess);
+				$mess = str_replace("\r", "<BR />",$mess);
 				$mess = addslashes( $mess );
 			}
 
@@ -52,8 +52,8 @@
 			}
 
 
-			$sujet = ereg_replace("<", "&lt;",$sujet);
-			$sujet = ereg_replace(">", "&gt;",$sujet);
+			$sujet = str_replace("<", "&lt;",$sujet);
+			$sujet = str_replace(">", "&gt;",$sujet);
 			$sujet = addslashes( $sujet );
 
 			if ( $sujet == '' ) {

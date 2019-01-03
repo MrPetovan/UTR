@@ -31,7 +31,7 @@
 			if($XPRestants != 0) $codesErreur .= "2001,";
 
 
-			$codesErreur = ereg_replace(",{2,}",",",$codesErreur);
+			$codesErreur = preg_replace("/,{2,}/",",",$codesErreur);
 			$codesErreur = substr($codesErreur,1,-1);
 			if($codesErreur != "")
 			{

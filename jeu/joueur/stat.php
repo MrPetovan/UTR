@@ -223,7 +223,7 @@
 														FROM piece_detachee, modele_piece, voiture, marque, type_piece
 														WHERE IdModelePiece = PiDet_IdModele
 														AND IdMarque = ModPi_IdMarque
-														AND Voit_Id".ereg_replace(" ","",$TypPi_Libelle)." = IdPieceDetachee
+														AND Voit_Id".str_replace(" ","",$TypPi_Libelle)." = IdPieceDetachee
 														AND ModPi_IdTypePiece = '$IdTypePiece'
 														AND IdTypePiece = ModPi_IdTypePiece
 														AND IdVoiture = '".$infoJoueur['IdVoiture']."'";

@@ -316,7 +316,7 @@
 				if($Jou_MotDePasse != $Jou_MotDePasse2)
 					$codesErreur .= "104,";
 
-			$codesErreur = ereg_replace(",{2,}",",",$codesErreur);
+			$codesErreur = preg_replace("/,{2,}/",",",$codesErreur);
 			$codesErreur = substr($codesErreur,1,-1);
 
 			if($codesErreur != "")

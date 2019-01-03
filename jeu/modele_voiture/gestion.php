@@ -318,7 +318,7 @@ Insertion effectuée avec succès !
 		while($infoModelePiece = mysql_fetch_assoc($resultatModelesPiece))
 		{
 ?>
-					<option value="<?php echo $infoModelePiece['IdModelePiece']?>"<?php echo ($infoModelePiece['IdModelePiece'] == $infoModeleVoiture['ModVoi_Id'.ereg_replace(" ","",$TypPi_Libelle)])?" selected":""?>>
+					<option value="<?php echo $infoModelePiece['IdModelePiece']?>"<?php echo ($infoModelePiece['IdModelePiece'] == $infoModeleVoiture['ModVoi_Id'.str_replace(" ","",$TypPi_Libelle)])?" selected":""?>>
 						<?php echo "(Niv ".$infoModelePiece['ModPi_Niveau'].") ".$infoModelePiece['ModPi_NomModele']." ".$infoModelePiece['Marq_Libelle']?>
 					</option>
 <?php

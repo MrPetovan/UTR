@@ -139,7 +139,7 @@ var piece = new Array();
 		print_r($infoPieceDetachee);
 		echo"/";*/
 		$requeteInfoVoiture = "	SELECT IdVoiture FROM voiture
-										WHERE Voit_Id".ereg_replace(" ","",$infoPieceDetachee['TypPi_Libelle'])."='".$infoPieceDetachee['IdPieceDetachee']."'";
+										WHERE Voit_Id".str_replace(" ","",$infoPieceDetachee['TypPi_Libelle'])."='".$infoPieceDetachee['IdPieceDetachee']."'";
 		$resultatInfoVoiture = mysql_query($requeteInfoVoiture)or die("Requete Info Voiture : ".mysql_error());
 		$infoVoiture = mysql_fetch_assoc($resultatInfoVoiture);
 		$infoPieceDetachee['Installee'] = ($infoVoiture['IdVoiture']=="")?"0":"1";
@@ -213,12 +213,12 @@ var piece = new Array();
 									AND IdTypePiece = ModPi_IdTypePiece
 									AND PiDet_IdManager = '$IdManager'
 									AND ModPi_IdTypePiece ='$IdTypePiece'
-									AND Voit_Id".ereg_replace(" ","",$typePiece['TypPi_Libelle'])." = IdPieceDetachee
+									AND Voit_Id".str_replace(" ","",$typePiece['TypPi_Libelle'])." = IdPieceDetachee
 									AND IdVoiture = '$IdVoiture'";
 	$resultatPieceStock = mysql_query($requetePieceStock) or die("requete Piece Stock : ".mysql_error());
 	$pieceStock = mysql_fetch_assoc($resultatPieceStock);
 
-	$IdPieceInstallee = $infoVoiture["Voit_Id".ereg_replace(' ','',$typePiece['TypPi_Libelle'])];
+	$IdPieceInstallee = $infoVoiture["Voit_Id".str_replace(' ','',$typePiece['TypPi_Libelle'])];
 
 	if(!empty($pieceStock))
 	{

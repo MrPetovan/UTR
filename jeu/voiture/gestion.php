@@ -124,7 +124,7 @@
 																ModPi_PrixNeuve
 													FROM modele_piece, modele_voiture, marque, type_piece
 													WHERE IdMarque = ModPi_IdMarque
-													AND ModVoi_Id".ereg_replace(" ","",$TypPi_Libelle)." = IdModelePiece
+													AND ModVoi_Id".str_replace(" ","",$TypPi_Libelle)." = IdModelePiece
 													AND IdTypePiece = ModPi_IdTypePiece
 													AND IdTypePiece = '$IdTypePiece'
 													AND IdModeleVoiture = '$IdModeleVoiture'";

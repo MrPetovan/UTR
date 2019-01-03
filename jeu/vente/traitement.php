@@ -246,11 +246,11 @@
 			$codesErreur .= is_Number($Ven_Prix,'',"701").",";
 			if($Ven_IdTypeVente == 2)
 			{
-				$codesErreur .= is_Number(ereg_replace("'","",$Ven_Usure),'',"702").",";
-				$codesErreur .= is_Number(ereg_replace("'","",$Ven_Qualite),'',"703").",";
+				$codesErreur .= is_Number(str_replace("'","",$Ven_Usure),'',"702").",";
+				$codesErreur .= is_Number(str_replace("'","",$Ven_Qualite),'',"703").",";
 			}
 
-			$codesErreur = ereg_replace(",{2,}",",",$codesErreur);
+			$codesErreur = preg_replace("/,{2,}/",",",$codesErreur);
 			$codesErreur = substr($codesErreur,1,-1);
 
 			if($codesErreur != "")

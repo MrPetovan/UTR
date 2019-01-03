@@ -123,7 +123,7 @@
 														FROM piece_detachee
 														INNER JOIN modele_piece ON IdModelePiece = PiDet_IdModele
 														INNER JOIN marque ON IdMarque = ModPi_IdMarque
-														INNER JOIN voiture ON Voit_Id".ereg_replace(" ","",$TypPi_Libelle)." = IdPieceDetachee
+														INNER JOIN voiture ON Voit_Id".str_replace(" ","",$TypPi_Libelle)." = IdPieceDetachee
 														INNER JOIN type_piece ON IdTypePiece = ModPi_IdTypePiece
 														LEFT JOIN vente ON Ven_IdItem = IdVoiture AND Ven_IdTypeVente = '1'
 														WHERE  ModPi_IdTypePiece = '$IdTypePiece'
