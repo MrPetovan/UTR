@@ -65,20 +65,43 @@ th.titre
 	text-align : center;
 }
 textarea {
-	border-right: #666666 1px groove; border-top: #666666 1px groove; overflow-y: auto; font-size: 8pt; overflow-x: hidden; border-left: #666666 1px groove; color: #ffffff; border-bottom: #666666 1px groove; font-family: verdana, arial, helvetica; background-color: #780000
+	border: #666666 1px groove;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	overflow-y: auto;
+	font-size: 8pt;
+	overflow-x: hidden;
+	color: #ffffff;
+	font-family: verdana, arial, helvetica;
+	background-color: #780000;
 }
 select {
-	border-right: #b4c2ca 1px solid; border-top: #b4c2ca 1px solid; font-size: 8pt; border-left: #b4c2ca 1px solid; color: #ffffff; border-bottom: #b4c2ca 1px solid; font-family: verdana, arial, helvetica; background-color: #780000
+	border: #b4c2ca 1px solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 8pt;
+	color: #ffffff;
+	font-family: verdana, arial, helvetica;
+	background-color: #780000;
 }
 input {
-	border-right: #b4c2ca 1px solid; border-top: #b4c2ca 1px solid; font-size: 8pt; border-left: #b4c2ca 1px solid; color: #ffffff; border-bottom: #b4c2ca 1px solid; font-family: verdana, arial, helvetica; background-color: #780000
+	border: #b4c2ca 1px solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 8pt;
+	color: #ffffff;
+	font-family: verdana, arial, helvetica;
+	background-color: #780000;
 }
 div.actions
 {
-	border-top : #780000 1px solid;
-	border-bottom : #780000 1px solid;
-	border-left : #780000 1px solid;
-	border-right : #780000 1px solid;
+	border: #780000 1px solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	text-align : center;
 	font-weight : bold;
 }
@@ -99,16 +122,16 @@ tr.piece
 
 table.listebleu
 {
-	border-top : #000080 1px solid;
-	border-bottom : #000080 1px solid;
-	border-left : #000080 1px solid;
-	border-right : #000080 1px solid;
+	border : #000080 1px solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 
 table.liste
 {
-	border-top : #780000 1px solid;
-	border-bottom : #780000 1px solid;
-	border-left : #780000 1px solid;
-	border-right : #780000 1px solid;
+	border: #780000 1px solid;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
