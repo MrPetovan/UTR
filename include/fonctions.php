@@ -12,11 +12,9 @@
 										AND IdPieceDetachee = '$IdPiece'";
 		$resultatUsurePiece = mysql_query($requeteUsurePiece)or die("Requete Usure Piece :<br>$requeteUsurePiece<br><br>".mysql_query());
 		$usurePiece = mysql_fetch_assoc($resultatUsurePiece);
-		//echo "Usure : ".$usurePiece['PiDet_Usure'];
 		$dureeVieActuelle = $usurePiece['ModPi_DureeVieMax']*($usurePiece['PiDet_Qualite']/100) * sqrt(100 - $usurePiece['PiDet_Usure']) / 10;
 		//Passage aux secondes
 		$dureeVieActuelle *= 365*24*60*60;
-		//echo "dispoPiece($IdPiece) : Piece Detachee n°".$usurePiece['IdPieceDetachee']." : DVA = $dureeVieActuelle <=> ".$usurePiece['PiDet_Age']." = Age<br>";
 		//Pièce cassée
 		return($usurePiece['PiDet_Age'] < $dureeVieActuelle);
 	}
@@ -257,7 +255,7 @@
 										FROM voiture
 										INNER JOIN modele_voiture ON IdModeleVoiture = Voit_IdModele
 										INNER JOIN marque ON IdMarque = ModVoi_IdMarque
-										INNER JOIN manager ON IdManager = Voit_IdManager
+										LEFT JOIN manager ON IdManager = Voit_IdManager
 										LEFT JOIN vente ON Ven_IdItem = IdVoiture AND Ven_IdTypeVente = '1'
 										WHERE IdVoiture = '$IdVoiture'
 										GROUP BY IdVoiture";
@@ -315,9 +313,6 @@
 			$pieceInstallee[$IdTypePiece]['TypPi_Libelle'] = $TypPi_Libelle;
 			$pieceInstallee[$IdTypePiece]['TypPi_Obligatoire'] = $TypPi_Obligatoire;
 
-			/*echo"<pre>infoPieceInstallee[$TypPi_Libelle] Qualite :".$infoPieceInstallee['PiDet_Qualite']." :<br>";
-			print_r($infoPieceInstallee);*/
-
 			$infoVoiture['Voit_Acceleration'] += $infoPieceInstallee['ModPi_Acceleration']*$infoPieceInstallee['PiDet_Qualite']/100;
 			$infoVoiture['Voit_VitesseMax'] += $infoPieceInstallee['ModPi_VitesseMax']*$infoPieceInstallee['PiDet_Qualite']/100;
 			$infoVoiture['Voit_Freinage'] += $infoPieceInstallee['ModPi_Freinage']*$infoPieceInstallee['PiDet_Qualite']/100;
@@ -330,9 +325,6 @@
 			$infoVoiture['Voit_Poids'] += $infoPieceInstallee['ModPi_Poids'];
 			$infoVoiture['Voit_Prix'] += $infoPieceInstallee['ModPi_PrixNeuve'];
 
-			/*echo"<br>infoVoiture<br>";
-			print_r($infoVoiture);
-			echo"</pre>";*/
 		}
 	}
 ?>
