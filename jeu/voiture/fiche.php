@@ -19,7 +19,6 @@
 	<title>UTR : Fiche d'une voiture</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
-	<!--<link href="../../include/style.css" rel="stylesheet" type="text/css" />-->
 	<script language="JavaScript">
 		function confirmSuppr(form)
 		{
@@ -39,20 +38,6 @@
 		}
 	</script>
 	<script language="JavaScript" src="../../include/formulaire.js"></script>
-	<style>
-<!--	tr.voiture
-		{
-			background-image: url("http://localhost/UTR/images/Wallpaper_Angel_Fall_First.bmp");
-			//background-color : #FF0000;
-			background-color : #004080;
-		}
-		td.voiture
-		{
-			background-image: url("http://localhost/UTR/images/Wallpaper_Angel_Fall_First.bmp");
-			//background-color : #FF0000;
-			background-color : #004080;
-		}-->
-	</style>
 </head>
 <body>
 <table width="100%"  cellspacing="0" cellpadding="0">
@@ -265,7 +250,7 @@
 ?>
 		<tr class="piece">
 			<th>Propriétaire</th>
-			<td><?php echo $infoVoiture['Man_Nom']?></td>
+			<td><?php echo $infoVoiture['Man_Nom'] ?: 'Première main' ?></td>
 		</tr>
 <?php
 			$EtatVoiture = dispoVoiture($IdVoiture);
@@ -495,15 +480,6 @@
 			<div class="actions">
 		<br />Actions possibles<br />
 <?php
-		if($_GET['page']=='pieces' && $infoVoiture['Voit_IdManager']==$IdManager && empty($infoVoiture['IdVente']))
-		{
-?>
-<form action="changerPiece.php" method="get">
-	<input type="hidden" name="IdVoiture" value="<?php echo $infoVoiture['IdVoiture']; ?>">
-	<input type="submit" value="Ajouter/Changer une pièce">
-</form>
-<?php
-		}
 		if(!empty($submitFormGestion)&& $nbCoursesPrevues == 0)
 		{
 ?>
