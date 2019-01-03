@@ -68,14 +68,14 @@
                                 Marq_Libelle,
                                 ModVoi_NomModele,
                                 SUM(Pari_Montant) AS Pari_Montant
-                          FROM inscription_course, pilote, marque, voiture, modele_voiture, manager
+                          FROM inscription_course
+                          JOIN pilote ON IdPilote = IC_IdPilote
+                          JOIN manager ON IdManager = Pil_IdManager
+                          JOIN voiture ON IdVoiture = IC_IdVoiture
+                          JOIN modele_voiture ON IdModeleVoiture = Voit_IdModele
+                          JOIN marque ON IdMarque = ModVoi_IdMarque
                           LEFT JOIN pari ON Pari_IdInscriptionCourse = IdInscriptionCourse
-                          WHERE IdPilote = IC_IdPilote
-                          AND IdVoiture = IC_IdVoiture
-                          AND IdMarque = ModVoi_IdMarque
-                          AND IdModeleVoiture = Voit_IdModele
-                          AND IdManager = Pil_IdManager
-                          AND IC_IdCourse = '$IdCourse'
+                          WHERE IC_IdCourse = '$IdCourse'
                           GROUP BY IdInscriptionCourse";
       if($debug) echo $requeteInscriptionCourse;
       $resultatInscriptionCourse = mysql_query($requeteInscriptionCourse) or die("Requete Inscription Course :<br>$requeteInscriptionCourse<br><br>".mysql_error());
