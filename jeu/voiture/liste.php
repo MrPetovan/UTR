@@ -67,19 +67,19 @@
 		if($Man_Niveau > 2)
 		{
 ?>
-		<th class="titre"><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
-		<th class="titre"><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
-		<th class="titre"><img alt="Freinage" src="../../images/frein.gif"></th>
-		<th class="titre"><img alt="Turbo" src="../../images/turbo.gif"></th>
-		<th class="titre"><img alt="Adhérence" src="../../images/adh.gif"></th>
-		<th class="titre"><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
+		<th class="titre"><img alt="Accélération" title="Accélération" height="20" src="../../images/acc.gif"></th>
+		<th class="titre"><img alt="Vitesse Max" title="Vitesse Max" src="../../images/vmax.gif"></th>
+		<th class="titre"><img alt="Freinage" title="Freinage" src="../../images/frein.gif"></th>
+		<th class="titre"><img alt="Turbo" title="Turbo" src="../../images/turbo.gif"></th>
+		<th class="titre"><img alt="Adhérence" title="Adhérence" src="../../images/adh.gif"></th>
+		<th class="titre"><img alt="Solidité Moteur" title="Solidité Moteur" src="../../images/solmot.gif"></th>
 <?php
 		}
 ?>
-		<th class="titre"><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
-		<th class="titre"><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-		<th class="titre"><img alt="Poids" src="../../images/poids.gif"></th>
-		<th class="titre"><img alt="Prix" src="../../images/prix.gif"></th>
+		<th class="titre"><img alt="Aspect Extérieur" title="Aspect Extérieur" src="../../images/aspect.gif"></th>
+		<th class="titre"><img alt="Capacité Moteur" title="Capacité Moteur" src="../../images/capa.gif"></th>
+		<th class="titre"><img alt="Poids" title="Poids" src="../../images/poids.gif"></th>
+		<th class="titre"><img alt="Prix" title="Prix" src="../../images/prix.gif"></th>
 	</tr>
 <?php
 		while($infoVoiture = mysql_fetch_assoc($resultatInfoVoitures))

@@ -192,19 +192,19 @@ Il y a une ou plusieurs erreurs dans le formulaire :
 			</select></td>
 		</tr>
 		<tr>
-			<th><img alt="Poids" src="../../images/poids.gif"></th>
+			<th><img alt="Poids" title="Poids" src="../../images/poids.gif"></th>
 			<td><?php echo $infoModelePiece['ModPi_Poids'];?> kg</td>
 		</tr>
 		<tr>
-			<th><img alt="Age" src="../../images/age.gif"></th>
+			<th><img alt="Age" title="Age" src="../../images/age.gif"></th>
 			<td><?php echo round($infoPieceDetachee['PiDet_Age'] / 86400,0);?> jours</td>
 		</tr>
 		<tr>
-			<th><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+			<th><img alt="Durée de vie Max" title="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
 			<td><?php echo $infoModelePiece['ModPi_DureeVieMax']?></td>
 		</tr>
 		<tr>
-			<th><img alt="Prix" src="../../images/prix.gif"></th>
+			<th><img alt="Prix" title="Prix" src="../../images/prix.gif"></th>
 			<td><?php echo $infoModelePiece['ModPi_PrixNeuve'];?> &euro;</td>
 		</tr>
 	</table>
@@ -212,15 +212,15 @@ Il y a une ou plusieurs erreurs dans le formulaire :
 	<table border="1" id="Modifier">
 		<tr>
 			<th>Caractéristiques</th>
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
-			<th><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
-			<th><img alt="Freinage" src="../../images/frein.gif"></th>
-			<th><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
+			<th><img alt="Accélération" title="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th><img alt="Vitesse Max" title="Vitesse Max" src="../../images/vmax.gif"></th>
+			<th><img alt="Freinage" title="Freinage" src="../../images/frein.gif"></th>
+			<th><img alt="Turbo" title="Turbo" src="../../images/turbo.gif"></th>
+			<th><img alt="Adhérence" title="Adhérence" src="../../images/adh.gif"></th>
+			<th><img alt="Solidité Moteur" title="Solidité Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="Aspect Extérieur" title="Aspect Extérieur" src="../../images/aspect.gif"></th>
+			<th><img alt="Capacité Moteur" title="Capacité Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="Capacité Max" title="Capacité Max" src="../../images/capamax.gif"></th>
 
 		</tr>
 		<tr>

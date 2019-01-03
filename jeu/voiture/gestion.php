@@ -195,15 +195,15 @@
 			<td><?php echo $infoModeleVoiture['ModVoi_NbVictoires']."/$nbCoursesCourues"?></td>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
+			<th><img alt="Aspect Extérieur" title="Aspect Extérieur" src="../../images/aspect.gif"></th>
 			<td><?php echo $infoModeleVoiture['ModVoi_AspectExterieur'];?></td>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Poids" src="../../images/poids.gif"></th>
+			<th><img alt="Poids" title="Poids" src="../../images/poids.gif"></th>
 			<td><?php echo $infoModeleVoiture['ModVoi_Poids']+$infoModeleVoiture['ModVoi_PoidsCarrosserie'];?> kg</td>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Prix" src="../../images/prix.gif"></th>
+			<th><img alt="Prix" title="Prix" src="../../images/prix.gif"></th>
 			<td><?php echo $infoModeleVoiture['ModVoi_PrixNeuve'];?> &euro;</td>
 		</tr>
 		<tr class="piece">
@@ -229,13 +229,13 @@
 			<th colspan="7" class="titre">Caractéristiques techniques</th>
 		</tr>
 		<tr class="piece">
-			<th class="titre"><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
-			<th class="titre"><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
-			<th class="titre"><img alt="Freinage" src="../../images/frein.gif"></th>
-			<th class="titre"><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th class="titre"><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th class="titre"><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th class="titre"><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
+			<th class="titre"><img alt="Accélération" title="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th class="titre"><img alt="Vitesse Max" title="Vitesse Max" src="../../images/vmax.gif"></th>
+			<th class="titre"><img alt="Freinage" title="Freinage" src="../../images/frein.gif"></th>
+			<th class="titre"><img alt="Turbo" title="Turbo" src="../../images/turbo.gif"></th>
+			<th class="titre"><img alt="Adhérence" title="Adhérence" src="../../images/adh.gif"></th>
+			<th class="titre"><img alt="Solidité Moteur" title="Solidité Moteur" src="../../images/solmot.gif"></th>
+			<th class="titre"><img alt="Capacité Moteur" title="Capacité Moteur" src="../../images/capa.gif"></th>
 		</tr>
 		<tr class="piece">
 			<td><?php echo round($infoModeleVoiture['ModVoi_Acceleration'],2);?></td>

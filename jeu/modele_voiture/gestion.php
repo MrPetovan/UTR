@@ -238,11 +238,11 @@ Insertion effectuée avec succès !
 			<td colspan="2"><input type="text" size="3" name="ModVoi_Niveau" value="<?php echo $infoModeleVoiture['ModVoi_Niveau'];?>"></td>
 		</tr>
 		<tr>
-			<th><img alt="Poids Carrosserie" src="../../images/poids.gif"></th>
+			<th><img alt="Poids Carrosserie" title="Poids Carrosserie" src="../../images/poids.gif"></th>
 			<td colspan="2"><input type="text" name="ModVoi_PoidsCarrosserie" size="4" value="<?php echo $infoModeleVoiture['ModVoi_PoidsCarrosserie'];?>"> kg</td>
 		</tr>
 		<tr>
-			<th><img alt="Prix" src="../../images/prix.gif"></th>
+			<th><img alt="Prix" title="Prix" src="../../images/prix.gif"></th>
 			<td colspan="2"><input type="text" name="ModVoi_PrixNeuve" size="6" value="<?php echo $infoModeleVoiture['ModVoi_PrixNeuve'];?>"> &euro;</td>
 		</tr>
 	</table>
@@ -350,18 +350,18 @@ Insertion effectuée avec succès !
 		</tr>
 		<tr>
 			<th rowspan="2">Caractéristiques</th>
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
-			<th><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
-			<th><img alt="Freinage" src="../../images/frein.gif"></th>
-			<th><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
-			<th><img alt="Poids" src="../../images/poids.gif"></th>
-			<th><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
-			<th><img alt="Prix Neuve" src="../../images/prix.gif"></th>
+			<th><img alt="Accélération" title="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th><img alt="Vitesse Max" title="Vitesse Max" src="../../images/vmax.gif"></th>
+			<th><img alt="Freinage" title="Freinage" src="../../images/frein.gif"></th>
+			<th><img alt="Turbo" title="Turbo" src="../../images/turbo.gif"></th>
+			<th><img alt="Adhérence" title="Adhérence" src="../../images/adh.gif"></th>
+			<th><img alt="Solidité Moteur" title="Solidité Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="Aspect Extérieur" title="Aspect Extérieur" src="../../images/aspect.gif"></th>
+			<th><img alt="Capacité Moteur" title="Capacité Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="Capacité Max" title="Capacité Max" src="../../images/capamax.gif"></th>
+			<th><img alt="Poids" title="Poids" src="../../images/poids.gif"></th>
+			<th><img alt="Durée de vie Max" title="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+			<th><img alt="Prix Neuve" title="Prix Neuve" src="../../images/prix.gif"></th>
 		</tr>
 		<tr>
 			<td><?php if($typePiece['TypPi_Acceleration']!=""){?><input type="text" id="ModPi<?php echo $IdTypePiece?>" size="2" name="ModPi_Acceleration[<?php echo $IdTypePiece?>]" disabled><?php } ?></td>

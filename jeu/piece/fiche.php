@@ -291,7 +291,7 @@
 ?>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
+			<th><img alt="Aspect Extérieur" title="Aspect Extérieur" src="../../images/aspect.gif"></th>
 			<td>
 <?php
 		if($infoPieceDetachee['ModPi_AspectExterieur']!="")
@@ -305,15 +305,15 @@
 			</td>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Poids" src="../../images/poids.gif"></th>
+			<th><img alt="Poids" title="Poids" src="../../images/poids.gif"></th>
 			<td><?php echo $infoPieceDetachee['ModPi_Poids'];?> kg</td>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Age" src="../../images/age.gif"></th>
+			<th><img alt="Age" title="Age" src="../../images/age.gif"></th>
 			<td><?php echo round($infoPieceDetachee['PiDet_Age']/(24*3600),0);?> jours</td>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Prix" src="../../images/prix.gif"></th>
+			<th><img alt="Prix" title="Prix" src="../../images/prix.gif"></th>
 			<td><?php echo $infoPieceDetachee['ModPi_PrixNeuve']?> €</td>
 		</tr>
 		<tr class="piece">
@@ -331,7 +331,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th><img alt="Accélération" title="Accélération" height="20" src="../../images/acc.gif"></th>
 			<td>[
 <?php
 			for($i = 0;$i < 10;$i++)
@@ -345,7 +345,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
+			<th><img alt="Vitesse Max" title="Vitesse Max" src="../../images/vmax.gif"></th>
 			<td>[
 <?php
 			for($i = 0;$i < 10;$i++)
@@ -359,7 +359,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Freinage" src="../../images/frein.gif"></th>
+			<th><img alt="Freinage" title="Freinage" src="../../images/frein.gif"></th>
 			<td>[
 <?php
 			for($i = 0;$i < 10;$i++)
@@ -373,7 +373,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Turbo" src="../../images/turbo.gif"></th>
+			<th><img alt="Turbo" title="Turbo" src="../../images/turbo.gif"></th>
 			<td>[
 <?php
 			for($i = 0;$i < 10;$i++)
@@ -387,7 +387,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
+			<th><img alt="Adhérence" title="Adhérence" src="../../images/adh.gif"></th>
 			<td>[
 <?php
 			for($i = 0;$i < 10;$i++)
@@ -401,7 +401,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="Solidité Moteur" title="Solidité Moteur" src="../../images/solmot.gif"></th>
 			<td>[
 <?php
 			for($i = 0;$i < 10;$i++)
@@ -415,7 +415,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="Capacité Moteur" title="Capacité Moteur" src="../../images/capa.gif"></th>
 			<td><?php echo $infoPieceDetachee['ModPi_CapaciteMoteur'];?></td>
 		</tr>
 <?php
@@ -424,7 +424,7 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
+			<th><img alt="Capacité Max" title="Capacité Max" src="../../images/capamax.gif"></th>
 			<td><?php echo $infoPieceDetachee['ModPi_CapaciteMax'];?></td>
 		</tr>
 <?php
@@ -433,18 +433,18 @@
 		{
 ?>
 		<tr class="piece">
-			<th><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+			<th><img alt="Durée de vie Max" title="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
 			<td><?php echo $infoPieceDetachee['ModPi_DureeVieMax'];?></td>
 		</tr>
 <?php
 		}
 ?>
 		<tr class="piece">
-			<th><img alt="Usure" src="../../images/usure.gif"></th>
+			<th><img alt="Usure" title="Usure" src="../../images/usure.gif"></th>
 			<td><?php echo ($infoPieceDetachee['PiDet_UsureMesuree']=="")?"?":$infoPieceDetachee['PiDet_UsureMesuree'];?> %</td>
 		</tr>
 		<tr class="piece">
-			<th><img alt="Qualité" src="../../images/qualite.gif"></th>
+			<th><img alt="Qualité" title="Qualité" src="../../images/qualite.gif"></th>
 			<td><?php echo ($infoPieceDetachee['PiDet_QualiteMesuree']=='')?"?":$infoPieceDetachee['PiDet_QualiteMesuree'];?> %</td>
 		</tr>
 	</table>
@@ -452,17 +452,17 @@
 	<table border="0" class="liste">
 		<tr class="piece">
 			<th>Caractéristiques</th>
-			<th><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
-			<th><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
-			<th><img alt="Freinage" src="../../images/frein.gif"></th>
-			<th><img alt="Turbo" src="../../images/turbo.gif"></th>
-			<th><img alt="Adhérence" src="../../images/adh.gif"></th>
-			<th><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
-			<th><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-			<th><img alt="Capacité Max" src="../../images/capamax.gif"></th>
-			<th><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
-			<th><img alt="Usure" src="../../images/usure.gif"></th>
-			<th><img alt="Qualité" src="../../images/qualite.gif"></th>
+			<th><img alt="Accélération" title="Accélération" height="20" src="../../images/acc.gif"></th>
+			<th><img alt="Vitesse Max" title="Vitesse Max" src="../../images/vmax.gif"></th>
+			<th><img alt="Freinage" title="Freinage" src="../../images/frein.gif"></th>
+			<th><img alt="Turbo" title="Turbo" src="../../images/turbo.gif"></th>
+			<th><img alt="Adhérence" title="Adhérence" src="../../images/adh.gif"></th>
+			<th><img alt="Solidité Moteur" title="Solidité Moteur" src="../../images/solmot.gif"></th>
+			<th><img alt="Capacité Moteur" title="Capacité Moteur" src="../../images/capa.gif"></th>
+			<th><img alt="Capacité Max" title="Capacité Max" src="../../images/capamax.gif"></th>
+			<th><img alt="Durée de vie Max" title="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+			<th><img alt="Usure" title="Usure" src="../../images/usure.gif"></th>
+			<th><img alt="Qualité" title="Qualité" src="../../images/qualite.gif"></th>
 		</tr>
 		<tr class="piece">
 			<th>Données standard</th>

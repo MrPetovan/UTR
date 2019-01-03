@@ -123,25 +123,25 @@
 		if($Man_Niveau > 2)
 		{
 ?>
-		<th class="titre"><img alt="Accélération" height="20" src="../../images/acc.gif"></th>
-		<th class="titre"><img alt="Vitesse Max" src="../../images/vmax.gif"></th>
-		<th class="titre"><img alt="Freinage" src="../../images/frein.gif"></th>
-		<th class="titre"><img alt="Turbo" src="../../images/turbo.gif"></th>
-		<th class="titre"><img alt="Adhérence" src="../../images/adh.gif"></th>
-		<th class="titre"><img alt="Solidité Moteur" src="../../images/solmot.gif"></th>
+		<th class="titre"><img alt="Accélération" title="Accélération" height="20" src="../../images/acc.gif"></th>
+		<th class="titre"><img alt="Vitesse Max" title="Vitesse Max" src="../../images/vmax.gif"></th>
+		<th class="titre"><img alt="Freinage" title="Freinage" src="../../images/frein.gif"></th>
+		<th class="titre"><img alt="Turbo" title="Turbo" src="../../images/turbo.gif"></th>
+		<th class="titre"><img alt="Adhérence" title="Adhérence" src="../../images/adh.gif"></th>
+		<th class="titre"><img alt="Solidité Moteur" title="Solidité Moteur" src="../../images/solmot.gif"></th>
 
 <?php
 		}
 ?>
-		<th class="titre"><img alt="Aspect Extérieur" src="../../images/aspect.gif"></th>
-		<th class="titre"><img alt="Capacité Moteur" src="../../images/capa.gif"></th>
-		<th class="titre"><img alt="Capacité Max" src="../../images/capamax.gif"></th>
-		<th class="titre"><img alt="Poids" src="../../images/poids.gif"></th>
-		<th class="titre"><img alt="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
-		<th class="titre"><img alt="Usure" src="../../images/usure.gif"></th>
-		<th class="titre"><img alt="Qualité" src="../../images/qualite.gif"></th>
-		<th class="titre"><img alt="Age" src="../../images/age.gif"></th>
-		<th class="titre"><img alt="Prix" src="../../images/prix.gif"></th>
+		<th class="titre"><img alt="Aspect Extérieur" title="Aspect Extérieur" src="../../images/aspect.gif"></th>
+		<th class="titre"><img alt="Capacité Moteur" title="Capacité Moteur" src="../../images/capa.gif"></th>
+		<th class="titre"><img alt="Capacité Max" title="Capacité Max" src="../../images/capamax.gif"></th>
+		<th class="titre"><img alt="Poids" title="Poids" src="../../images/poids.gif"></th>
+		<th class="titre"><img alt="Durée de vie Max" title="Durée de vie Max" src="../../images/dureeviemax.gif"></th>
+		<th class="titre"><img alt="Usure" title="Usure" src="../../images/usure.gif"></th>
+		<th class="titre"><img alt="Qualité" title="Qualité" src="../../images/qualite.gif"></th>
+		<th class="titre"><img alt="Age" title="Age" src="../../images/age.gif"></th>
+		<th class="titre"><img alt="Prix" title="Prix" src="../../images/prix.gif"></th>
 	</tr>
 <?php
 		$requetePieceStock="	SELECT	IdPieceDetachee,
