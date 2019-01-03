@@ -1,42 +1,42 @@
 
 
-BODY {
-  PADDING-RIGHT: 0px;
-  PADDING-LEFT: 0px;
-  SCROLLBAR-FACE-COLOR: #780000;
-  PADDING-BOTTOM: 0px;
-  MARGIN: 5px;
-  SCROLLBAR-HIGHLIGHT-COLOR: #780000;
-  SCROLLBAR-SHADOW-COLOR: #660000;
-  SCROLLBAR-3DLIGHT-COLOR: #780000;
-  SCROLLBAR-ARROW-COLOR: #c0c0c0;
-  PADDING-TOP: 0px;
-  SCROLLBAR-TRACK-COLOR: #330000;
-  SCROLLBAR-DARKSHADOW-COLOR: #330000;
+body {
+  padding-right: 0px;
+  padding-left: 0px;
+  scrollbar-face-color: #780000;
+  padding-bottom: 0px;
+  margin: 5px;
+  scrollbar-highlight-color: #780000;
+  scrollbar-shadow-color: #660000;
+  scrollbar-3dlight-color: #780000;
+  scrollbar-arrow-color: #c0c0c0;
+  padding-top: 0px;
+  scrollbar-track-color: #330000;
+  scrollbar-darkshadow-color: #330000;
   width: 800px;
   margin: 0 auto;
 }
-A:hover {
-	COLOR: #c0c0c0
+a:hover {
+	color: #c0c0c0
 }
-A {
-	TEXT-DECORATION: none
+a {
+	text-decoration: none
 }
 .news {
-	FONT: 8pt Verdana, Arial, Helvetica, sans-serif; COLOR: #0fabc6
+	font: 8pt verdana, arial, helvetica, sans-serif; color: #0fabc6
 }
-TABLE {
-	FONT: 8pt Verdana, Arial, Helvetica, sans-serif; COLOR: #c0c0c0; TEXT-DECORATION: none
+table {
+	font: 8pt verdana, arial, helvetica, sans-serif; color: #c0c0c0; text-decoration: none
 }
-TR {
-	FONT: 8pt Verdana, Arial, Helvetica, sans-serif; COLOR: #c0c0c0
+tr {
+	font: 8pt verdana, arial, helvetica, sans-serif; color: #c0c0c0
 }
-TD {
-	FONT: 8pt Verdana, Arial, Helvetica, sans-serif; COLOR: #c0c0c0
+td {
+	font: 8pt verdana, arial, helvetica, sans-serif; color: #c0c0c0
 }
 td.valeur
 {
-	background-color: #A3A3C9;
+	background-color: #a3a3c9;
 	color : #000000;
 	font-size : 15px;
 	padding : 2px
@@ -45,16 +45,16 @@ td.casse
 {
 	background-color : #800000;
 	font-weight: bold;
-	color : #FFFFFF;
+	color : #ffffff;
 }
 td.ok
 {
 	background-color : #008000;
-	color : #FFFFFF;
+	color : #ffffff;
 	font-weight: bold;
 }
 
-TH
+th
 {
 	background-color : #101010;
 	font-weight : bold;
@@ -64,14 +64,14 @@ th.titre
 {
 	text-align : center;
 }
-TEXTAREA {
-	BORDER-RIGHT: #666666 1px groove; BORDER-TOP: #666666 1px groove; OVERFLOW-Y: auto; FONT-SIZE: 8pt; OVERFLOW-X: hidden; BORDER-LEFT: #666666 1px groove; COLOR: #ffffff; BORDER-BOTTOM: #666666 1px groove; FONT-FAMILY: Verdana, Arial, Helvetica; BACKGROUND-COLOR: #780000
+textarea {
+	border-right: #666666 1px groove; border-top: #666666 1px groove; overflow-y: auto; font-size: 8pt; overflow-x: hidden; border-left: #666666 1px groove; color: #ffffff; border-bottom: #666666 1px groove; font-family: verdana, arial, helvetica; background-color: #780000
 }
-SELECT {
-	BORDER-RIGHT: #b4c2ca 1px solid; BORDER-TOP: #b4c2ca 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #b4c2ca 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #b4c2ca 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica; BACKGROUND-COLOR: #780000
+select {
+	border-right: #b4c2ca 1px solid; border-top: #b4c2ca 1px solid; font-size: 8pt; border-left: #b4c2ca 1px solid; color: #ffffff; border-bottom: #b4c2ca 1px solid; font-family: verdana, arial, helvetica; background-color: #780000
 }
-INPUT {
-	BORDER-RIGHT: #b4c2ca 1px solid; BORDER-TOP: #b4c2ca 1px solid; FONT-SIZE: 8pt; BORDER-LEFT: #b4c2ca 1px solid; COLOR: #ffffff; BORDER-BOTTOM: #b4c2ca 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica; BACKGROUND-COLOR: #780000
+input {
+	border-right: #b4c2ca 1px solid; border-top: #b4c2ca 1px solid; font-size: 8pt; border-left: #b4c2ca 1px solid; color: #ffffff; border-bottom: #b4c2ca 1px solid; font-family: verdana, arial, helvetica; background-color: #780000
 }
 div.actions
 {
@@ -83,12 +83,11 @@ div.actions
 	font-weight : bold;
 }
 
-
 tr.casse
 {
 	background-color : #800000;
 	font-weight: bold;
-	color : #FFFFFF;
+	color : #ffffff;
 	text-align : center;
 }
 
@@ -97,8 +96,6 @@ tr.piece
 	background-color : #202020;
 	text-align : center;
 }
-
-
 
 table.listebleu
 {
