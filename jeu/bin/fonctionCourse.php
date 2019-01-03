@@ -42,7 +42,7 @@
   //Initialisation de toutes les variables//
   //////////////////////////////////////////
       $IdCourse = $infoCourse['IdCourse'];
-      $infoConcurrent = "";
+      $infoConcurrent = [];
       $mess = "";
       $position = 1;
 
