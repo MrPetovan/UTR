@@ -13,24 +13,65 @@
 	$Man_Niveau = $_SESSION['Man_Niveau'];
 	$IdManager = $_SESSION['IdManager'];
 
-/*
-	echo"<pre>";
-	print_r($_GET);
-	print_r($_POST);
-	print_r($_SESSION);
-	echo"</pre>";
-*/
+	$IdTypePiece = $_GET['IdType'];
+
+	$resultatTypePiece = mysql_query("	SELECT	IdTypePiece,
+																TypPi_Libelle,
+																TypPi_Obligatoire,
+																TypPi_PrixDemontage,
+																TypPi_PrixMontage,
+																TypPi_Acceleration,
+																TypPi_VitesseMax,
+																TypPi_Freinage,
+																TypPi_Turbo,
+																TypPi_Adherence,
+																TypPi_SoliditeMoteur,
+																TypPi_AspectExterieur,
+																TypPi_CapaciteMoteur,
+																TypPi_CapaciteMax
+													FROM type_piece
+													WHERE IdTypePiece = '$IdTypePiece'");
+	$typePiece = mysql_fetch_assoc($resultatTypePiece)or die('Requete type pieces :' . mysql_error());
+
+	$requetePiecesDetachees= "	SELECT 	IdPieceDetachee,
+													ModPi_NomModele,
+													ModPi_IdTypePiece,
+													TypPi_Libelle,
+													Marq_Libelle,
+													ModPi_Acceleration,
+													ModPi_VitesseMax,
+													ModPi_Freinage,
+													ModPi_Turbo,
+													ModPi_Adherence,
+													ModPi_SoliditeMoteur,
+													ModPi_AspectExterieur,
+													ModPi_CapaciteMoteur,
+													ModPi_CapaciteMax,
+													ModPi_Poids,
+													ModPi_DureeVieMax,
+													PiDet_Usure,
+													PiDet_UsureMesuree,
+													PiDet_Qualite,
+													PiDet_QualiteMesuree,
+													UNIX_TIMESTAMP(NOW()) - UNIX_TIMESTAMP(PiDet_DateFabrication) AS PiDet_Age,
+													ModPi_PrixNeuve
+										FROM piece_detachee
+										JOIN modele_piece ON IdModelePiece = PiDet_IdModele
+										JOIN marque ON IdMarque = ModPi_IdMarque
+										JOIN type_piece ON IdTypePiece = ModPi_IdTypePiece
+										WHERE PiDet_IdManager = '$IdManager'
+										AND IdTypePiece = '$IdTypePiece'";
+	$resultatPiecesDetachees = mysql_query($requetePiecesDetachees)or die('Requete pieces détachées :' . mysql_error());
 ?>
 <html>
 <head>
 	<title></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<link href="/UTR/design/utr.css" type="text/css" rel="styleSheet" />
-	<link href="../../design/changerPiece.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" language="JavaScript" src="../../include/verif.js"></script>
 	<script type="text/javascript" language="JavaScript">
 
-function PieceDetachee(Id,Modele,IdTypePiece,Acceleration,VitesseMax,Freinage,Turbo,Adherence,SoliditeMoteur,AspectExterieur,CapaciteMoteur,CapaciteMax,Poids,DureeVieMax,Usure,UsureMesuree,Qualite,QualiteMesuree,Age,PrixNeuve,Installee)
+function PieceDetachee(Id,Modele,IdTypePiece,Acceleration,VitesseMax,Freinage,Turbo,Adherence,SoliditeMoteur,AspectExterieur,CapaciteMoteur,CapaciteMax,Poids,DureeVieMax,Casse,Usure,UsureMesuree,Qualite,QualiteMesuree,Age,PrixNeuve,Installee)
 {
 	this.Id = Id;
 	this.Modele = Modele;
@@ -65,6 +106,7 @@ function PieceDetachee(Id,Modele,IdTypePiece,Acceleration,VitesseMax,Freinage,Tu
 		this.Qualite = QualiteMesuree;
 		this.Usure = UsureMesuree;
 	}
+	this.Casse = Casse;
 	this.Acceleration = Acceleration;
 	this.VitesseMax = VitesseMax;
 	this.Freinage = Freinage;
@@ -82,71 +124,31 @@ function PieceDetachee(Id,Modele,IdTypePiece,Acceleration,VitesseMax,Freinage,Tu
 
 var piece = new Array();
 <?php
-	$IdTypePiece = $_GET['IdType'];
-
-	$resultatTypePiece = mysql_query("	SELECT	IdTypePiece,
-																TypPi_Libelle,
-																TypPi_Obligatoire,
-																TypPi_PrixDemontage,
-																TypPi_PrixMontage,
-																TypPi_Acceleration,
-																TypPi_VitesseMax,
-																TypPi_Freinage,
-																TypPi_Turbo,
-																TypPi_Adherence,
-																TypPi_SoliditeMoteur,
-																TypPi_AspectExterieur,
-																TypPi_CapaciteMoteur,
-																TypPi_CapaciteMax
-													FROM type_piece
-													WHERE IdTypePiece = '$IdTypePiece'");
-	$typePiece = mysql_fetch_assoc($resultatTypePiece)or die( mysql_error());
-
-	$requetePiecesDetachees= "	SELECT 	IdPieceDetachee,
-													ModPi_NomModele,
-													ModPi_IdTypePiece,
-													TypPi_Libelle,
-													Marq_Libelle,
-													ModPi_Acceleration,
-													ModPi_VitesseMax,
-													ModPi_Freinage,
-													ModPi_Turbo,
-													ModPi_Adherence,
-													ModPi_SoliditeMoteur,
-													ModPi_AspectExterieur,
-													ModPi_CapaciteMoteur,
-													ModPi_CapaciteMax,
-													ModPi_Poids,
-													ModPi_DureeVieMax,
-													PiDet_Usure,
-													PiDet_UsureMesuree,
-													PiDet_Qualite,
-													PiDet_QualiteMesuree,
-													UNIX_TIMESTAMP(NOW()) - UNIX_TIMESTAMP(PiDet_DateFabrication) AS PiDet_Age,
-													ModPi_PrixNeuve
-										FROM piece_detachee, modele_piece, marque, type_piece
-										WHERE IdModelePiece = PiDet_IdModele
-										AND PiDet_IdManager = '$IdManager'
-										AND IdTypePiece = ModPi_IdTypePiece
-										AND IdTypePiece = '$IdTypePiece'
-										AND IdMarque = ModPi_IdMarque";
-	$resultatPiecesDetachees = mysql_query($requetePiecesDetachees);
-//echo mysql_num_rows($resultatPiecesDetachees);
 	echo "piece[0] = new PieceDetachee('','','','','','','','','','','','','','','','','','','','');\n";
 	while($infoPieceDetachee = mysql_fetch_assoc($resultatPiecesDetachees))
 	{
-		/*echo"/*";
-		print_r($infoPieceDetachee);
-		echo"/";*/
 		$requeteInfoVoiture = "	SELECT IdVoiture FROM voiture
 										WHERE Voit_Id".str_replace(" ","",$infoPieceDetachee['TypPi_Libelle'])."='".$infoPieceDetachee['IdPieceDetachee']."'";
 		$resultatInfoVoiture = mysql_query($requeteInfoVoiture)or die("Requete Info Voiture : ".mysql_error());
 		$infoVoiture = mysql_fetch_assoc($resultatInfoVoiture);
 		$infoPieceDetachee['Installee'] = ($infoVoiture['IdVoiture']=="")?"0":"1";
 
+		$dureeVieActuelle = $infoPieceDetachee['ModPi_DureeVieMax']*($infoPieceDetachee['PiDet_Qualite']/100) * sqrt(100 - $infoPieceDetachee['PiDet_Usure']) / sqrt(100);
+		$dureeVieActuelle *= 365*24*60*60;
+
+		if($infoPieceDetachee['PiDet_Age'] > $dureeVieActuelle)
+		{
+			$PiDet_Casse = 1;
+			$label = $infoPieceDetachee['ModPi_NomModele']." ".$infoPieceDetachee['Marq_Libelle'] . " (pièce cassée)";
+		}
+		else
+		{
+			$PiDet_Casse = 0;
+			$label = "Remplacer par : ".$infoPieceDetachee['ModPi_NomModele']." ".$infoPieceDetachee['Marq_Libelle'];
+		}
 
 		echo "piece[".$infoPieceDetachee['IdPieceDetachee']."] = new PieceDetachee(".$infoPieceDetachee['IdPieceDetachee'].",
-							\"Remplacer par : ".$infoPieceDetachee['ModPi_NomModele']." ".$infoPieceDetachee['Marq_Libelle']."\",
+							\"".$label."\",
 							'".$infoPieceDetachee['ModPi_IdTypePiece']."',
 							'".$infoPieceDetachee['ModPi_Acceleration']."',
 							'".$infoPieceDetachee['ModPi_VitesseMax']."',
@@ -159,6 +161,7 @@ var piece = new Array();
 							'".$infoPieceDetachee['ModPi_CapaciteMax']."',
 							".$infoPieceDetachee['ModPi_Poids'].",
 							".$infoPieceDetachee['ModPi_DureeVieMax'].",
+							".$PiDet_Casse.",
 							".$infoPieceDetachee['PiDet_Usure'].",
 							'".$infoPieceDetachee['PiDet_UsureMesuree']."',
 							".$infoPieceDetachee['PiDet_Qualite'].",
@@ -207,13 +210,13 @@ var piece = new Array();
 												PiDet_QualiteMesuree,
 												UNIX_TIMESTAMP(NOW()) - UNIX_TIMESTAMP(PiDet_DateFabrication) AS PiDet_Age,
 												ModPi_PrixNeuve
-									FROM piece_detachee, modele_piece, marque, type_piece, voiture
-									WHERE IdModelePiece = Pidet_IdModele
-									AND IdMarque = ModPi_IdMarque
-									AND IdTypePiece = ModPi_IdTypePiece
-									AND PiDet_IdManager = '$IdManager'
+									FROM piece_detachee
+									JOIN modele_piece ON IdModelePiece = Pidet_IdModele
+									JOIN marque ON IdMarque = ModPi_IdMarque
+									JOIN type_piece ON IdTypePiece = ModPi_IdTypePiece
+									JOIN voiture ON Voit_Id".str_replace(" ","",$typePiece['TypPi_Libelle'])." = IdPieceDetachee
+									WHERE PiDet_IdManager = '$IdManager'
 									AND ModPi_IdTypePiece ='$IdTypePiece'
-									AND Voit_Id".str_replace(" ","",$typePiece['TypPi_Libelle'])." = IdPieceDetachee
 									AND IdVoiture = '$IdVoiture'";
 	$resultatPieceStock = mysql_query($requetePieceStock) or die("requete Piece Stock : ".mysql_error());
 	$pieceStock = mysql_fetch_assoc($resultatPieceStock);
@@ -231,7 +234,17 @@ var piece = new Array();
 		echo "var PiInst_AspectExterieur = '".$pieceStock['ModPi_AspectExterieur']."';\n";
 		echo "var PieceInstallee = '1';\n";
 	}
-	else echo "var PieceInstallee = '0';\n";
+	else
+	{
+		echo "var PiInst_Acceleration = 0;\n";
+		echo "var PiInst_VitesseMax = 0;\n";
+		echo "var PiInst_Freinage = 0;\n";
+		echo "var PiInst_Turbo = 0;\n";
+		echo "var PiInst_Adherence = 0;\n";
+		echo "var PiInst_SoliditeMoteur = 0;\n";
+		echo "var PiInst_AspectExterieur = 0;\n";
+		echo "var PieceInstallee = '0';\n";
+	}
 
 	echo "var prixMontage = '".$typePiece['TypPi_PrixMontage']."';\n";
 	echo "var prixDemontage = '".$typePiece['TypPi_PrixDemontage']."';\n";
@@ -288,9 +301,10 @@ function InitialiserBarres()
 	}
 }
 
-function Ajouter(select,text,value)
+function Ajouter(select,text,value,disabled = false)
 {
 	var o=new Option(text,value);
+	o.disabled = disabled;
 	select.options[select.options.length]=o;
 }
 
@@ -301,7 +315,7 @@ function InitialiserSelects(FormulaireCourant)
 	{
 		if(piece[i]!=null && piece[i].Installee == "0")
 		{
-			Ajouter(FormulaireCourant.IdPieceChangement,piece[i].Modele,piece[i].Id);
+			Ajouter(FormulaireCourant.IdPieceChangement,piece[i].Modele,piece[i].Id,piece[i].Casse === 1);
 		}
 	}
 	if(!document.all)
@@ -317,7 +331,6 @@ function InitialiserSelects(FormulaireCourant)
 
 function ChangeMessage(cp,msg)
 {
-	//alert("ChangeMessage("+cp+","+msg+")");
 	if(document.getElementById)
 		document.getElementById(cp).innerHTML = msg;
 }
@@ -361,10 +374,9 @@ function afficherCarac(radio)
 		{
 			if(piece[idPiece].Acceleration != '')
 			{
-				eval("Acceleration = "+Voit_Acceleration+" - "+PiInst_Acceleration+" + "+piece[idPiece].Acceleration);
+				var Acceleration = Voit_Acceleration - PiInst_Acceleration + piece[idPiece].Acceleration;
 				var Pourcentage = Math.floor(Acceleration * 100 / Voit_Acceleration);
 
-				//alert("Voit_Acceleration = "+Voit_Acceleration+"\nPiInst_Acceleration = "+PiInst_Acceleration+"\npiece[idPiece].Acceleration = "+piece[idPiece].Acceleration+"\nAcceleration = "+Acceleration+"\nPourcentage = "+Pourcentage);
 				if(Pourcentage >= 100)
 				{
 					acceleration_verte.width = 100;
@@ -383,7 +395,6 @@ function afficherCarac(radio)
 				eval("VitesseMax = "+Voit_VitesseMax+" - "+PiInst_VitesseMax+" + "+piece[idPiece].VitesseMax);
 				var Pourcentage = Math.floor(VitesseMax * 100 / Voit_VitesseMax);
 
-				//alert("Voit_VitesseMax = "+Voit_VitesseMax+"\nPiInst_VitesseMax = "+PiInst_VitesseMax+"\npiece[idPiece].VitesseMax = "+piece[idPiece].VitesseMax+"\nVitesseMax = "+VitesseMax+"\nPourcentage = "+Pourcentage);
 				if(Pourcentage >= 100)
 				{
 					vitesse_max_verte.width = 100;
@@ -402,7 +413,6 @@ function afficherCarac(radio)
 				eval("Freinage = "+Voit_Freinage+" - "+PiInst_Freinage+" + "+piece[idPiece].Freinage);
 				Pourcentage = Math.floor(Freinage * 100 / Voit_Freinage);
 
-				//alert("Voit_Freinage = "+Voit_Freinage+"\nPiInst_Freinage = "+PiInst_Freinage+"\npiece[idPiece].Freinage = "+piece[idPiece].Freinage+"\nFreinage = "+Freinage+"\nPourcentage = "+Pourcentage);
 				if(Pourcentage >= 100)
 				{
 					freinage_verte.width = 100;
@@ -421,7 +431,6 @@ function afficherCarac(radio)
 				eval("Turbo = "+Voit_Turbo+" - "+PiInst_Turbo+" + "+piece[idPiece].Turbo);
 				Pourcentage = Math.floor(Turbo * 100 / Voit_Turbo);
 
-				//alert("Voit_Turbo = "+Voit_Turbo+"\nPiInst_Turbo = "+PiInst_Turbo+"\npiece[idPiece].Turbo = "+piece[idPiece].Turbo+"\nTurbo = "+Turbo+"\nPourcentage = "+Pourcentage);
 				if(Pourcentage >= 100)
 				{
 					turbo_verte.width = 100;
@@ -440,7 +449,6 @@ function afficherCarac(radio)
 				eval("Adherence = "+Voit_Adherence+" - "+PiInst_Adherence+" + "+piece[idPiece].Adherence);
 				Pourcentage = Math.floor(Adherence * 100 / Voit_Adherence);
 
-				//alert("Voit_Adherence = "+Voit_Adherence+"\nPiInst_Adherence = "+PiInst_Adherence+"\npiece[idPiece].Adherence = "+piece[idPiece].Adherence+"\nAdherence = "+Adherence+"\nPourcentage = "+Pourcentage);
 				if(Pourcentage >= 100)
 				{
 					adherence_verte.width = 100;
@@ -459,7 +467,6 @@ function afficherCarac(radio)
 				eval("SoliditeMoteur = "+Voit_SoliditeMoteur+" - "+PiInst_SoliditeMoteur+" + "+piece[idPiece].SoliditeMoteur);
 				Pourcentage = Math.floor(SoliditeMoteur * 100 / Voit_SoliditeMoteur);
 
-				//alert("Voit_SoliditeMoteur = "+Voit_SoliditeMoteur+"\nPiInst_SoliditeMoteur = "+PiInst_SoliditeMoteur+"\npiece[idPiece].SoliditeMoteur = "+piece[idPiece].SoliditeMoteur+"\nSoliditeMoteur = "+SoliditeMoteur+"\nPourcentage = "+Pourcentage);
 				if(Pourcentage >= 100)
 				{
 					solidite_moteur_verte.width = 100;
@@ -478,7 +485,6 @@ function afficherCarac(radio)
 				eval("AspectExt = "+Voit_AspectExterieur+" - "+PiInst_AspectExterieur+" + "+piece[idPiece].AspectExterieur);
 				Pourcentage = Math.floor(AspectExt * 100 / Voit_AspectExterieur);
 
-				//alert("Voit_AspectExt = "+Voit_AspectExterieur+"\nPiInst_AspectExt = "+PiInst_AspectExterieur+"\npiece[idPiece].AspectExt = "+piece[idPiece].AspectExterieur+"\nAspectExt = "+AspectExt+"\nPourcentage = "+Pourcentage);
 				if(Pourcentage >= 100)
 				{
 					aspect_exterieur_verte.width = 100;
@@ -514,12 +520,10 @@ function afficherCarac(radio)
 			prixChangement = prixMontage;
 
 	document.formulaire.prix.value = prixChangement;
-	//ChangeMessage("prix",prixChangement)
 }
 
 function ChangeMessage(cp,msg)
 {
-	//alert("ChangeMessage("+cp+","+msg+")");
 	if(document.getElementById)
 		document.getElementById(cp).innerHTML = msg;
 	else
