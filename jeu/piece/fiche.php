@@ -143,7 +143,7 @@
 		$dureeVieActuelle *= 365*24*60*60;
 
 		if($infoPieceDetachee['PiDet_Age'] > $dureeVieActuelle) $PiDet_Casse = 1;
-		else $PidDet_Casse = 0;
+		else $PiDet_Casse = 0;
 
 		if(empty($infoPieceDetachee['IdVente']))
 		{
@@ -265,6 +265,16 @@
 		<tr class="piece">
 			<th>Type :</th>
 			<td><?php echo $infoPieceDetachee['TypPi_Libelle'];?></td>
+		</tr>
+		<tr class="piece">
+			<th>État :</th>
+		<?php if ($PiDet_Casse):?>
+			<td class="casse">Pièce Cassée !</td>
+		<?php elseif ($infoPieceDetachee['PiDet_Usure'] == 0) :?>
+			<td>Neuf</td>
+		<?php else :?>
+			<td>En usage</td>
+		<?php endif;?>
 		</tr>
 		<tr class="piece">
 			<th>Voiture équipée :</th>
