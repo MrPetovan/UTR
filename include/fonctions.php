@@ -54,7 +54,7 @@
 		$secondes = intval($temps / 1000);
 		$temps -= $secondes *1000;
 		$chaine ="";
-		if(!empty($heures)) $chaine .= "$heuresh ";
+		if(!empty($heures)) $chaine .= "$heures ";
 		$chaine .= "$minutes' $secondes\" $temps";
 
 		return($chaine);
